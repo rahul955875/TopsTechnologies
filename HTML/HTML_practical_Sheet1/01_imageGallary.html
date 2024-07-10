@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallary</title>
+  </head>
+  <body>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      header,
+      footer {
+        font-size: 25px;
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+      }
+      .images {
+        width: 100%;
+        height: 70%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 30px;
+        padding: 0px 30px;
+        margin: 20px 0;
+        place-content: center;
+        place-items: center;
+      }
+      .images img {
+        width: 230px;
+        height: 200px;
+        transition: transform 0.5s ease-in-out;
+      }
+      .box {
+        overflow: hidden;
+        border: solid 2px rgb(0, 0, 0);
+        border-radius: 10px;
+        height: 200px;
+        box-shadow: 5px 5px 20px 3px black;
+      }
+      .images img:hover {
+        transform: scale(1.2);
+      }
+    </style>
+    <header>
+      <h1>Image Gallary</h1>
+    </header>
+    <hr width="100%" size="6px" color="black" />
+    <div class="images">
+      <div class="box"><img src="bird_images/b1.jpg" alt="img1" /></div>
+      <div class="box"><img src="bird_images/b2.webp" alt="img2" /></div>
+      <div class="box"><img src="bird_images/b3.webp" alt="img3" /></div>
+      <div class="box"><img src="bird_images/b4.jpg" alt="img4" /></div>
+      <div class="box"><img src="bird_images/b5.jpg" alt="img5" /></div>
+      <div class="box"><img src="bird_images/b6.jpg" alt="img6" /></div>
+      <div class="box"><img src="bird_images/b7.jpg" alt="img7" /></div>
+      <div class="box"><img src="bird_images/b8.jpg" alt="img8" /></div>
+      <div class="box"><img src="bird_images/b9.jpg" alt="img9" /></div>
+      <div class="box"><img src="bird_images/b10.jpg" alt="img10" /></div>
+    </div>
+    <hr width="100%" color="black" size="6px" />
+    <footer>
+      <h3>copyright &COPY;2024 Image Gallary</h3>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04_Nested_Table</title>
+    <style>
+        .main{
+            font-size: 40px;  
+        }
+        table,td,th{
+            padding: 10px;
+            border:3px solid black;
+            margin: 50px auto;
+        }
+        .table2{
+          padding: 0;
+          margin: 0;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <table border="1">
+        <tr bgcolor="lightblue">
+          <th>Device</th>
+          <th>Brand</th>
+          <th>Specification</th>
+        </tr>
+        <tr>
+          <td>Smartphone</td>
+          <td>Apple</td>
+          <td>
+            <table class="table2" border="1">
+              <tr bgcolor="yellow">
+                <th>Model</th>
+                <th>Storage</th>
+              </tr>
+              <tr>
+                <td>iphone 12 pro</td>
+                <td>256GB</td>
+              </tr>
+              <tr>
+                <td>iphone SE</td>
+                <td>128GB</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>Laptop</td>
+          <td>HP</td>
+          <td>15.6" Display</td>
+        </tr>
+        <tr>
+          <td>Tablet</td>
+          <td>Samsung</td>
+          <td>10.5" Display</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

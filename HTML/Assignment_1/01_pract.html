@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html Website</title>
+    <style>
+        html,body{
+            margin: 0;
+        }
+        .main{
+            width: 100%;
+            height: auto;
+        }
+        .nav{
+            width: 100%;
+            
+        }
+        .nav table{
+            width: 100%;
+            text-align: center;
+            margin-top: 0;
+
+        }
+        .t1{
+            background-color: red;
+        }
+        #img2{
+            width: 100%;
+            height: 450px;
+        }
+        #img1{
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .contact1{
+          position: relative;
+        }
+        .contact1 .gradient::before{
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to right,red,blue);
+          opacity: 0.5;
+        }
+        .contact{
+            background-color: rgb(255, 116, 139);
+            height: 30px;
+            text-align: center;
+            margin-top: -23px;
+        }
+        #Contact-us{
+            font-size: 50px;
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            -webkit-text-stroke: 1px black;
+            transform: translate(-50%,-50%);
+        }
+        .t2{
+          width: 100%;
+          text-align: center;
+          background-color: aqua;
+        }
+        .content{
+          width: 100%;
+          display: flex;
+        }
+        .map{
+          width: 50%;
+        }
+        .video{
+          width: 50%;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="nav">
+        <table border="1" rules="all">
+          <tr>
+            <td>
+              <a href="#">Home</a>
+            </td>
+            <td>
+              <a href="#">about</a>
+            </td>
+            <td><a href="#">contact</a></td>
+            <td>
+              <a href="#">help</a>
+            </td>
+            <td>
+              <a href="#">store</a>
+            </td>
+            <td>
+                <table class="t1" border="0" rules="all">
+                    <tr>
+                        <td>
+                            <a href="#">Download</a>
+                        </td>
+                        <tr>
+                           <td>
+                            <span>app</span>
+                        </td>
+                        </tr>
+                    </tr>
+                    <tr></tr>
+                </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <img id="img2" src="https://media.dev.to/cdn-cgi/image/width=1600,height=900,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F29eq0ios3wbhnpzqcrel.jpg" alt="img">
+      <div class="contact">
+        <h4>Contact-us-page</h4>
+      </div>
+      <div class="contact1">
+        <div class="gradient"></div>
+        <img id="img1" src="https://img.freepik.com/free-photo/side-view-cropped-unrecognizable-business-people-working-common-desk_1098-20474.jpg?size=626&ext=jpg&ga=GA1.1.2116175301.1719014400&semt=ais_user" alt="img">
+        <h1 id="Contact-us"> Contact-us</h1>
+      </div>
+      <div class="form">
+        <form action="#" method="get">
+        <table class="t2" border="1" rules="all">
+            <tr>
+              <td><label for="fname">First Name:</label> <input type="text" id="fname" placeholder="enter your name" required></td>
+              <td>
+                <label for="lname">Last Name:</label> <input type="text" id="lname" placeholder="enter your name"></td>
+              
+            </tr>
+            <tr>
+              <td>
+                <label for="email">Email id:</label> <input type="email" id="email" placeholder="enter your email id">
+              </td>
+              <td>
+                <label for="phone">Phone No.:</label> <input type="text" id="phone" placeholder="enter your name" maxlength="10" minlength="10">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="sel">City:</label>
+                <select name="" id="sel">
+                  <option value="">--select--</option>
+                  <option value="">surat</option>
+                  <option value="">Ahemdabad</option>
+                  <option value="">rajkot</option>
+                  <option value="">navsari</option>
+                </select>
+              </td>
+              <td>
+                <label for="Gender">Gender:</label>
+               <label for="male">male</label> <input type="radio" name="geder" id="male">
+                <label for="female">female</label><input type="radio" name="geder" id="female">
+                <label for="other">other</label><input type="radio" name="geder" id="other">
+              </td>
+            </tr>
+        </table>
+      </form>
+      </div>
+      <div class="content">
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.272700095166!2d72.82275937471844!3d21.181323282522136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e6c2d24d613%3A0x5c7ca1ea557092d0!2sTOPS%20Technologies!5e0!3m2!1sen!2sin!4v1719072716151!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="video" src="https://www.youtube.com/embed/jhaYipeU_ag?si=QMZtHcARj0GJEfEi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </body>
+</html>

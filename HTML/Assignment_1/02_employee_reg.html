@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee registration form</title>
+    <style>
+      body{
+        margin: 0;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      img {
+        width: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .head {
+        display: flex;
+        margin-left: 50px;
+      }
+      h1 {
+        font-size: 60px;
+        padding-left: 20px;
+        color: red;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      table {
+        width: 80%;
+        font-size: 30px;
+        margin-left: 50px;
+      }
+      td {
+        padding: 10px;
+      }
+      input,
+      select,
+      textarea {
+        font-size: 30px;
+      }
+      .button{
+        margin-left: 460px;
+        margin-bottom: 40px;
+      }
+      .button input{
+        border-radius: 10px;
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+        <form action="#" method="get">
+      <div class="head">
+        <img
+          src="https://cdn2.iconfinder.com/data/icons/business-271/141/27-512.png"
+          alt=""
+        />
+        <h1>Employee Registration Form</h1>
+      </div>
+      <div class="table">
+        <table>
+          <tr>
+            <td></td>
+            <td>
+              <input type="radio" name="gender" id="Mr" /><label for="Mr">Mr.</label>
+              <input type="radio" name="gender" id="Mrs" /> <label for="Mrs">Mrs.</label>
+              <input type="radio" name="gender" id="Ms" /> <label for="Ms">Ms.</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="fname">First Name</label></td>
+            <td><input type="text" placeholder="First name" id="fname" required/></td>
+          </tr>
+          <tr>
+            <td><label for="lname">Last name</label></td>
+            <td>
+              <input type="text" placeholder="Last name" id="lname" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="mail1">Mail Address1</label>
+            </td>
+            <td>
+              <input type="text" id="mail1" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="mail2">Mail Address2</label>
+            </td>
+            <td>
+              <input type="text" id="mail2" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="city">City</label></td>
+            <td>
+              <input type="text" id="city" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="state">State</label></td>
+            <td>
+              <select name="" id="state">
+                <option value="">Gujrat</option>
+                <option value="">rajsthan</option>
+                <option value="">Maharastra</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="zip">Zip</label>
+            </td>
+            <td>
+              <input type="text" id="zip" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="photo">Photo</label></td>
+            <td>
+              <input type="file" id="photo" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="Email">Email</label></td>
+            <td>
+              <input type="email" id="Email" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="Mobile">Mobile No.</label>
+            </td>
+            <td>
+              <input type="text" id="Mobile" placeholder="+91" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="">Langauge</label></td>
+            <td>
+              <input type="checkbox" />Gujarati <br><input type="checkbox" />Hindi <br>
+              <input type="checkbox" />English <br> <input type="checkbox" />Marathi
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="add">Additional Information</label>
+            </td>
+            <td>
+              <textarea
+                name="optional"
+                id="add"
+                placeholder="optional" rows="5"
+              ></textarea>
+            </td>
+          </tr>
+        </table>
+        <div class="button">
+            <input type="submit" />
+            <input type="reset" />
+          </div>
+      </div>
+    </form>
+    </div>
+  </body>
+</html>
