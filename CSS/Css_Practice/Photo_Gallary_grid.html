@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallary</title>
+    <style>
+        .main{
+            display: grid;
+            /* width: 100%; */
+            padding:100px;
+            grid-template-columns: repeat(4,1fr);
+        }
+        .main div{
+            overflow: hidden;
+            /* border: 2px solid black; */
+        }
+        img{
+            max-width: 100%;
+            vertical-align: middle;
+            transition: all 0.5s ease;
+        }
+        .main .img1{
+            grid-row-start: 1;
+            grid-row-end: span 2;
+        }
+        .main .img2{
+            grid-column-start: 2;
+            grid-column-end: span 2;
+        }
+        .main .img9{
+            grid-column-start: 3;
+            grid-column-end: span 2;
+        }
+        img:hover{
+            scale: 1.1;
+            filter: brightness(50%);
+            cursor: crosshair;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="img1"><img src="https://preview.colorlib.com/theme/cocoon/assets/img/portfolio/home-port1.png" alt=""></div>
+        <div class="img2"><img src="https://preview.colorlib.com/theme/cocoon/assets/img/portfolio/home-port2.png" alt=""></div>
+        <div class="img3"><img src="https://preview.colorlib.com/theme/cocoon/assets/img/portfolio/home-port3.png" alt=""></div>
+        <div class="img4"><img src="https://preview.colorlib.com/theme/cocoon/assets/img/portfolio/home-port4.png" alt=""></div>
+        <div class="img5"><img src="https://preview.colorlib.com/theme/cocoon/assets/img/portfolio/home-port5.png" alt=""></div>
+        <div class="img6"><img src="https://preview.colorlib.com/theme/cocoon/assets/img/portfolio/home-port6.png" alt=""></div>
+        <div class="img7"><img src="https://preview.colorlib.com/theme/cocoon/assets/img/portfolio/home-port7.png" alt=""></div>
+        <div class="img8"><img src="https://preview.colorlib.com/theme/cocoon/assets/img/portfolio/home-port8.png" alt=""></div>
+        <div class="img9"><img src="https://preview.colorlib.com/theme/cocoon/assets/img/portfolio/home-port9.png" alt=""></div>
+    </div>
+</body>
+</html>
