@@ -1,45 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sell income</title>
     <style>
-
-        .main{
-            width: 400px;
-            height: auto;
-            border: 10px solid grey;
-                
-        }
-        .sell{
-            width: 400px;
-            height: auto;
-            border-bottom: 8px solid blue;
-            font-size: 25px;
-        
-        }   
-        .doller,.linechart{
-            padding-left: 40px;
-        }     
-        h1{
-            margin: 0;
-        }
+      .main {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        width: 450px;
+        height: auto;
+        margin: 50px auto;
+        border: 10px solid rgba(189, 179, 179, 0.5);
+      }
+      .sell {
+        max-width: 450px;
+        max-height: 350px;
+        border-bottom: 8px solid blue;
+        font-size: 25px;
+        padding: 50px 0px;
+      }
+      .doller,
+      .linechart {
+        padding-left: 40px;
+      }
+      h1 {
+        font-weight: 600;
+        color: rgb(42, 36, 36);
+        margin: 0;
+      }
+      span,
+      p {
+        font-weight: 500;
+        color: gray;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="main">
-        <div class="sell">
-            <h1 class="doller"><span>$</span>   1283</h1>
-            <p class="doller">
-                  Sale Income
-            </p>
-            <div class="linechart">
-                <svg width="600px">
-                    <polyline points="0,30 20,10 40,40 60,20 80,30 100,10 120,50 140,20 160,40 180,30" style="fill: none; stroke:blue; stroke-width:2px"></polyline>
-                </svg>
-            </div>
+      <div class="sell">
+        <h1 class="doller"><span>$</span> 1283</h1>
+        <p class="doller">Sale Income</p>
+        <div class="linechart">
+          <svg width="600px">
+            <polyline
+              points="0,30 20,10 40,40 60,20 80,30 100,10 120,50 140,20 160,40 180,30"
+              style="fill: none; stroke: blue; stroke-width: 2px"
+            ></polyline>
+          </svg>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
