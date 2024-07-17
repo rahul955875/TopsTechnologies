@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <title>Hero Image</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            background: url(https://img.freepik.com/premium-photo/peaceful-landscapes-with-mountains-river-highly-detailed-high-resolution_599292-1747.jpg);
+            background-size:cover;
+            background-position: bottom;
+            display: grid;
+            place-content: center;
+            /* filter: brightness(50%); */
+        }
+        .main::before{
+            content: "";
+            position: absolute;
+            background: rgba(0, 0, 0, 0.498);
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        .container{
+            width: 40vw;
+            height: 30vh;
+            z-index: 2;
+            /* position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);*/
+            text-align: center;
+            color: whitesmoke;
+        }
+        .container h1{
+            font-size: 50px;
+            text-shadow: 10px 5px 10px black;
+            margin-bottom: 30px;
+        }
+        .container p{
+            font-size: 18px;
+            text-shadow: 10px 5px 10px black;
+            margin-bottom: 30px;
+        }
+        .container button{
+            padding: 10px 15px;
+            color: white;
+            background-color:rgb(237, 19, 139);
+            border: none;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <h1>Discover the world</h1>
+            <p>We offer the best adventure holidyas and tailor-made trips!</p>
+            <button>search for tours<i class="ri-arrow-right-line"></i></button>
+        </div>
+    </div>
+</body>
+</html>
