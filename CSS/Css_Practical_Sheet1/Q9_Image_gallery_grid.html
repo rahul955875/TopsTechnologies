@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .main{
+            max-width:70vw;
+            border: 2px solid black;
+            margin: 20px auto;
+            padding:0 40px 10px;
+            display: grid;
+            grid-template-columns:1fr 1fr 1fr;
+            gap: 20px;
+            place-items: center;
+        }
+        .box{
+            width: 300px;
+            height: 250px;
+            margin: 10px;
+            border: 2px solid black;  
+        }
+        .box img{
+            width:100%;
+            height: 250px;
+            object-fit:cover;
+        }
+        .box:nth-child(1){
+            grid-row-start: 1;
+            grid-row-end: span 2;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box"><img src="https://img.freepik.com/free-photo/colorful-design-with-spiral-design_188544-9588.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1721347200&semt=sph" alt="img"></div>
+        <div class="box"><img src="https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg" alt="img"></div>
+        <div class="box"><img src="https://avatars.mds.yandex.net/i?id=b507a2b8d9382967a186c654f1eeaa74-5262078-images-taas-consumers&n=27&h=480&w=480" alt="img"></div>
+        <div class="box"><img src="https://pixlr.com/images/index/product-image-one.webp" alt="img"></div>
+        <div class="box"><img src="https://imgcdn.zigwheels.ph/large/gallery/exterior/29/2009/suzuki-jimny-rear-angle-view-360022.jpg" alt="img"></div>
+        <div class="box"><img src="https://storage.googleapis.com/turbo-math.appspot.com/user-assets/gzMWmegNKSUlh64nFjBAIuqhqGr2/04-23-2023/image-to-image/image-to-image__5f419cc4305219bba97ae735b799a45d_1682284222619_1_1682284234.png" alt="img"></div>
+        <div class="box"><img src="https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/40087/thar-exterior-front-view.jpeg?q=80" alt="img"></div>
+        <div class="box"><img src="https://images.pexels.com/photos/3777200/pexels-photo-3777200.jpeg" alt="img"></div>
+        <div class="box"><img src="https://static.vecteezy.com/system/resources/previews/030/700/357/large_2x/elephant-image-hd-free-photo.jpg" alt="img"></div>
+    </div>
+</body>
+</html>
