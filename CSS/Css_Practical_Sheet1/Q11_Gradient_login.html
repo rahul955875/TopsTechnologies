@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <title>Login Page</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main {
+        width: 100vw;
+        height: 100vh;
+        background: conic-gradient(
+          white -17deg,
+          rgb(80, 80, 193) 228deg,
+          rgba(228, 220, 220, 0.402)
+        );
+        display: grid;
+        place-content: center;
+      }
+      .main .loginpage {
+        width: 500px;
+        height: 300px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 10px black;
+        border: 2px solid black;
+        font-family: sans-serif;
+      }
+      .loginpage h1{
+        text-align: center;
+        margin:10px 0 30px 0;
+        font-weight: 800;
+      }
+      .loginpage input {
+        display: block;
+        width: 80%;
+        padding: 15px;
+        border-radius: 10px;
+        margin:0 0 20px 50px;
+      }
+      .loginpage button{
+        display: block;
+        font-size: 25px;
+        padding:5px 30px;
+        margin:0 auto;
+        color: white;
+        background-color: blue;
+        border-radius: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="loginpage">
+        <form action="#" method="post">
+          <h1>Login</h1>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <input type="password" placeholder="Enter password" required />
+          <button type="submit">Submit <i class="ri-arrow-right-s-line"></i></button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
