@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>LoginPage using flex</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+          color: white;
+      }
+      .back {
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(
+          to right,
+          rgba(255, 68, 0, 0.731),
+          rgba(255, 166, 0, 0.845)
+        );
+        display: grid;
+        place-content: center;
+      }
+      .main {
+        width: 70vw;
+        height: 70vh;
+        display: flex;
+        /* justify-content: center; */
+        box-shadow:5px 5px 10px black;
+        border-radius: 10px;
+      }
+      .main .part1 {
+        width: 60%;
+        height: inherit;
+        background: url(https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/blogs/10482/images/VNNcqv0uQiexY4BUshPs_laptop-home-office.jpg);
+        background-size: cover;
+        border-top-left-radius:10px;
+        border-bottom-left-radius:10px;
+      }
+      .main .part2 {
+        width: 40%;
+        height: inherit;
+        background-color:rgb(18, 18, 245);
+        padding: 30px 20px;
+        border-bottom-right-radius:10px;
+        border-top-right-radius:10px;
+      }
+      .part2 h1{
+        font-size: 35px;
+        margin: 25px 0 0 0;
+      }
+      .part2 p{
+        letter-spacing: 1px;
+        margin-bottom: 60px;
+      }
+      .part2 input[type="email"],input[type="password"]{
+        background:none;
+        border:none;
+        width: 100%;
+        outline: none;
+        padding: 0 50px 20px 5px;
+      }
+      .part2 ::placeholder{
+        color: white;
+      }
+      /* optional feature */
+      .part2 ::selection{
+        background-color: transparent;
+        color: transparent;
+      }
+      .input1,.input2{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        /* padding-bottom: 20px; */
+        border-bottom: 2px solid white;
+      }
+      .input2 i{
+        transform:rotate(120deg);
+        padding-right: 20px;
+      }
+      .back a{
+        text-decoration: none;
+      }
+      .input3{
+        display: flex;
+        vertical-align: middle;
+        justify-content:space-between;
+      }
+      .input3 i{
+        color: blue;
+      }
+      .input3 button{
+        color: blue;
+        font-size: 16px;
+        height: 40px;
+        margin-top: -10px;
+        padding:0px 5px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="back">
+      <div class="main">
+        <div class="part1"></div>
+        <div class="part2">
+          <h1>Login</h1>
+          <p>Hello! lets go stated</p>
+          <form action="#" method="post">
+          <div class="input1">
+            <input
+              type="email"
+              placeholder="Email ID"
+              name="email"
+              id="email"
+              required
+            /><i class="ri-user-2-fill"></i>
+          </div>
+          <div class="input2">
+            <input
+              type="Password"
+              placeholder="Password"
+              name="pass"
+              id="pass"
+              required
+            /><i class="ri-key-fill"></i></i>
+          </div>
+          <div class="input3">
+          <p>Forgot Password? <a href="Q12_LandFarmPage.html">Click here</a></p>
+          <button type="submit">Continue<i class="ri-arrow-right-line"></i></button>
+        </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
