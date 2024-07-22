@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <title>Registration Form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: 0;
+            font-family: sans-serif;
+        }
+        .main{
+            width: 96vw;
+            height: 97vh;
+            display: flex;
+            border: 3px solid black;
+            margin: 10px;
+        }
+        .main .left{
+            width: 65%;
+            height: inherit;
+            /* background-color: red; */
+            background: url(https://d2908q01vomqb2.cloudfront.net/761f22b2c1593d0bb87e0b606f990ba4974706de/2021/12/17/lens-concept.jpg);
+            background-size: cover;
+            
+        }
+        .main .right{
+            width: 35%;
+            height: inherit;
+            /* background-color: red; */
+            padding: 10px;
+        }
+        .right i{
+            font-weight:bold;
+            display: block;
+            text-align:right;
+            padding: 20px 10px;
+            font-size: 20px;
+        }
+        .right h1{
+            text-align: center;
+            /* margin: 10px 0; */
+            text-transform: uppercase;
+            font-size: 25px;
+            font-weight: bolder;
+            color:darkblue;
+            letter-spacing: -1px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .right form{
+            display: flex;
+            flex-direction: column;
+            width:80%;
+            margin: 30px 50px;
+        }
+        .right form input,button{
+            padding: 15px 10px;
+            margin: 5px 0;
+            border-radius:5px;
+            border-color: rgba(128, 128, 128, 0.58);
+        }
+        .right button{
+            background-color:darkblue;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .right p{
+            margin: 5px 0;
+            padding-bottom: 20px;
+            border-bottom: 3px solid rgba(128, 128, 128, 0.58);
+        }
+        .right p a{
+            text-decoration: none;
+        }
+        .right form button i{
+            display: inline-block;
+            padding: 12px;
+        }
+        .btn1,.btn2{
+            padding: 0px !important;
+        }
+        .btn1{
+            margin: 30px 0 5px 0;
+            background-color: red !important;
+            border: none;
+        }
+        button:hover{
+            background-color:black !important ;
+        }
+        .btn2{
+         background-color:blue !important;   
+        }
+        @media (max-width:576px) {
+            .main{
+                width: 100vw;
+                height: 100vh;
+                position: relative;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            .main .left{
+                width: 100vw;
+                display: none;
+            }
+            .main .right{
+                width: 100vw;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="left"></div>
+        <div class="right">
+            <i class="ri-close-large-line"></i>
+            <h1>Register</h1>
+            <form action="" method="post">
+                <input type="text" name="username" id="user" required placeholder="User Name">
+                <input type="email" name="email" id="email" required placeholder="Email">
+                <input type="password" name="password" id="pass" required placeholder="Enter password">
+                <input type="password" name="con-password" id="con-pass" required placeholder="Confirm password">
+                <button type="submit">Register</button>
+                <p>Have an account? <a href="Q13_Login_flex.html" target="_blank">Sign in</a></p>
+                <button class="btn1"><i class="ri-google-fill"></i> sign up with google</button>
+                <button class="btn2"><i class="ri-facebook-fill"></i>sign up with facebook</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
