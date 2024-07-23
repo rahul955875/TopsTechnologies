@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://www.freepnglogos.com/uploads/pubg-png/pubg-png-playerunknown-battlegrounds-windows-central-0.png"
+    />
+    <title>Card Design</title>
+    <style>
+      :root {
+        --grey: grey;
+        --black: black;
+        --blue: blue;
+        --light-blue: rgb(37, 37, 200);
+        --light-black: rgba(19, 16, 16, 0.9);
+        --darkblue: darkblue;
+        --darkgrey: rgb(54, 49, 49);
+        /* ============================== */
+        --p1: 10px;
+        --p2: 20px;
+        --p3: 30px;
+        --p4: 40px;
+        --p5: 50px;
+        --pe: 5px;
+        /* ================================ */
+        --f1: 25px;
+        --f2: 15px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      .main {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        place-content: center;
+      }
+      .container {
+        width: 90vw;
+        height: 90vh;
+        border: 2px solid black;
+        padding: var(--p1) var(--p5);
+        box-shadow: 10px 10px var(--p1) var(--grey);
+      }
+      a {
+        text-decoration: none;
+      }
+      .container .heading h1,
+      h2 {
+        text-align: center;
+        margin-bottom: var(--p2);
+      }
+      .container .heading h1 {
+        color: var(--grey);
+      }
+      .container .heading h2 {
+        font-weight: 800;
+        font-size: var(--f1);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--p3);
+      }
+      .container .cards .user {
+        width: 300px;
+        margin-top: var(--p4);
+        height: 400px;
+        /* border: 2px solid var(--black); */
+        box-shadow: 0 0 4px var(--grey);
+        display: flex;
+        flex-direction: column;
+        padding: var(--p3) var(--p5);
+        align-items: center;
+        gap: var(--p2);
+      }
+      .container .user h1 {
+        font-size: var(--f1);
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--darkblue);
+      }
+      .container .user h4 {
+        margin-top: -10px;
+        color: var(--black);
+      }
+      .container .user p {
+        line-height: 25px;
+        color: var(--darkgrey);
+      }
+      .container .user button {
+        width: 100px;
+        height: 40px;
+        color: white;
+        background-color: var(--darkblue);
+        font-weight: 700;
+        letter-spacing: 2px;
+        transition: 0.2s ease-in-out;
+      }
+      .cards .user .person {
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+        overflow: hidden;
+        border-radius: 50%;
+      }
+      .cards .user img {
+        width: 100%;
+      }
+      .container .cards .user button:hover {
+        background-color: var(--grey);
+        border-radius: var(--p1);
+      }
+      /* ===================================================== */
+
+      @media (max-width: 576px) {
+        .container {
+          width: 100vw;
+          height: 100vh;
+          box-shadow: none;
+          border: none;
+        }
+        .cards {
+          grid-template-columns: repeat(1, 1fr);
+          padding-bottom: var(--p5);
+          justify-content: center;
+          justify-items: center;
+        }
+      }
+      /* ================================================== */
+      @media (min-width: 577px) and (max-width: 1024px) {
+        .container {
+          width: 100vw;
+          height: 100vh;
+          box-shadow: none;
+          border: none;
+        }
+        .cards {
+          grid-template-columns: repeat(2, 1fr);
+          justify-items: center;
+          gap: 10px;
+        }
+      }
+      /* =================================================== */
+      @media (min-width: 1000px) and (max-width: 1400px) {
+        .container {
+          width: 100vw;
+          height: 100vh;
+          box-shadow: none;
+          border: none;
+        }
+        .cards {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <div class="heading">
+          <h1>Our Team</h1>
+          <h2>Our Expert Team Member</h2>
+        </div>
+        <div class="cards">
+          <div class="user">
+            <div class="person">
+              <img
+                src="https://www.icon0.com/free/static2/preview2/stock-photo-teen-boy-avatar-people-icon-character-cartoon-33260.jpg"
+                alt="person"
+              />
+            </div>
+            <h1>
+              <a href="https://github.com/rahul955875" target="_blank"
+                >Rahul Nizare</a
+              >
+            </h1>
+            <h4>Manager</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <button>Profile</button>
+          </div>
+          <div class="user">
+            <div class="person">
+              <img
+                src="https://www.icon0.com/free/static2/preview2/stock-photo-teen-boy-avatar-people-icon-character-cartoon-33260.jpg"
+                alt="person"
+              />
+            </div>
+            <h1>
+              <a href="https://github.com/rahul955875" target="_blank"
+                >Jack Will</a
+              >
+            </h1>
+            <h4>Manager</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <button>Profile</button>
+          </div>
+          <div class="user">
+            <div class="person">
+              <img
+                src="https://www.icon0.com/free/static2/preview2/stock-photo-teen-boy-avatar-people-icon-character-cartoon-33260.jpg"
+                alt="person"
+              />
+            </div>
+            <h1>
+              <a href="https://github.com/rahul955875" target="_blank"
+                >Jignesh Solanki</a
+              >
+            </h1>
+            <h4>Manager</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <button>Profile</button>
+          </div>
+          <div class="user">
+            <div class="person">
+              <img
+                src="https://www.icon0.com/free/static2/preview2/stock-photo-teen-boy-avatar-people-icon-character-cartoon-33260.jpg"
+                alt="person"
+              />
+            </div>
+            <h1>
+              <a href="https://github.com/rahul955875" target="_blank"
+                >Satyam Jasani</a
+              >
+            </h1>
+            <h4>Manager</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <button>Profile</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
