@@ -1,96 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <title>Dropdown Menu</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-            color: white;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+      }
+      .main {
+        width: 100vw;
+        height: 100vh;
+      }
+      .navbar {
+        width: 100vw;
+        background-color: rgb(99, 2, 42);
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 40px;
+        align-items: center;
+      }
+      .menu ul {
+        list-style: none;
+        display: flex;
+        position: relative;
+      }
+      .menu ul li a {
+        text-decoration: none;
+        font-size: 17px;
+        margin-right: 40px;
+      }
+      .logo h1 {
+        margin-left: 30px;
+        font-weight: 800;
+      }
+      .menu ul .dropdown ul {
+        display: flex;
+        flex-direction: column;
+        padding: 15px 20px;
+        background-color: white;
+        box-shadow: 0 0 5px black;
+        border-radius: 5px;
+        position: absolute;
+        top: 20px;
+      }
+      .menu ul .dropdown ul li:hover {
+        background-color: black;
+        color: white;
+      }
+      .dropdown ul li {
+        padding: 5px 0;
+        color: black;
+        font-weight: bold;
+      }
+      .dropdown {
+        display: none;
+      }
+      #service:hover .dropdown {
+        display: block;
+      }
+      #service:hover a i {
+        display: inline-block;
+        transform: rotate(180deg);
+      }
+      .menu ul li:hover a {
+        border-bottom: 2px solid orange;
+      }
+      @media (max-width: 576px) {
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
         }
-        .main{
-            width: 100vw;
-            height: 100vh;
+        .main {
+          width: 100vw;
         }
-        .navbar{
-            width: 100vw;
-            background-color:rgb(99, 2, 42);
-            display: flex;
-            justify-content: space-between;
-            padding: 20px 40px;
-            align-items: center;
+        .navbar {
+          width: 100vw;
+          padding: 0;
         }
-        .menu ul{
-            list-style: none;
-            display: flex;
-            position: relative;
+        .navbar .logo h1 {
+          font-size: calc(1vw + 20px);
+          margin: 8px;
         }
-        .menu ul li a{
-            text-decoration: none;
-            font-size: 17px;
-            margin-right: 40px;
-            
+        .navbar .menu ul li a {
+          font-size: calc(1vw + 10px);
+          margin: 5px;
         }
-        .logo h1{
-            margin-left: 30px;
-            font-weight:800;
-        }
-        .menu ul .dropdown ul{
-            display: flex;
-            flex-direction: column;
-            padding: 15px 20px;
-            background-color: white;
-            box-shadow: 0 0 5px black;
-            border-radius: 5px;
-            position: absolute;
-            top:20px;
-        }
-        .dropdown ul li{
-            padding: 5px 0;
-            color: black;
-            font-weight: bold;
-        }
-        .dropdown{
-            /* transition: 0.5s ease-in-out; */
-            display: none;
-        }
-        .service:hover .dropdown{
-            display: block;
-        }
-        .service:hover .service a i{
-            transform: rotate(180deg);
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="main">
-        <div class="navbar">
-            <div class="logo"><h1><i class="ri-home-4-fill"></i>Logo</h1></div>
-            <div class="menu">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li id="service"><a href="">Services <i class="ri-arrow-drop-down-line"></i></a>
-                    <div class="dropdown">
-                        <ul>
-                            <li>Services 1</li>
-                            <li>Services 2</li>
-                            <li>Services 3</li>
-                        </ul>
-                    </div></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Blog</a></li>
-                </ul>
-            </div>
+      <div class="navbar">
+        <div class="logo">
+          <h1><i class="ri-home-4-fill"></i>Logo</h1>
         </div>
+        <div class="menu">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li id="service">
+              <a href="">Services <i class="ri-arrow-drop-down-line"></i></a>
+              <div class="dropdown">
+                <ul>
+                  <li>Services 1</li>
+                  <li>Services 2</li>
+                  <li>Services 3</li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Blog</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
