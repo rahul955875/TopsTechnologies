@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scale 1</title>
+    <style>
+      :root {
+        /* colors====================================== */
+        --black: black;
+        --white: white;
+        --lightblack: rgba(23, 21, 21, 0.692);
+        /* =============================================== */
+        --f1: 50px;
+        --f2: 65px;
+        /* ================================================= */
+        --p5: 5px;
+        --p10: 10px;
+        --p20: 20px;
+        --p30: 30px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main {
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--black);
+        display: grid;
+        place-content: center;
+      }
+      .container {
+        width: 45vw;
+        height: 90vh;
+        border: var(--p20) solid var(--white);
+        border-radius: var(--p20);
+        position: relative;
+        overflow: hidden;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.2);
+        transition: 1s ease-in-out;
+      }
+      .container:hover img {
+        transform: scale(1);
+      }
+      /* =================================================== */
+      @media (max-width: 768px) {
+        .container {
+          width: 80vw;
+          height: 50vh;
+          border: var(--p5) solid var(--white);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <img
+          src="https://cdn.pixabay.com/photo/2020/06/05/21/09/cultural-tourism-5264542_1280.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+  </body>
+</html>
