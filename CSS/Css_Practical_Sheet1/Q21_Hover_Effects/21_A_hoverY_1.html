@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HoverY 1</title>
+    <style>
+      :root {
+        /* colors====================================== */
+        --black: black;
+        --white: white;
+        --lightblack: rgba(23, 21, 21, 0.692);
+        /* =============================================== */
+        --f1: 50px;
+        --f2: 65px;
+        /* ================================================= */
+        --p5: 5px;
+        --p10: 10px;
+        --p20: 20px;
+        --p30: 30px;
+        --p50: 50px;
+        --p60: 60px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main {
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--black);
+        display: grid;
+        place-content: center;
+      }
+      .container {
+        width: 45vw;
+        height: 90vh;
+        border: var(--p20) solid var(--white);
+        border-radius: var(--p20);
+        position: relative;
+        overflow: hidden;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.5s ease-in-out;
+      }
+      .overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--black);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: var(--white);
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        justify-content: center;
+        padding: var(--p10) var(--p20);
+        z-index: -1;
+        transform: rotatey(180deg);
+        transition: 0.5s ease-in-out;
+      }
+      .overlay h1 {
+        font-size: var(--f1);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-bottom: var(--p60);
+      }
+      .overlay p {
+        font-size: var(--p30);
+        text-align: justify;
+      }
+      #flip {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-content: center;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: var(--white);
+        font-size: var(--f2);
+        -webkit-text-stroke: 1px black;
+        transition: 0.5s ease-in-out;
+      }
+      .container:hover #flip {
+        transform: rotatey(180deg);
+      }
+      .container:hover .overlay {
+        z-index: 1;
+        transform: rotate(0deg);
+      }
+
+      .container:hover img {
+        /* backface-visibility: hidden; */
+        transform: rotateY(180deg);
+      }
+      /* =================================================== */
+      @media (max-width: 768px) {
+        .container {
+          width: 80vw;
+          height: 50vh;
+          border: var(--p5) solid var(--white);
+        }
+        .container .overlay p {
+          display: flex;
+          align-items: center;
+          text-align: center;
+          font-size: var(--p10);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <h1 id="flip">Flipping</h1>
+        <img
+          src="https://i.pinimg.com/originals/92/70/9b/92709b0c0acbe201f3aa135bd36823ef.jpg"
+          alt=""
+        />
+        <div class="overlay">
+          <h1>Flip Image</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+            accusamus quibusdam facilis esse est quidem eveniet adipisci quaerat
+            distinctio iusto? Reiciendis dicta aspernatur laborum ducimus.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
