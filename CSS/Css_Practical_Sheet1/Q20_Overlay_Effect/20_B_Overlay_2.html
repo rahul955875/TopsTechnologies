@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overlay 2</title>
+    <style>
+      :root {
+        /* colors====================================== */
+        --black: black;
+        --white: white;
+        --lightblack: rgba(23, 21, 21, 0.692);
+        /* =============================================== */
+        --f1: 50px;
+        --f2: 65px;
+        /* ================================================= */
+        --p5: 5px;
+        --p10: 10px;
+        --p20: 20px;
+        --p30: 30px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main {
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--black);
+        display: grid;
+        place-content: center;
+      }
+      .container {
+        width: 45vw;
+        height: 90vh;
+        border: var(--p20) solid var(--white);
+        border-radius: var(--p20);
+        position: relative;
+        overflow: hidden;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 1s ease-in-out;
+      }
+      .overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--lightblack);
+        backdrop-filter: blur(var(--p5));
+        text-transform: uppercase;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        font-size: var(--p30);
+        display: flex;
+        place-items: center;
+        justify-content: center;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        transition: 1s ease-in-out;
+      }
+      .container:hover .overlay {
+        transform:scaley(1);
+      }
+      .container:hover img {
+        transform: scale(1.2);
+      }
+      /* =================================================== */
+      @media (max-width: 768px) {
+        .container {
+          width: 80vw;
+          height: 50vh;
+          /* border: var(--p5) solid var(--white); */
+        }
+        .overlay{
+          font-size: var(--p10);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <img
+          src="https://i.pinimg.com/originals/92/70/9b/92709b0c0acbe201f3aa135bd36823ef.jpg"
+          alt=""
+        />
+        <div class="overlay"><h1>Image Overlay</h1></div>
+      </div>
+    </div>
+  </body>
+</html>
