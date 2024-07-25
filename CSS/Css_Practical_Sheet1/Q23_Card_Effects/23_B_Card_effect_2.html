@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Card Design with Hover</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        place-content: center;
+      }
+      .main .container {
+        width: 350px;
+        height:650px;
+        position: relative;
+        border: 2px solid grey;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 5px;
+        box-shadow: 0 0 10px gray;
+      }
+      .top {
+        width: 100%;
+        height: 70%;
+        overflow: hidden;
+        position: relative;
+      }
+      .top img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.5s ease-in-out;
+      }
+      .bottom {
+        height: 30%;
+        width: 100%;
+        padding: 40px 30px 0 30px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      .bottom h1 {
+        font-size: 35px;
+        margin-bottom: 20px;
+      }
+      .bottom a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.812);
+      }
+      .top:hover img {
+        transform: scale(1.2) rotate(5deg);
+      }
+      .main .container .top .top2 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 20%;
+        background-color: rgba(0, 0, 0, 0.47);
+        transform: translateY(100%);
+        transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        display: grid;
+        align-items: center;
+      }
+      .main .container:hover .top .top2 {
+        transform: translateY(0);
+      }
+      .main .container .top .top2 ul a:hover{
+        color:blue;
+        background-color:orange;
+      }
+      .main .container .top .top2 ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .main .container .top .top2 ul a {
+        text-decoration: none;
+        background-color: white;
+        font-size: 30px;
+        color: black;
+        padding: 10px;
+        border-radius: 50px;
+      }
+      /* =============================================== */
+      @media (max-width: 576px) {
+        .main .container {
+          width: 200px;
+          height: 350px;
+        }
+        .main .container .bottom {
+            padding: 2px 0 0 5px;
+        }
+        .main .container .bottom a h1 {
+          font-size: calc(2vw + 20px);
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .main .container {
+          width: 700px;
+          height: 96vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <div class="top">
+          <div class="top1">
+            <img
+              src="https://images.unsplash.com/photo-1504257373399-12c79acab9e6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHN1bnJpc2UlMjBmbG93ZXJ8ZW58MHx8MHx8fDA%3D"
+              alt="img"
+            />
+          </div>
+          <div class="top2">
+            <ul>
+              <li>
+                <a href="https://github.com/rahul955875" target="_blank"><i class="ri-facebook-fill"></i></a>
+              </li>
+              <li>
+                <a href="https://github.com/rahul955875" target="_blank"><i class="ri-instagram-line"></i></a>
+              </li>
+              <li>
+                <a href="https://github.com/rahul955875" target="_blank"><i class="ri-whatsapp-line"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom">
+          <a href="https://github.com/rahul955875"><h1>My Profile</h1></a>
+          <p>Lorem ipsum dolor sit</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
