@@ -1,73 +1,491 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Button Hover</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        place-items: center;
+        gap: 10px;
+        background: linear-gradient(
+          to right,
+          rgba(176, 235, 235, 0.386),
+          rgb(244, 161, 161)
+        );
+      }
+      .main button {
+        width: 200px;
+        height: 70px;
+        border: 2px solid black;
+        background-color: transparent;
+        font-size: 25px;
+        position: relative;
+      }
+      .btn1 button span::after {
+        content: "";
+        width: 100%;
+        height: 0%;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+      .btn1 button span::before {
+        content: "";
+        width: 100%;
+        height: 0%;
+        background-color: black;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+      .btn1 button:hover span::after,
+      .btn1 button:hover span::before {
+        height: 15%;
+      }
+      /* ============================================== */
+      .btn2 button span::after {
+        content: "";
+        position: absolute;
+        background-color: black;
+        height: 100%;
+        width: 0;
+        top: 0;
+        left: 0;
+        transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+      .btn2 button span::before {
+        content: "";
+        position: absolute;
+        background-color: black;
+        height: 100%;
+        width: 0%;
+        top: 0;
+        right: 0;
+        transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+      .btn2 button:hover span::before,
+      .btn2 button:hover span::after {
+        width: 5%;
+      }
+      /* =================================================== */
+      .btn3 button {
+        transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+      .btn3 button:hover {
+        background-color: black;
+        color: white;
+      }
+      /* ====================================================== */
+      .btn4 button::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        transform: scale(0);
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        border-radius: 50%;
+        transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+      .btn4 button::before {
+        content: "Click here";
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+      .btn4 button:hover::after {
+        transform: scale(1);
+        border-radius: 0;
+      }
+      .btn4 button:hover {
+        color: white;
+      }
+      /* =============================================== */
+      .btn5 button span::after {
+        content: "";
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scaleX(0);
+        transition: 0.5s ease-in-out;
+        transform-origin: center;
+        z-index: 1;
+      }
+      .btn5 button::before {
+        content: "Click here";
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+      .btn5 button:hover span::after {
+        transform: scale(1);
+      }
+      .btn5 button:hover {
+        color: white;
+      }
+      /* ================================================== */
+      .btn6 button span::after {
+        content: "";
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scaley(0);
+        transition: 0.5s ease-in-out;
+        z-index: 1;
+      }
+      .btn6 button::before {
+        content: "Click here";
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+      .btn6 button:hover span::after {
+        transform: scale(1);
+      }
+      .btn6 button:hover {
+        color: white;
+      }
+      /* ==================================================== */
+      .btn7 button span::after {
+        content: "";
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scaleX(0);
+        transition: 0.5s ease-in-out;
+        transform-origin: left;
+        z-index: 1;
+      }
+      .btn7 button::before {
+        content: "Click here";
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+      .btn7 button:hover span::after {
+        transform: scale(1);
+      }
+      .btn7 button:hover {
+        color: white;
+      }
+      /* ===================================================== */
+      .btn8 button span::after {
+        content: "";
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scaleX(0);
+        transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        transform-origin: right;
+        z-index: 1;
+      }
+      .btn8 button::before {
+        content: "Click here";
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+      .btn8 button:hover span::after {
+        transform: scale(1);
+      }
+      .btn8 button:hover {
+        color: white;
+      }
+      /* ==================================================== */
+      .btn9 button span::after {
+        content: "";
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scaley(0);
+        transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        transform-origin: bottom;
+        z-index: 1;
+      }
+      .btn9 button::before {
+        content: "Click here";
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+      .btn9 button:hover span::after {
+        transform: scale(1);
+      }
+      .btn9 button:hover {
+        color: white;
+      }
+      /* ======================================================= */
+      .btn10 button span::after {
+        content: "";
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scaley(0);
+        transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        transform-origin: top;
+        z-index: 1;
+      }
+      .btn10 button::before {
+        content: "Click here";
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+      .btn10 button:hover span::after {
+        transform: scale(1);
+      }
+      .btn10 button:hover {
+        color: white;
+      }
+      /* ===================================================== */
+      .btn11 button span::after {
+        content: "";
+        background-color: black;
+        width: 0%;
+        height: 0%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        /* transform-origin:left; */
+        z-index: 1;
+      }
+      .btn11 button::before {
+        content: "Click here";
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+      .btn11 button:hover span::after {
+        width: 100%;
+        height: 100%;
+      }
+      .btn11 button:hover {
+        color: white;
+      }
+      /* ================================================ */
+      .btn12 button span::after {
+        content: "";
+        background-color: black;
+        width: 0%;
+        height: 0%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        z-index: 1;
+      }
+      .btn12 button::before {
+        content: "Click here";
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+      .btn12 button:hover span::after {
+        width: 100%;
+        height: 100%;
+      }
+      .btn12 button:hover {
+        color: white;
+      }
+      /* ============================================== */
+      .btn13 button span::after {
+        content: "";
+        background-color: black;
+        width: 0%;
+        height: 0%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        z-index: 1;
+      }
+      .btn13 button::before {
+        content: "Click here";
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+      .btn13 button:hover span::after {
+        width: 100%;
+        height: 100%;
+      }
+      .btn13 button:hover {
+        color: white;
+      }
+      /* ===================================================== */
+      .btn14 button span::after {
+        content: "";
+        background-color: black;
+        width: 0%;
+        height: 0%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        z-index: 1;
+      }
+      .btn14 button::before {
+        content: "Click here";
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+      .btn14 button:hover span::after {
+        width: 100%;
+        height: 100%;
+      }
+      .btn14 button:hover {
+        color: white;
+      }
+      /* =================================================== */
+      @media (max-width:576px){
         .main{
-            width: 100vw;
-            height: 100vh;
-            display: grid;
-            grid-template-columns: repeat(4,1fr);
-            place-items: center;
-            background:linear-gradient(to right,rgba(176, 235, 235, 0.386),rgb(244, 161, 161));
+            background-color:blue ;
+            grid-template-columns: repeat(2,1fr);
+      }
+    }
+      /* =========================================== */
+      @media (min-width:576px) and (max-width:1024px){
+        .main{
+            grid-template-columns: repeat(3,1fr);
         }
-        .main button{
-            width: 200px;
-            height: 70px;
-            border: 2px solid black;
-            background-color: transparent;
-            font-size: 25px;
-        }
-        .btn{
-            overflow: hidden;
-        }
-        .btn1::after{
-            content: "";
-            width:200px ;
-            height: 10px;
-            transform: translatey(-10px);
-            background-color: black;
-            position: absolute;
-            display: block;
-            transition: 0.5s ease-in-out;
-        }
-        .btn1::before{
-            content: "";
-            width:200px ;
-            height: 0px;
-            transform: translatey(0px);
-            background-color: black;
-            position: absolute;
-            transition: 0.5s ease-in-out;
-        }
-        .btn1:hover::before{
-            height: 10px;
-        }
+      }
+    
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="main">
-        <div class="btn1 btn"><button>Click here</button></div>
-        <div class="btn2 btn"><button>Click here</button></div>
-        <div class="btn3 btn"><button>Click here</button></div>
-        <div class="btn4 btn"><button>Click here</button></div>
-        <div class="btn5 btn"><button>Click here</button></div>
-        <div class="btn6 btn"><button>Click here</button></div>
-        <div class="btn7 btn"><button>Click here</button></div>
-        <div class="btn8 btn"><button>Click here</button></div>
-        <div class="btn9 btn"><button>Click here</button></div>
-        <div class="btn10 btn"><button>Click here</button></div>
-        <div class="btn11 btn"><button>Click here</button></div>
-        <div class="btn12 btn"><button>Click here</button></div>
-        <div class="btn13 btn"><button>Click here</button></div>
-        <div class="btn14 btn"><button>Click here</button></div>
+      <div class="btn1 btn">
+        <button><span>Click here</span></button>
+      </div>
+      <div class="btn2 btn">
+        <button><span>Click here</span></button>
+      </div>
+      <div class="btn3 btn">
+        <button><span>Click here</span></button>
+      </div>
+      <div class="btn4 btn">
+        <button><span>Click here</span></button>
+      </div>
+      <div class="btn5 btn">
+        <button><span>Click here</span></button>
+      </div>
+      <div class="btn6 btn">
+        <button><span>Click here</span></button>
+      </div>
+      <div class="btn7 btn">
+        <button><span>Click here</span></button>
+      </div>
+      <div class="btn8 btn">
+        <button><span>Click here</span></button>
+      </div>
+      <div class="btn9 btn">
+        <button><span>Click here</span></button>
+      </div>
+      <div class="btn10 btn">
+        <button><span>Click here</span></button>
+      </div>
+      <div class="btn11 btn">
+        <button><span>Click here</span></button>
+      </div>
+      <div class="btn12 btn">
+        <button><span>Click here</span></button>
+      </div>
+      <div class="btn13 btn">
+        <button><span>Click here</span></button>
+      </div>
+      <div class="btn14 btn">
+        <button><span>Click here</span></button>
+      </div>
     </div>
-</body>
+  </body>
 </html>
