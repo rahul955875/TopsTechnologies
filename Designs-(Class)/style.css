@@ -1,0 +1,157 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto+Condensed&family=Sevillana&display=swap');
+
+:root{
+    --font-cursive:"Sevillana", cursive;
+    --font-roboto:"Roboto Condensed", sans-serif;
+    --font-great:"Great Vibes", cursive;
+/* ======================================================= */
+    --f10:10px;
+    --f14:14px;
+    --f16:16px;
+    --f18:18px;
+    --f20:20px;
+    --f25:25px;
+    --f30:30px;
+    --f40:40px;
+    --f50:50px;
+/* ========================================================== */
+    --p5:5px;
+    --p10:10px;
+    --p15:15px;
+    --p20:20px;
+    --p30:30px;
+    --p40:40px;
+    --p50:50px;
+    --p100:100px;
+
+    /* ===================================================== */
+    --black:black;
+    --white:white;
+    --salmon:salmon;
+    --grey:grey;
+    --lightgrey:rgba(185, 180, 180, 0.404);
+    --lightblue:rgb(37, 37, 223);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height:100vh;
+    font-family: var(--font-roboto);
+}
+.header .navbar{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    box-shadow: var(--p10) 0 var(--p10) var(--black);
+}
+h1,h2.h3,h4{
+    font-family: var(--font-great);
+    font-weight: 500;
+}
+.header .navbar .nav-right ul a{
+    text-decoration: none;
+    color: var(--black);
+    font-size: var(--f16);
+    transition: 0.3s ease-in-out;
+}
+.header .navbar .nav-right{
+    display: flex;
+    align-items: center;
+}
+.header .navbar .nav-right ul{
+    display: flex;
+    gap:var(--p30);
+    list-style: none;
+}
+.header .navbar .nav-right ul a i{
+    font-size: var(--f10);
+    /* font-weight: 900; */
+
+}
+.header .navbar .nav-left{
+    font-size: var(--f30);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+.header .navbar .nav-right form input{
+    font-size: var(--f14);
+    padding: var(--p10) var(--p20);
+    border-top-left-radius:var(--p40);
+    border-bottom-left-radius:var(--p40);
+    border: 1px solid var(--lightgrey);
+    margin: var(--p20) 0 var(--p20) var(--p20);
+    outline: none;
+}
+.header .navbar .nav-right form button{
+    font-size: var(--f14);
+    color:var(--white);
+    padding: var(--p10);
+    border: none;
+    border-top-right-radius:var(--p30);
+    border-bottom-right-radius:var(--p30);
+    background-color: var(--lightblue);
+    margin-left: -5px;
+}
+.header .navbar .nav-right .moon i{
+    font-size: var(--f30);
+    transform: rotate(-10deg);
+    margin-left: var(--p20);
+}
+.setting{
+    display: none;
+}
+.header .navbar .nav-right ul .active,.header .navbar .nav-right ul a:hover{
+    color: var(--lightblue);
+}
+/* =======================header-colse======================= */
+
+
+
+/* =======================media query========================== */
+@media (max-width:576px){
+    .header .navbar{
+        justify-content: space-between;
+        padding: 0 var(--p10);
+    }
+    .header .navbar .nav-right ul,.header .navbar .nav-right form{
+        display: none;
+    }
+    .header .navbar .nav-right .setting {
+        font-size: var(--f20);
+        border: 1px solid var(--black);
+        padding: var(--p5) var(--p10);
+        border-radius: var(--p10);
+        margin-left: var(--p20);
+        background-color: var(--lightblue);
+        color: white;
+        display: block;
+    }
+}
+
+/* ======================2ns media=========================== */
+@media (min-width:576px) and (max-width:800px) {
+    .header .navbar{
+        justify-content: space-between;
+        padding: 0 var(--p30);
+    }
+    .header .navbar .nav-right ul,.header .navbar .nav-right form{
+        display: none;
+    }
+    .header .navbar .nav-right .setting {
+        font-size: var(--f20);
+        border: 1px solid var(--black);
+        padding: var(--p5) var(--p10);
+        border-radius: var(--p10);
+        margin-left: var(--p20);
+        background-color: var(--lightblue);
+        color: white;
+        display: block;
+    }
+}
+/* =======================header-colse======================= */
