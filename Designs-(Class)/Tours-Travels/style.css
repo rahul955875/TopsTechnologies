@@ -15,6 +15,9 @@
     --f30:30px;
     --f40:40px;
     --f50:50px;
+    --f80:80px;
+    --f100:100px;
+    --p150:150px;
 /* ========================================================== */
     --p5:5px;
     --p10:10px;
@@ -110,6 +113,40 @@ h1,h2.h3,h4{
     color: var(--lightblue);
 }
 /* =======================header-colse======================= */
+.main{
+    width: 100vw;
+    /* height:100vh; */
+    height:  calc(100vh - 78.400px);;
+    background: url(imgs/banner1.jpg);
+    background-position:center;
+    background-size: cover;
+}
+.main .main-heading{
+    height: inherit;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    padding:var(--p150);
+}
+.main .main-heading h1{
+    font-size:var(--f80);
+}
+.main .main-heading p{
+    font-size: var(--f20);
+}
+.main .main-heading a{
+    text-decoration: none;
+    width:150px;
+    color: white;
+    font-size: var(--f18);
+    padding: var(--p15) 0;
+    margin: var(--p50) 0;
+    border-radius: var(--p30);
+    text-align: center;
+    background-color:rgba(20, 20, 194, 0.767);
+    font-weight: bold;
+
+}
 
 
 
@@ -129,9 +166,22 @@ h1,h2.h3,h4{
         border-radius: var(--p10);
         margin-left: var(--p20);
         background-color: var(--lightblue);
-        color: white;
+        color:var(--white);
         display: block;
     }
+    .main .main-heading{
+        padding: var(--p20);
+    }
+    .main .main-heading h1{
+        font-size:var(--f40);
+    }
+    .main .main-heading p{
+        font-size:var(--f14);
+    }
+    .main .main-heading a{
+        margin: var(--p20) 0;
+    }
+    
 }
 
 /* ======================2ns media=========================== */
