@@ -427,19 +427,26 @@
         color: white;
       }
       /* =================================================== */
-      @media (max-width:576px){
-        .main{
-            background-color:blue ;
-            grid-template-columns: repeat(2,1fr);
-      }
-    }
-      /* =========================================== */
-      @media (min-width:576px) and (max-width:1024px){
-        .main{
-            grid-template-columns: repeat(3,1fr);
+      @media (max-width: 576px) {
+        .main {
+          background-color: blue;
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .main button {
+          width: 100px;
+          height: 40px;
+          border: 2px solid black;
+          background-color: transparent;
+          font-size: 15px;
+          position: relative;
         }
       }
-    
+      /* =========================================== */
+      @media (min-width: 576px) and (max-width: 1024px) {
+        .main {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
     </style>
   </head>
   <body>
