@@ -119,7 +119,7 @@ h1,h2,h3,h4{
 .main{
     width: 100vw;
     height:  calc(100vh - 78.400px);;
-    /* background: url(imgs/banner1.jpg); */
+    background: url(imgs/banner1.jpg);
     background-position:center;
     background-size: cover;
 }
