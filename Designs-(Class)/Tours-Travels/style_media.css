@@ -21,17 +21,17 @@
         color:var(--white);
         display: block;
     }
-    .main .main-heading{
+    .main-heading{
         padding: var(--p20);
     }
-    .main .main-heading h1{
+    .main-heading h1{
         font-size:var(--f40);
     }
-    .main .main-heading p{
+    .main-heading p{
         font-size:var(--f14);
         color: var(--black);
     }
-    .main .main-heading a{
+    .main-heading a{
         margin: var(--p20) 0;
         width: 150px;
     }
@@ -118,16 +118,16 @@
         color: white;
         display: block;
     }
-    .main .main-heading h1{
+    .main-heading h1{
         font-size:var(--f50);
     }
-    .main .main-heading p{
+    .main-heading p{
         font-size: var(--f18);
     }
-    .main .main-heading a{
+    .main-heading a{
         margin: var(--p20) 0;
     }
-    .main .main-heading{ 
+    .main-heading{ 
         padding:var(--p50);
     }
     /* ========================================= */
@@ -183,16 +183,16 @@
 /* ====================3rd media================== */
  @media (min-width:801px) and (max-width:1025px) {
 
-    .main .main-heading h1{
+    .main-heading h1{
         font-size:var(--f50);
     }
-    .main .main-heading p{
+    .main-heading p{
         font-size: var(--f18);
     }
-    .main .main-heading a{
+    .main-heading a{
         margin: var(--p20) 0;
     }
-    .main .main-heading{ 
+    .main-heading{ 
         padding:var(--p50);
     }
 /* ======================================= */

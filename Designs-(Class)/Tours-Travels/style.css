@@ -60,6 +60,7 @@ html,body{
     justify-content: space-around;
     box-shadow: var(--p10) 0 var(--p10) rgba(128, 128, 128, 0.2);
     position:fixed;
+    z-index: 100;
     background-color: var(--white);   
 }
 h1,h2,h3,h4{
@@ -124,28 +125,74 @@ a{
     color: var(--lightblue);
 }
 /* =======================header-colse======================= */
+.main-sec{
+    width: 400vw;
+    display: flex;
+    animation: slider-head 20s cubic-bezier(0.165, 0.84, 0.44, 1) infinite 2s;
+    scroll-behavior: smooth;
+}
 .main{
+    background: url(imgs/banner1.jpg);
+}
+.main2{
+    background: url(imgs/banner2.jpg);
+}
+.main3{
+    background: url(imgs/banner3.jpg);
+}
+.main4{
+    background: url(imgs/banner4.jpg);
+}
+@keyframes slider-head {
+    0%{
+        transform: translateX(0);
+    }
+    10%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-100vw);
+    }
+    40%{
+        transform:translateX(-100vw);
+    }
+    50%{
+        transform: translateX(-200vw);
+    }
+    70%{
+        transform: translateX(-200vw);
+    }
+    80%{
+        transform: translateX(-300vw);
+    }
+    90%{
+        transform: translateX(-300vw);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.main, .main2, .main3, .main4{
     width: 100vw;
     height:  calc(100vh - 78.400px);
     margin-top: 78.400px;
-    background: url(imgs/banner1.jpg);
     background-position:center;
     background-size: cover;
 }
-.main .main-heading{
+.main-heading{
     height: inherit;
     display: flex;
     flex-direction: column; 
     justify-content: center;
     padding:var(--p150);
 }
-.main .main-heading h1{
+.main-heading h1{
     font-size:var(--f80);
 }
-.main .main-heading p{
+.main-heading p{
     font-size: var(--f20);
 }
-.main .main-heading a{
+.main-heading a{
     width:170px;
     color: white;
     font-size: var(--f18);
@@ -279,7 +326,7 @@ a{
     transition: 0.5s ease-in-out;
     border: 1px solid var(--lightblue);
 }
-.about-sec .about-right a:hover,.main .main-heading a:hover,.form-sec .form-tour .find-btn button:hover{
+.about-sec .about-right a:hover,.main-heading a:hover,.form-sec .form-tour .find-btn button:hover{
     color: var(--lightblue);
     background-color: transparent;
 }
