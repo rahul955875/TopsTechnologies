@@ -4,6 +4,10 @@
         justify-content: space-between;
         padding: 0 var(--p10);
     }
+    .header .navbar .nav-left{
+        font-size: var(--f20);
+        padding: var(--p10);
+    }
     .header .navbar .nav-right ul,.header .navbar .nav-right form{
         display: none;
     }
@@ -25,11 +29,51 @@
     }
     .main .main-heading p{
         font-size:var(--f14);
+        color: var(--black);
     }
     .main .main-heading a{
         margin: var(--p20) 0;
+        width: 150px;
     }
-    
+    /* ========================form-sec============== */
+    .form-sec .form-tour{
+        width: 100%;
+        padding: var(--p50) 0;    
+        grid-template-columns: repeat(1,1fr);
+        gap: 10px;
+    }
+    .form-sec .form-tour{
+        margin: 0 15px;        
+    }
+    .form-sec .form-tour .find-btn button{
+        width: 90%;
+        margin-top: 20px;
+        
+    }
+    /* ================about-sec===================== */
+    .about-sec {
+        width: 90%;
+        flex-direction: column;
+        padding: 0;
+    }
+    .about-left{
+        width: 100%; 
+    }
+    .about-sec .about-right{
+        width: 100%;
+        padding:0;
+    }
+    .about-sec .about-right #plan-head{
+        font-size:var(--f30);
+    }
+    .about-sec .about-right .para{
+        line-height: 25px;
+        letter-spacing:1px;
+    }
+    .about-sec .about-right p{
+        margin-top: var(--p15);
+        font-size: var(--f15);
+    }
 }
 
 /* ======================2ns media=========================== */
@@ -63,5 +107,109 @@
     .main .main-heading{ 
         padding:var(--p50);
     }
+    /* ========================================= */
+    .form-sec .form-tour{
+        width: 100%;
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+    }
+    .form-sec .form-tour{
+        margin: 0 15px;        
+    }
+    .form-sec .form-tour .find-btn button{
+        width: 90%;
+        margin-top: 20px;
+        
+    }
+
+    /* ================about-sec===================== */
+    .about-sec {
+        width: 90%;
+        flex-direction: column;
+        padding: 0;
+    }
+    .about-left{
+        width: 100%; 
+    }
+    .about-sec .about-right{
+        width: 100%;
+        padding:0;
+    }
+    .about-sec .about-right #plan-head{
+        font-size:var(--f30);
+    }
+    .about-sec .about-right .para{
+        line-height: 25px;
+        letter-spacing:1px;
+    }
+    .about-sec .about-right p{
+        margin-top: var(--p15);
+        font-size: var(--f15);
+    }
 }
-/* =======================header-colse======================= */
+
+/* ====================3rd media================== */
+ @media (min-width:801px) and (max-width:1025px) {
+
+    .main .main-heading h1{
+        font-size:var(--f50);
+    }
+    .main .main-heading p{
+        font-size: var(--f18);
+    }
+    .main .main-heading a{
+        margin: var(--p20) 0;
+    }
+    .main .main-heading{ 
+        padding:var(--p50);
+    }
+/* ======================================= */
+.form-sec .form-tour{
+    width: 100%;
+    gap: 10px;
+}
+.form-sec .form-tour{
+    margin: 0 15px;        
+}
+.form-sec .form-tour .find-btn button{
+    width: 100%;
+    margin-top: 20px;
+    
+}
+/* ================about-sec===================== */
+.about-sec {
+    width: 90%;
+}
+.about-left{
+    width: 50%; 
+}
+.about-sec .about-right{
+    width: 50%;
+    padding: 0;
+}
+.about-sec .about-right #plan-head{
+    font-size:var(--f30);
+}
+.about-sec .about-right .para{
+    line-height: 25px;
+}
+.about-sec .about-right p{
+    margin-top: var(--p5);
+}
+    
+/* ==========================features-sec=================== */
+
+.feature-head h1{
+    font-size: var(--f40);
+    color: var(--lightblue);
+}
+.feature-head p{
+    font-size: var(--f40);
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--black);
+    font-family:sans-serif;
+}
+/* =========================== */
+
+ }

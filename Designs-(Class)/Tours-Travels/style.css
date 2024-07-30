@@ -146,8 +146,7 @@ a{
     font-size: var(--f20);
 }
 .main .main-heading a{
-    text-decoration: none;
-    width:150px;
+    width:170px;
     color: white;
     font-size: var(--f18);
     padding: var(--p15) 0;
@@ -155,21 +154,22 @@ a{
     border-radius: var(--p30);
     text-align: center;
     background-color:rgba(48, 48, 234, 0.767);
-    background-color:lightseagreen;
     font-weight: bold;
-
+    transition: 0.5s ease-in-out;
+    border: 1px solid var(--lightblue);
 }
+
 /* ==========================form-section============ */
 .form-sec{
     width: 100%;
     padding: var(--p80) var(--p20);
 }
 .form-sec .form-tour{
+    width: 80%;
     display: grid;
     margin:0 auto;
     padding: var(--p50);
     grid-template-columns: repeat(5,1fr);
-    width: 80%;
     box-shadow: 0 10px 20px 1px rgba(128, 128, 128, 0.1);
 }
 .form-sec .form-tour .input-sec{
@@ -190,7 +190,7 @@ a{
     border: none;
     outline: none;
     background-color:var(--light);
-
+    appearance: none;
 }
 .form-sec .form-tour .find-btn{
     display: flex;
@@ -204,6 +204,8 @@ a{
     border-radius: var(--p30);
     color: var(--white);
     background-color: var(--lightblue);
+    transition: 0.5s ease-in-out;
+    border: 1px solid var(--lightblue);
     
 }
 /* ==============================form-sec-close========= */
@@ -265,19 +267,19 @@ a{
 .about-sec .about-right a{
     text-decoration: none;
     display:block;
-    width:150px;
+    width:180px;
     color: white;
     font-size: var(--f16);
-    padding: var(--p10) 0;
+    padding: var(--p15) 0;
     margin: var(--p50) 0;
     border-radius: var(--p30);
     text-align: center;
     background-color:var(--lightblue);
     font-weight: bold;
-    transition: 0.5s ease;
+    transition: 0.5s ease-in-out;
     border: 1px solid var(--lightblue);
 }
-.about-sec .about-right a:hover{
+.about-sec .about-right a:hover,.main .main-heading a:hover,.form-sec .form-tour .find-btn button:hover{
     color: var(--lightblue);
     background-color: transparent;
 }
