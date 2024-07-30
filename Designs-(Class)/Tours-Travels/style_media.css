@@ -1,0 +1,67 @@
+/* =======================media query========================== */
+@media (max-width:576px){
+    .header .navbar{
+        justify-content: space-between;
+        padding: 0 var(--p10);
+    }
+    .header .navbar .nav-right ul,.header .navbar .nav-right form{
+        display: none;
+    }
+    .header .navbar .nav-right .setting {
+        font-size: var(--f20);
+        border: 1px solid var(--black);
+        padding: var(--p5) var(--p10);
+        border-radius: var(--p10);
+        margin-left: var(--p20);
+        background-color: var(--lightblue);
+        color:var(--white);
+        display: block;
+    }
+    .main .main-heading{
+        padding: var(--p20);
+    }
+    .main .main-heading h1{
+        font-size:var(--f40);
+    }
+    .main .main-heading p{
+        font-size:var(--f14);
+    }
+    .main .main-heading a{
+        margin: var(--p20) 0;
+    }
+    
+}
+
+/* ======================2ns media=========================== */
+@media (min-width:576px) and (max-width:800px) {
+    .header .navbar{
+        justify-content: space-between;
+        padding: 0 var(--p30);
+    }
+    .header .navbar .nav-right ul,.header .navbar .nav-right form{
+        display: none;
+    }
+    .header .navbar .nav-right .setting {
+        font-size: var(--f20);
+        border: 1px solid var(--black);
+        padding: var(--p5) var(--p10);
+        border-radius: var(--p10);
+        margin-left: var(--p20);
+        background-color: var(--lightblue);
+        color: white;
+        display: block;
+    }
+    .main .main-heading h1{
+        font-size:var(--f50);
+    }
+    .main .main-heading p{
+        font-size: var(--f18);
+    }
+    .main .main-heading a{
+        margin: var(--p20) 0;
+    }
+    .main .main-heading{ 
+        padding:var(--p50);
+    }
+}
+/* =======================header-colse======================= */

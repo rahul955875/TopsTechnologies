@@ -8,11 +8,13 @@
 /* ======================================================= */
     --f10:10px;
     --f14:14px;
+    --f15:15px;
     --f16:16px;
     --f18:18px;
     --f20:20px;
     --f25:25px;
     --f30:30px;
+    --f35:35px;
     --f40:40px;
     --f50:50px;
     --f80:80px;
@@ -56,13 +58,16 @@ html,body{
     display: flex;
     text-align: center;
     justify-content: space-around;
-    box-shadow: var(--p10) 0 var(--p10) var(--black);
+    box-shadow: var(--p10) 0 var(--p10) rgba(128, 128, 128, 0.2);
     position:fixed;
     background-color: var(--white);   
 }
 h1,h2,h3,h4{
     font-family: var(--font-great);
     font-weight: 500;
+}
+a{
+    text-decoration: none;
 }
 .header .navbar .nav-right ul a{
     text-decoration: none;
@@ -207,7 +212,7 @@ h1,h2,h3,h4{
     margin: 0 auto;
     display: flex;
     gap: var(--p50);
-    padding: var(--p100) 0;
+    padding: var(--p80) 0 var(--p50) 0;
     justify-items: center;
 }
 .about-left{
@@ -227,21 +232,23 @@ h1,h2,h3,h4{
     padding: var(--p50) 0;
 }
 .about-sec .about-right h1{
-    font-size: var(--f40);
+    font-size: var(--f30);
     color: var(--lightblue);
     text-transform: capitalize;
 }
 .about-sec .about-right #tick{
+    width: 20px;
+    height: 20px;
     font-size: var(--p10);
     color: var(--white);
     border-radius:50%;
-    padding: 5px 7px;
+    padding: 2px 4px;
     margin-right: var(--p10);
-    background-color: var(--lightseagreen);
+    background-color: var(--lightblue);
 }
 .about-sec .about-right #plan-head{
-    font-size: var(--f40);
-    letter-spacing: 2px;
+    font-size:var(--f35);
+    letter-spacing: 1px;
     font-weight: 900;
     text-transform: capitalize;
 }
@@ -252,23 +259,22 @@ h1,h2,h3,h4{
     letter-spacing:1px;
 }
 .about-sec .about-right p{
-    margin-top: 15px;
-    font-size: var(--f18);
+    margin-top: var(--p15);
+    font-size: var(--f15);
 }
 .about-sec .about-right a{
     text-decoration: none;
-    display:inline-block;
-    width:200px;
+    display:block;
+    width:150px;
     color: white;
-    font-size: var(--f18);
-    padding: var(--p15) 0;
+    font-size: var(--f16);
+    padding: var(--p10) 0;
     margin: var(--p50) 0;
     border-radius: var(--p30);
     text-align: center;
-    background-color:rgba(48, 48, 234, 0.767);
-    background-color:lightseagreen;
+    background-color:var(--lightblue);
     font-weight: bold;
-    transition: 1s ease;
+    transition: 0.5s ease;
     border: 1px solid var(--lightblue);
 }
 .about-sec .about-right a:hover{
@@ -276,6 +282,7 @@ h1,h2,h3,h4{
     background-color: transparent;
 }
 /* ==========================features-sec=================== */
+
 .features .feature-head {
     text-align: center;
 }
@@ -285,82 +292,110 @@ h1,h2,h3,h4{
 }
 .feature-head p{
     font-size: var(--f40);
-    font-weight: 900;
+    font-weight: 700;
     letter-spacing: 2px;
+    color: var(--black);
+    font-family:sans-serif;
 }
 /* =========================== */
 .feature-slide{
-    width: calc();
+    padding: 50px 15px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 20px;
 }
 .feature-slide .slides{
-    width: 300px;
-    height: 600px;
-    border: 2px solid;
+    width: 350px;
+    height: 500px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.15);
+    overflow: hidden;
 }
-/* =======================media query========================== */
-@media (max-width:576px){
-    .header .navbar{
-        justify-content: space-between;
-        padding: 0 var(--p10);
-    }
-    .header .navbar .nav-right ul,.header .navbar .nav-right form{
-        display: none;
-    }
-    .header .navbar .nav-right .setting {
-        font-size: var(--f20);
-        border: 1px solid var(--black);
-        padding: var(--p5) var(--p10);
-        border-radius: var(--p10);
-        margin-left: var(--p20);
-        background-color: var(--lightblue);
-        color:var(--white);
-        display: block;
-    }
-    .main .main-heading{
-        padding: var(--p20);
-    }
-    .main .main-heading h1{
-        font-size:var(--f40);
-    }
-    .main .main-heading p{
-        font-size:var(--f14);
-    }
-    .main .main-heading a{
-        margin: var(--p20) 0;
-    }
-    
+.feature-slide img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    vertical-align: middle;
+    transition: 0.5s ease-in-out;
+}
+.feature-slide .slides .img-class{
+    overflow: hidden;
+}
+.feature-slide .slides img:hover{
+ transform: scale(1.1);
+ cursor: pointer;
+}
+.data-class{
+    padding: var(--p20) var(--p20);
+}
+.data-class ul{
+    list-style: none;
+    display: flex;
+    color:rgb(230, 168, 11);
+    gap: var(--p5);
+    font-size: 12px;
+}
+.data-class ul .rating,p{
+    color: grey;
+    font-size: var(--f18);
+}
+.data-class .place a{
+    color:black;
+    font-size:22px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin: 10px 0;
+    display: block;
+}
+.data-class .blue{
+    color: var(--lightblue);
+}
+.data-class .Location{
+    font-size: var(--f18);
+    margin: 0 5px;
+}
+.data-class .dollor{
+    margin: 15px 0;
+    font-weight: bold;
+}
+.data-class .dollor .big-font{
+    font-size: var(--f25);
+    margin: 0 5px;
+}
+.data-class .Explore{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--f18);
+}
+.data-class .blue .fa-arrow-right{
+    margin-left: 5px;
+    color: green;
+}
+.slider-master{
+    display: flex;
+}
+.feature-slide{
+    animation: slider 10s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
 }
 
-/* ======================2ns media=========================== */
-@media (min-width:576px) and (max-width:800px) {
-    .header .navbar{
-        justify-content: space-between;
-        padding: 0 var(--p30);
+@keyframes slider {
+    0%{
+        transform: translateX(0);
     }
-    .header .navbar .nav-right ul,.header .navbar .nav-right form{
-        display: none;
+    20%{
+        transform: translateX(-20%);
     }
-    .header .navbar .nav-right .setting {
-        font-size: var(--f20);
-        border: 1px solid var(--black);
-        padding: var(--p5) var(--p10);
-        border-radius: var(--p10);
-        margin-left: var(--p20);
-        background-color: var(--lightblue);
-        color: white;
-        display: block;
+    40%{
+        transform: translateX(-40%);
     }
-    .main .main-heading h1{
-        font-size:var(--f50);
+    60%{
+        transform: translateX(-60%);
     }
-    .main .main-heading p{
-        font-size: var(--f18);
+    80%{
+        transform:translateX(-80%);
     }
-    .main .main-heading a{
-        margin: var(--p20) 0;
-    }
-    .main .main-heading{ 
-        padding:var(--p50);
+    100%{
+        transform: translateX(-100%);
     }
 }
-/* =======================header-colse======================= */
