@@ -125,6 +125,77 @@
 .container-des{
     gap: 5px;
 }
+/* ======================service-sec========== */
+.service-class{
+    padding: 0 20px;
+}
+.service-heading{
+    margin-bottom: 40px;
+}
+.service-heading h1{
+    font-size: var(--f30);
+}
+.service-heading p{
+    font-size: var(--f20);
+}
+.service-body{
+    grid-template-columns: repeat(1,1fr);
+}
+.box1{
+ width: 290px;
+ height: 300px;
+ margin: 0;
+}
+.box1 a{
+    padding: 0px;
+    gap: 10px;
+}
+.box1 .bold-heading{
+    font-size: var(--f25);
+}
+.box1 .service-description{
+    font-size: var(--f14);
+    font-weight: 500;
+    line-height: 30px;
+}
+/* ======================features-sec2====== */
+
+.tour-features .tour-container{
+    padding:0 0px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin: 80px auto;
+    width: 90%;
+}
+.tour-container .tour-left{
+    width: 100%;
+    height:300px;
+}
+.tour-container .tour-right{
+    width: 100%;   
+    padding: 0;
+}
+.tour-right h1{
+    margin-top: 50px;
+    font-size: var(--f25);
+}
+.tour-right .sub-heading{
+    font-size: var(--f30);
+}
+.tour-right .para{
+    line-height: 25px;
+    margin-bottom: 50px;
+}
+.tour-right .speciality{
+    margin: 0px 0;
+}
+.tour-right .speciality .fa-certificate, .fa-money-bill-wave{
+    padding:15px;
+} 
+.speciality .bold-sub-heading{
+    margin-left: 20px;
+}
+
 
 }
 
@@ -140,7 +211,7 @@
 
 
 
-/* ======================2ns media=========================== */
+/* ======================2nd media=========================== */
 @media (min-width:576px) and (max-width:800px) {
     .header .navbar{
         justify-content: space-between;
@@ -249,6 +320,75 @@
 .container-des{
     gap: 5px;
 }
+/* ======================service-sec========== */
+.service-class{
+    padding: 0 20px;
+}
+.service-heading h1{
+    font-size: var(--f35);
+}
+.service-heading p{
+    font-size: var(--f35);
+}
+.service-body{
+    grid-template-columns: repeat(2,1fr);
+    place-content: center;
+}
+.service-body :nth-of-type(3){
+     grid-column: 1 / span 2;
+    justify-self: center;
+}
+.box1{
+    width: 320px;
+    height: 300px;
+    margin-bottom: 0;
+}
+.box1 a{
+ padding: 20px;
+}
+.box1 .service-description{
+    font-size: var(--f14);
+    line-height: 20px;
+}
+/* ======================features-sec2====== */
+
+.tour-features .tour-container{
+    padding:0 0px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin: 80px auto;
+    width: 90%;
+}
+.tour-container .tour-left{
+    width: 100%;
+    height:100vh;
+}
+.tour-container .tour-right{
+    width: 100%;   
+    padding: 0;
+}
+.tour-right h1{
+    margin-top: 50px;
+    font-size: var(--f25);
+}
+.tour-right .sub-heading{
+    font-size: var(--f30);
+}
+.tour-right .para{
+    line-height: 25px;
+    margin-bottom: 50px;
+}
+.tour-right .speciality{
+    margin: 0px 0;
+}
+.tour-right .speciality .fa-certificate, .fa-money-bill-wave{
+    padding:15px;
+} 
+.speciality .bold-sub-heading{
+    margin-left: 20px;
+}
+
+
 }
 
 
@@ -258,9 +398,11 @@
 
 
 
-/* ====================3rd media================== */
- @media (min-width:801px) and (max-width:1025px) {
 
+
+
+/* ====================3rd media================== */
+ @media (min-width:801px) and (max-width:1024px) {
     .main-heading h1{
         font-size:var(--f50);
     }
@@ -274,65 +416,121 @@
         padding:var(--p50);
     }
 /* ======================================= */
-.form-sec .form-tour{
-    width: 100%;
-    gap: 10px;
-}
-.form-sec .form-tour{
-    margin: 0 15px;        
-}
-.form-sec .form-tour .find-btn button{
-    width: 100%;
-    margin-top: 20px;
+    .form-sec .form-tour{
+        width: 100%;
+        gap: 10px;
+    }
+    .form-sec .form-tour{
+        margin: 0 15px;        
+    }
+    .form-sec .form-tour .find-btn button{
+        width: 100%;
+        margin-top: 20px;
+        
+    }
+    /* ================about-sec===================== */
+    .about-sec {
+        width: 90%;
+    }
+    .about-left{
+        width: 50%; 
+    }
+    .about-sec .about-right{
+        width: 50%;
+        padding: 0;
+    }
+    .about-sec .about-right #plan-head{
+        font-size:var(--f30);
+    }
+    .about-sec .about-right .para{
+        line-height: 25px;
+    }
+    .about-sec .about-right p{
+        margin-top: var(--p5);
+    }
+        
+    /* ======================= statistics-sec ============ */
+    .statistics-container{
+        width: 100vw;
+        height: 70vh;
+    }
+
+    .statistics-head h1{
+        font-size: var(--f40);
+    }
+    .statistics-head .exp{
+        font-size: var(--f40);
+    }
+    .statistics-body{
+        margin-top: 50px;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .statistics-body .icon{
+        font-size: var(--f30);
+    }
+    .statistics-body .num{
+        font-size: var(--f40);
+    }
+    .statistics-body .sub-des{
+        font-size: var(--f16);
+    }
+    .container-des{
+        gap: 5px;
+    }
+    /* ======================service-sec========== */
+    .service-class{
+        padding: 0 20px;
+        margin-bottom: 100px;
+    }
+    .service-heading{
+        margin-bottom: 50px;
+    }
+    .service-body{
+        grid-template-columns: repeat(3,1fr);
+    }
     
+    .box1{
+        width: 300px;
+        height: 300px;
+        margin: 0;
+       }
+       .box1 a{
+           gap: 10px;
+       }
+       .box1 .bold-heading{
+           font-size: var(--f25);
+       }
+       .box1 .service-description{
+           font-size: var(--f14);
+           font-weight: 500;
+           line-height: 30px;
+       }
+       /* ======================features-sec2====== */
+
+.tour-features .tour-container{
+   width: 96%;
+   height: 70%;
 }
-/* ================about-sec===================== */
-.about-sec {
-    width: 90%;
+.tour-container .tour-left{
+    height:500px;
 }
-.about-left{
-    width: 50%; 
+.tour-container .tour-right{
+    padding:40px 0 40px 40px;
 }
-.about-sec .about-right{
-    width: 50%;
-    padding: 0;
+.tour-right .para{
+    word-spacing: 0;
+
 }
-.about-sec .about-right #plan-head{
-    font-size:var(--f30);
+.tour-right .speciality{
+    margin: 0px 0;
 }
-.about-sec .about-right .para{
-    line-height: 25px;
-}
-.about-sec .about-right p{
-    margin-top: var(--p5);
-}
-    
-/* ======================= statistics-sec ============ */
-.statistics-container{
-    width: 100vw;
-    height: 70vh;
+.tour-right .speciality .fa-certificate, .fa-money-bill-wave{
+    padding:15px;
+} 
+.speciality .bold-sub-heading{
+    margin-left: 20px;
 }
 
-.statistics-head h1{
-    font-size: var(--f40);
+
 }
-.statistics-head .exp{
-    font-size: var(--f40);
-}
-.statistics-body{
-    margin-top: 50px;
-    grid-template-columns: repeat(4,1fr);
-}
-.statistics-body .icon{
-    font-size: var(--f30);
-}
-.statistics-body .num{
-    font-size: var(--f40);
-}
-.statistics-body .sub-des{
-    font-size: var(--f16);
-}
-.container-des{
-    gap: 5px;
-}
- }
+/* ================================ */
