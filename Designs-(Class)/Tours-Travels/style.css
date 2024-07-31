@@ -1,10 +1,11 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto+Condensed&family=Sevillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto+Condensed&family=Sevillana&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
 
 :root{
     --font-cursive:"Sevillana", cursive;
     --font-roboto:"Roboto Condensed", sans-serif;
     --font-great:"Great Vibes", cursive;
+    --font-ubuntu:"Ubuntu Sans", sans-serif;;
 /* ======================================================= */
     --f10:10px;
     --f14:14px;
@@ -41,6 +42,7 @@
     --lightgrey:rgba(185, 180, 180, 0.404);
     --lightblue:rgb(37, 37, 223);
     --lightseagreen:lightseagreen;
+    --primary_blue:#336dd5;
 }
 *{
     margin: 0;
@@ -343,8 +345,8 @@ a{
     font-size: var(--f40);
     font-weight: 700;
     letter-spacing: 2px;
-    color: var(--black);
-    font-family:sans-serif;
+    color:rgba(0, 0, 0, 0.958);
+    font-family:var(--font-ubuntu);
 }
 /* =========================== */
 .feature-slide{
@@ -425,7 +427,7 @@ a{
     display: flex;
 }
 .feature-slide{
-    animation: slider 10s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    animation: slider 15s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
 }
 
 @keyframes slider {
@@ -448,4 +450,114 @@ a{
         transform: translateX(-100%);
     }
 }
-/* ============================== */
+/* ======================= statistics-sec ============ */
+.statistics-container{
+    width: 100vw;
+    height: 80vh;
+    background: url(https://p.w3layouts.com/demos_new/template_demo/05-02-2022/tours-liberty-demo_Free/1559675193/web/assets/images/map.png) rgba(7, 7, 51, 0.912);
+    background-position: center;
+    margin: 80px 0;
+    color: var(--white);
+    display: gird;
+    place-content: center;
+    font-family: var(--font-ubuntu);
+}
+.statistics-head{
+    text-align: center;
+}
+.statistics-head h1{
+    font-size: var(--f40);
+    color:var(--lightseagreen);
+}
+.statistics-head .exp{
+    font-size: var(--f40);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.statistics-body{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(4,300px);
+    place-content: center;
+}
+.statistics-body .icon{
+    font-size: var(--f30);
+    background-color: rgba(255, 255, 255, 0.292);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: grid;
+    place-content: center;
+}
+.statistics-body .num{
+    font-size: var(--f50);
+    font-weight: 700;
+}
+.statistics-body .sub-des{
+    color: var(--white);
+    font-size: var(--f18);
+}
+.container-des{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 10px;
+}
+/* ======================service-sec========== */
+.service-class{
+    display: grid;
+    place-content: center;
+}
+.service-heading h1{
+    font-size: var(--f35);
+}
+.service-heading p{
+    letter-spacing: 0px;
+    font-size: var(--f35);
+}
+.service-body{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+.box1{
+ width: 400px;
+ height: 350px;
+ background-color: #f2f5f7;
+ margin: 50px 0;
+ border-radius:5px;
+ box-shadow: 0 0 10px rgba(128, 128, 128, 0.252);
+ transition: 0.5s ease-in-out;
+}
+.box1 i{
+    width: 80px;
+    height: 80px;
+    font-size: var(--f30);
+    color: var(--white);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    background-color:var(--primary_blue);
+}
+.box1 a{
+    height: 100%;
+    font-family: var(--font-ubuntu);
+    font-weight: 700;
+    color:rgba(0, 0, 0, 0.886);
+    display: grid;
+    place-items: center;
+    padding:40px ;
+    text-align: center;
+    gap: 20px;
+}
+.box1 .bold-heading{
+    font-size: var(--f30);
+}
+.box1 .service-description{
+    font-size: var(--f16);
+    font-weight: 500;
+    line-height: 30px;
+}
+.box1:hover{
+ background-color: var(--white);   
+}

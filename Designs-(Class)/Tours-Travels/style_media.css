@@ -94,10 +94,51 @@
 .data-class .place a{
     font-size:16px;
 }
-
-/* =========================== */
+/* ======================= statistics-sec ============ */
+.statistics-container{
+    height: 100vh;
+}
+.statistics-head h1{
+    font-size: var(--f30);
+}
+.statistics-head .exp{
+    font-size: var(--f30);
+}
+.statistics-body{
+    margin-top: 60px;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+    padding: 0 20px;
+    
+}
+.statistics-body .icon{
+    font-size: var(--f25);
+    width: 60px;
+    height: 60px;
+}
+.statistics-body .num{
+    font-size: var(--f30);
+}
+.statistics-body .sub-des{
+    font-size: var(--f16);
+}
+.container-des{
+    gap: 5px;
+}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================2ns media=========================== */
 @media (min-width:576px) and (max-width:800px) {
@@ -178,7 +219,44 @@
 .feature-head p{
     font-size: var(--f25);
 }
+/* ======================= statistics-sec ============ */
+.statistics-container{
+    width: 100vw;
+    height: 70vh;
 }
+
+.statistics-head h1{
+    font-size: var(--f30);
+}
+.statistics-head .exp{
+    font-size: var(--f30);
+}
+.statistics-body{
+    margin-top: 50px;
+    grid-template-columns: repeat(4,1fr);
+}
+.statistics-body .icon{
+    font-size: var(--f25);
+    width: 60px;
+    height: 60px;
+}
+.statistics-body .num{
+    font-size: var(--f40);
+}
+.statistics-body .sub-des{
+    font-size: var(--f16);
+}
+.container-des{
+    gap: 5px;
+}
+}
+
+
+
+
+
+
+
 
 /* ====================3rd media================== */
  @media (min-width:801px) and (max-width:1025px) {
@@ -229,5 +307,32 @@
     margin-top: var(--p5);
 }
     
+/* ======================= statistics-sec ============ */
+.statistics-container{
+    width: 100vw;
+    height: 70vh;
+}
 
+.statistics-head h1{
+    font-size: var(--f40);
+}
+.statistics-head .exp{
+    font-size: var(--f40);
+}
+.statistics-body{
+    margin-top: 50px;
+    grid-template-columns: repeat(4,1fr);
+}
+.statistics-body .icon{
+    font-size: var(--f30);
+}
+.statistics-body .num{
+    font-size: var(--f40);
+}
+.statistics-body .sub-des{
+    font-size: var(--f16);
+}
+.container-des{
+    gap: 5px;
+}
  }
