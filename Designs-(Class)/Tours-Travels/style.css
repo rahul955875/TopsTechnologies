@@ -43,6 +43,7 @@
     --lightblue:rgb(37, 37, 223);
     --lightseagreen:lightseagreen;
     --primary_blue:#336dd5;
+    --light:#f2f5f7;
 }
 *{
     margin: 0;
@@ -284,7 +285,7 @@ a{
     padding: var(--p50) 0;
 }
 .about-sec .about-right h1{
-    font-size: var(--f30);
+    font-size: var(--f40);
     color: var(--lightblue);
     text-transform: capitalize;
 }
@@ -577,14 +578,14 @@ a{
 }
 .tour-container .tour-left{
     width: 50%;
-    height:100%;
+    height:90vh;
     background: url(https://p.w3layouts.com/demos_new/template_demo/05-02-2022/tours-liberty-demo_Free/1559675193/web/assets/images/about2.jpg)no-repeat;
     background-size: cover;
     border-radius: 10px;
 }
 .tour-container .tour-right{
     width: 50%;   
-    padding: 20px 0 0 50px;
+    padding: 50px 0 0 50px;
 }
 .tour-right h1{
     font-size: var(--f30);
@@ -673,26 +674,27 @@ a{
 .blog-data{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
     padding: 35px;
 
 }
 .blog-row1{
     display: flex;
     gap: 30px;
-    font-size: var(--f18);
+    font-size: var(--f16);
 }
 .blog-row1 i{
     color: var(--primary_blue);
 }
 .blog-data .blog-name a{
-    font-size:27px;
+    font-size:var(--f25);
     font-weight: 600;
     color: black;
     transition: 0.5s ease-in-out;
 }
 .blog-data p{
     line-height: 30px;
+    font-size: var(--f16);
 }
 .blog-data .blog-button{
     width: 150px;
@@ -730,4 +732,107 @@ a{
 }
 .blog-img img:hover{
     transform: scale(1.1);
+}
+/* ===============================discount-container======== */
+.discount-class{
+    width: 100vw;
+    height: 100vh;
+    padding: 100px 90px;
+} 
+.discount-container{
+    font-family: var(--font-ubuntu);
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+ }
+ .discount-left{
+     width: 90%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.28);
+ }
+ .discount-left img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+ }
+ .discount-right{
+    display: grid;
+    place-content: center;
+ }
+ .discount-right .dis-30{ 
+    color:var(--black);
+    font-weight: 700;
+    word-spacing: 2px;
+    font-size: var(--f18);
+ }
+ .dis-heading{
+    font-size:var(--f35);
+    margin: 6px 0 20px 0;
+    font-weight: 800;
+    text-transform: uppercase;
+ }
+ .discount-right .para{
+    line-height:var(--p30);
+    margin-bottom: var(--p30);
+ }
+.discount-right form{
+    display: flex;
+    margin: 20px 0 40px 0;
+}
+.discount-right form input{
+    width: 70%;
+    padding: 20px 20px;
+    border-radius: 30px 0 0 30px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.19);
+    font-size:var(--f16);
+}
+.discount-right form button{
+    width: 30%;
+    border: none;
+    padding: 20px 20px;
+    background-color: var(--primary_blue);
+    border-radius: 0 30px 30px 0;
+    color: var(--white);
+    font-weight: 700;
+    font-size: var(--f16);
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.19);   
+}
+.discount-right form button:hover{
+background-color: red;
+}
+.apps{
+    display: flex;
+    gap: 15px;
+    font-size:var(--f35);
+}
+.apps span{
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-content: center;
+    color: var(--primary_blue);
+}
+.apps span:hover{
+color: red;
+border: 2px solid blueviolet;
+border-radius: 50%;
+background-color: var(--black);
+}
+
+/* ===========================footer-sec=========== */
+.footer-class{
+    width:100vw;
+    height: 70vh;
+    background-color: #0e2244;
+    padding: 80px;
+}
+.footer{
+    width: 80%;
+    margin:20px auto;
+    display: grid;
+    grid-template-columns:30% 20% 20% 30%;
 }

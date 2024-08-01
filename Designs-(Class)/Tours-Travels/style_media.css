@@ -21,6 +21,10 @@
         color:var(--white);
         display: block;
     }
+    .main, .main2, .main3, .main4{
+        height: calc(100vh - 57.6px);
+        margin-top: 57.6px;
+    }
     .main-heading{
         padding: var(--p20);
     }
@@ -170,6 +174,8 @@
 .tour-container .tour-left{
     width: 100%;
     height:300px;
+    background-size: cover;
+    background-position: center;
 }
 .tour-container .tour-right{
     width: 100%;   
@@ -237,6 +243,38 @@
     font-size:12px;
   
 }
+/* ===============================discount-container======== */
+.discount-class{
+    height:auto;
+    padding: 80px 0;
+} 
+.discount-container{
+    width:90%;
+    border-radius: 10px;
+    grid-template-columns: repeat(1,1fr);
+}
+.discount-left{
+    width: 100%;
+}
+.discount-right{
+    padding: 20px 0;
+ }
+ .dis-heading{
+    font-size:var(--f30);
+ }
+.discount-right form{
+    flex-direction: column;
+}
+.discount-right form input{
+    width: 100%;
+    border-radius: 30px;
+}
+.discount-right form button{
+    width: 100%;
+    border-radius:30px;
+    margin-top: 20px;
+    padding: 15px 20px ;   
+}
 
 
 }
@@ -272,6 +310,11 @@
         color: white;
         display: block;
     }
+    .main, .main2, .main3, .main4{
+        height: calc(100vh - 56.8px);
+        margin-top: 56.8px;
+    }
+    
     .main-heading h1{
         font-size:var(--f50);
     }
@@ -472,7 +515,34 @@
 .blog-box:nth-child(3){
     grid-column: 1 / span 2 !important;
 }
-
+/* ===============================discount-container======== */
+.discount-class{
+    height:auto;
+    padding: 80px 0;
+} 
+.discount-container{
+    width:90%;
+    border-radius: 10px;
+    grid-template-columns: repeat(1,1fr);
+}
+.discount-left{
+    width: 100%;
+}
+.discount-right{
+    padding: 20px 0;
+ }
+ .dis-heading{
+    font-size:var(--f30);
+ }
+ 
+.discount-right form input{
+    padding:17px;
+    
+}
+.discount-right form button{
+    padding:0;
+       
+}
 }
 
 
@@ -499,6 +569,7 @@
     .main-heading{ 
         padding:var(--p50);
     }
+    
 /* ======================================= */
     .form-sec .form-tour{
         width: 100%;
@@ -531,6 +602,9 @@
     }
     .about-sec .about-right p{
         margin-top: var(--p5);
+    }
+    .about-sec .about-right a{
+        margin: 20px 0;
     }
         
     /* ======================= statistics-sec ============ */
@@ -590,7 +664,9 @@
            line-height: 30px;
        }
        /* ======================features-sec2====== */
-
+.featured-tours{
+    margin-top: 80px;
+}
 .tour-features .tour-container{
    width: 96%;
    height: 70%;
@@ -647,6 +723,24 @@
     padding:7px 10px;
     font-size:12px;
     
+}
+/* ===============================discount-container======== */
+.discount-class{
+    height:auto;
+    padding: 80px 0;
+} 
+.discount-container{
+    width:90%;
+    grid-template-columns: repeat(2,1fr);
+}
+ .dis-heading{
+    font-size:var(--f30);
+ }
+.discount-right form input{
+    padding:10px;
+}
+.discount-right form button{
+    padding:10px ;   
 }
 
 }
