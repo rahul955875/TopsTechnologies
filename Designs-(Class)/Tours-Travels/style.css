@@ -828,11 +828,91 @@ background-color: var(--black);
     width:100vw;
     height: 70vh;
     background-color: #0e2244;
-    padding: 80px;
+    padding: 80px 60px;
 }
 .footer{
     width: 80%;
     margin:20px auto;
     display: grid;
-    grid-template-columns:30% 20% 20% 30%;
+    grid-template-columns:30% 15% 25% 30%;
+    color:var(--white);
+    font-family: var(--font-ubuntu);
+}
+.links{
+    justify-self: center;
+}
+.f-head{
+    font-size: var(--f20);
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.comman-para{
+    display: grid;
+    gap: 20px;
+}
+.comman-para .f-description{
+    font-size:15px;
+    color:rgba(255, 255, 255, 0.776);
+}
+.contacts .comman-para :nth-child(1){
+    line-height: 25px;
+}
+.contacts .comman-para :nth-child(3){
+    margin-bottom: 40px;
+}
+.contacts a, .links a{
+    color:rgba(255, 255, 255, 0.476);
+}
+.footer .social-icon{
+    display: flex;
+    gap: 10px;
+}
+.footer .social-icon a{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--white);
+    color: var(--black);
+    display: grid;
+    place-content: center;
+}
+.links a{
+    font-size: 15px;
+}
+.subscribe .f-btn button, .f-email input{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+}
+.f-email input{
+    font-size: var(--f16);
+    text-align: center;
+}
+.f-btn button{
+    background-color: var(--primary_blue);
+    color: var(--white);
+    font-weight: 700;
+    font-size: var(--f16);
+}
+.sub-info{
+    font-size: var(--f14);
+    line-height: 30px;
+    color:rgba(255, 255, 255, 0.717);
+}
+.copyright-info{
+    text-align: center;
+}
+.copyright-info .para{
+    color: var(--white);
+    font-size: var(--f16);
+    margin-top: 50px;   
+    word-spacing: 1px;
+    font-family: var(--font-ubuntu);
+}
+.copyright-info .para a{
+    color: var(--primary_blue);
 }
