@@ -131,6 +131,7 @@ a{
     width: 400vw;
     display: flex;
     animation: slider-head 20s cubic-bezier(0.165, 0.84, 0.44, 1) infinite 2s;
+    transition: 1s ease;
     scroll-behavior: smooth;
 }
 .main{
@@ -564,7 +565,6 @@ a{
 /* ======================features-sec2====== */
 .tour-features{
     width: 100vw;
-    height: 100vh;
     font-family: var(--font-ubuntu);
 }
 .tour-features .tour-container{
@@ -624,4 +624,110 @@ a{
     margin-top: 10px;
     margin-left: 20px;
     line-height: 25px;
+}
+/* ===============================blog-sec=============== */
+.blog-class{
+    margin-top: 30px;
+    font-family: var(--font-ubuntu);
+    background-color: #f2f5f7;
+    padding: 80px;
+}
+.blog{
+    width: 90%;
+    margin: 0 auto;
+}
+.blog-head{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.blog .blog-head h1{
+    color: var(--lightblue);
+}
+.blog .blog-head p{
+    color:var(--black);
+    font-weight: 600;
+}
+.blog-body{
+    width: 96%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin: 0 auto;
+}
+.blog-box {
+    width: 100%;
+    border-radius:10px;
+    overflow: hidden;
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.111);
+    position: relative;
+}
+.blog-box .blog-img{
+    overflow: hidden;
+}
+.blog-img a img{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease-in-out;
+}
+.blog-data{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 35px;
+
+}
+.blog-row1{
+    display: flex;
+    gap: 30px;
+    font-size: var(--f18);
+}
+.blog-row1 i{
+    color: var(--primary_blue);
+}
+.blog-data .blog-name a{
+    font-size:27px;
+    font-weight: 600;
+    color: black;
+    transition: 0.5s ease-in-out;
+}
+.blog-data p{
+    line-height: 30px;
+}
+.blog-data .blog-button{
+    width: 150px;
+    border: 1px solid var(--lightblue);
+    background-color: var(--lightblue);
+    text-align:center;
+    padding: 15px 0px;
+    border-radius: 40px;
+    transition: 0.5s ease-in-out;
+}
+.blog-data .blog-button a{
+    color: white;
+    font-size: var(--f18);
+    font-weight: 700;
+    transition: 0.5s ease-in-out;
+}
+.blog-img .badge{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 20px 10px;
+    background: var(--primary_blue);
+    color: #fff;
+    font-size:var(--f14);
+    font-weight: 600;
+    text-transform: uppercase;
+    border-top-right-radius: 10px
+}
+.blog-button:hover{
+    background-color:transparent;
+}
+.blog-button:hover a, .blog-data:hover .blog-name a{
+    color:var(--lightblue);
+    
+}
+.blog-img img:hover{
+    transform: scale(1.1);
 }

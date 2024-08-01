@@ -195,6 +195,48 @@
 .speciality .bold-sub-heading{
     margin-left: 20px;
 }
+/* ===============================blog-sec=============== */
+.blog-class{
+    padding: 0;
+}
+.blog{
+    width: 96%;
+    padding: 50px 0;
+}
+
+.blog-body{
+    width: 96%;
+    grid-template-columns: repeat(1,1fr);
+}
+.blog-data{
+    gap: 20px;
+    padding:30px;
+
+}
+.blog-row1{
+    gap:15px;
+    font-size: var(--f14);
+}
+
+.blog-data .blog-name a{
+    font-size:20px;
+}
+.blog-data p{
+    line-height: 25px;
+}
+.blog-data .blog-button{
+    width: 120px;
+    padding: 12px 0px;
+
+}
+.blog-data .blog-button a{
+    font-size: var(--f16);
+}
+.blog-img .badge{
+    padding:7px 10px;
+    font-size:12px;
+  
+}
 
 
 }
@@ -387,7 +429,49 @@
 .speciality .bold-sub-heading{
     margin-left: 20px;
 }
+/* ===============================blog-sec=============== */
+.blog-class{
+    padding: 0;
+}
+.blog{
+    width: 96%;
+    padding: 50px 0;
+}
 
+.blog-body{
+    width: 94%;
+    grid-template-columns: repeat(2,1fr);
+}
+
+
+.blog-row1{
+    gap:15px;
+    font-size: var(--f14);
+}
+
+.blog-data .blog-name a{
+    font-size:20px;
+}
+.blog-data p{
+    line-height: 25px;
+}
+.blog-data .blog-button{
+    width: 120px;
+    padding: 12px 0px;
+
+}
+.blog-data .blog-button a{
+    font-size: var(--f16);
+}
+.blog-img .badge{
+    padding:7px 10px;
+    font-size:12px;
+    
+}
+
+.blog-box:nth-child(3){
+    grid-column: 1 / span 2 !important;
+}
 
 }
 
@@ -530,7 +614,40 @@
 .speciality .bold-sub-heading{
     margin-left: 20px;
 }
+/* ===============================blog-sec=============== */
+.blog-class{
+    padding: 0;
+}
+.blog{
+    width: 96%;
+    padding: 50px 0;
+}
+.blog-body{
+    width: 96%;
+    
+}
 
+.blog-row1{
+    gap:15px;
+    font-size: var(--f14);
+}
+.blog-data{
+    gap: 15px;
+}
+.blog-data .blog-name a{
+    font-size:24px;
+}
+.blog-data p{
+    line-height: 25px;
+}
+.blog-data .blog-button a{
+    font-size: var(--f16);
+}
+.blog-img .badge{
+    padding:7px 10px;
+    font-size:12px;
+    
+}
 
 }
 /* ================================ */
