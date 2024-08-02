@@ -436,17 +436,32 @@ a{
     0%{
         transform: translateX(0);
     }
+    10%{
+        transform: translateX(-20%);
+    }
     20%{
         transform: translateX(-20%);
+    }
+    30%{
+        transform: translateX(-40%);
     }
     40%{
         transform: translateX(-40%);
     }
+    50%{
+        transform: translateX(-60%);
+    }
     60%{
         transform: translateX(-60%);
     }
+    70%{
+        transform:translateX(-80%);
+    }
     80%{
         transform:translateX(-80%);
+    }
+    90%{
+        transform: translateX(-100%);
     }
     100%{
         transform: translateX(-100%);
@@ -894,9 +909,15 @@ background-color: var(--black);
 }
 .f-btn button{
     background-color: var(--primary_blue);
+    border: 1px solid var(--primary_blue) !important;
     color: var(--white);
     font-weight: 700;
     font-size: var(--f16);
+    transition: 0.3s ease-in-out;
+}
+.f-btn button:hover{
+    background-color: transparent;
+    color: var(--primary_blue);
 }
 .sub-info{
     font-size: var(--f14);

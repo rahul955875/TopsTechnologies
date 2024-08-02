@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://img.freepik.com/premium-vector/colorful-bird-gradient-illustration-logo-concept_1253202-5761.jpg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style_media.css" />
+    <title>About-us</title>
+    <style>
+      .header-img {
+        width: 100vw;
+        height: 55vh;
+        margin-bottom: 30px;
+      }
+      .header-img .banner-about {
+        width: 100%;
+        height: 100%;
+        background: url(https://p.w3layouts.com/demos_new/template_demo/05-02-2022/tours-liberty-demo_Free/1559675193/web/assets/images/inner-banner.jpg);
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: cover;
+        overflow: hidden;
+        position: relative;
+      }
+      .nav-button {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+      }
+      .nav-button h1 {
+        font-size: 40px;
+        margin-bottom: 10px;
+      }
+      ul {
+        list-style: none;
+      }
+      #a-home {
+        color: black;
+        font-weight: 700;
+      }
+      .nav-button ul {
+        display: flex;
+        gap: 10px;
+      }
+      .about-sec {
+        height: 80vh;
+      }
+      .about-sec .about-right a {
+        margin: 20px 0;
+      }
+      .a-social {
+        background-color: blue;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: grid;
+        place-content: center;
+      }
+      .a-social a {
+        color: white;
+      }
+      .blog-body {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .blog-data {
+        text-align: center;
+        padding: 10px;
+      }
+      .blog-row1 {
+        gap: 10px;
+        place-content: center;
+      }
+      .blog-box .blog-data .blog-name a {
+        font-size: 20px;
+      }
+      .feature-slide {
+        width: 80%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        animation: none;
+        margin: 10px auto;
+      }
+      .features{
+        background-color: #f2f5f7;
+      }
+      .feature-slide .slides {
+        width: 100%;
+        height:100%;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.15);
+        overflow: hidden;
+      }
+      .data-class ul img {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+      }
+      .data-class{
+      }
+      .head-comment{
+        padding: 30px 30px;
+        background-color: #f2f5f7;
+      }
+      .head-comment p{
+        font-size: 14px;
+        padding: 10px;
+        /* color: white; */
+      }
+      /* ========================================== */
+      @media (max-width: 576px) {
+        .header-img {
+          height: 35vh;
+          margin-bottom: 50px;
+        }
+
+        .about-sec {
+          height: 100vh;
+        }
+        .statistics {
+          margin-top: 150px;
+        }
+        .blog-body {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+      @media (min-width: 576px) and (max-width: 800px) {
+        .header-img {
+          height: 40vh;
+          margin-bottom: 70px;
+        }
+        .statistics {
+          margin-top: 400px;
+        }
+        .blog-body {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .blog-box:nth-child(3) {
+          grid-column: 1 / span 1 !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="header">
+      <div class="navbar">
+        <div class="nav-left">
+          <h1>Tours</h1>
+        </div>
+        <div class="nav-right">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="" class="active">About</a></li>
+            <li><a href="">Tour</a></li>
+            <li>
+              <a href="">Blog<i class="fa-solid fa-angle-down"></i></a>
+            </li>
+            <li>
+              <a href="">Pages<i class="fa-solid fa-angle-down"></i></a>
+            </li>
+            <li><a href="">Contact</a></li>
+          </ul>
+          <form action="#">
+            <input type="text" name="search" placeholder="Enter Keyword" />
+            <button type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+          <span class="moon"><i class="fa-regular fa-moon"></i></span>
+          <span class="setting"><i class="fa-solid fa-bars"></i></span>
+        </div>
+      </div>
+    </section>
+    <section class="header-img">
+      <div class="banner-about">
+        <div class="nav-button">
+          <h1>About-Us</h1>
+          <ul class="nav-btn">
+            <li><a id="a-home" href="index.html">Home</a></li>
+            <li><i class="fas fa-angle-right mx-2"></i></li>
+            <li><a href="#" class="active">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="About-us">
+      <div class="about-sec">
+        <div class="about-left">
+          <img
+            src="https://p.w3layouts.com/demos_new/template_demo/05-02-2022/tours-liberty-demo_Free/1559675193/web/assets/images/about3.jpg"
+            alt="img-tour"
+          />
+        </div>
+        <div class="about-right">
+          <h1>About us</h1>
+          <span id="plan-head">World Best Travel Agency</span>
+          <p class="para">
+            Aptent taciti sociosqu ad litora conubia nostra, per inceptos
+            himenaeos. Aenean volutpat elementum ante, id eleifend eros luctus
+            sit.
+          </p>
+          <p class="para">
+            Aenean volutpat elementum ante, id eleifend eros luctus sit amet.
+            Eel tincidunt erat neque non ipsum. Ut sollicitudin pharetra enim.
+          </p>
+          <a href="#">Explore Now</a>
+        </div>
+      </div>
+    </section>
+    <section class="statistics">
+      <div class="statistics-container">
+        <div class="statistics-head">
+          <h1>Statistics</h1>
+          <div class="exp">We have over 10 years Experience</div>
+        </div>
+        <div class="statistics-body">
+          <div class="container-des">
+            <div class="icon">
+              <i class="fas fa-route"></i>
+            </div>
+            <div class="num">200+</div>
+            <p class="sub-des">Total Destinations</p>
+          </div>
+          <div class="container-des">
+            <div class="icon">
+              <i class="fas fa-smile"></i>
+            </div>
+            <div class="num">100+</div>
+            <p class="sub-des">Total Destinations</p>
+          </div>
+          <div class="container-des">
+            <div class="icon">
+              <i class="fas fa-medal"></i>
+            </div>
+            <div class="num">30+</div>
+            <p class="sub-des">Total Destinations</p>
+          </div>
+          <div class="container-des">
+            <div class="icon">
+              <i class="fas fa-umbrella-beach"></i>
+            </div>
+            <div class="num">130+</div>
+            <p class="sub-des">Total Destinations</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="blog-class">
+      <div class="blog">
+        <div class="blog-head service-heading">
+          <h1>Our Team</h1>
+          <p>Meet our Tours Agents</p>
+        </div>
+        <div class="blog-body">
+          <div class="blog-box">
+            <div class="blog-img">
+              <a href="">
+                <img
+                  src="https://p.w3layouts.com/demos_new/template_demo/05-02-2022/tours-liberty-demo_Free/1559675193/web/assets/images/team2.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="blog-data" style="background-color: aliceblue">
+              <div class="blog-name">
+                <a href="">Meyer Lson</a>
+              </div>
+              <div class="blog-row1">
+                <div class="a-social">
+                  <a href=""><span class="fab fa-facebook-f"></span></a>
+                </div>
+                <div class="a-social">
+                  <a href=""><span class="fab fa-twitter"></span></a>
+                </div>
+                <div class="a-social">
+                  <a href=""><span class="fab fa-linkedin-in"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blog-box">
+            <div class="blog-img">
+              <a href="">
+                <img
+                  src="https://p.w3layouts.com/demos_new/template_demo/05-02-2022/tours-liberty-demo_Free/1559675193/web/assets/images/team3.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="blog-data" style="background-color: aliceblue">
+              <div class="blog-name">
+                <a href="">Ali Meyer</a>
+              </div>
+              <div class="blog-row1">
+                <div class="a-social">
+                  <a href=""><span class="fab fa-facebook-f"></span></a>
+                </div>
+                <div class="a-social">
+                  <a href=""><span class="fab fa-twitter"></span></a>
+                </div>
+                <div class="a-social">
+                  <a href=""><span class="fab fa-linkedin-in"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blog-box">
+            <div class="blog-img">
+              <a href="">
+                <img
+                  src="https://p.w3layouts.com/demos_new/template_demo/05-02-2022/tours-liberty-demo_Free/1559675193/web/assets/images/team4.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="blog-data" style="background-color: aliceblue">
+              <div class="blog-name">
+                <a href="">Sam Mills</a>
+              </div>
+              <div class="blog-row1">
+                <div class="a-social">
+                  <a href=""><span class="fab fa-facebook-f"></span></a>
+                </div>
+                <div class="a-social">
+                  <a href=""><span class="fab fa-twitter"></span></a>
+                </div>
+                <div class="a-social">
+                  <a href=""><span class="fab fa-linkedin-in"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blog-box">
+            <div class="blog-img">
+              <a href="">
+                <img
+                  src="https://p.w3layouts.com/demos_new/template_demo/05-02-2022/tours-liberty-demo_Free/1559675193/web/assets/images/team1.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="blog-data" style="background-color: aliceblue">
+              <div class="blog-name">
+                <a href="">Lern Victor</a>
+              </div>
+              <div class="blog-row1">
+                <div class="a-social">
+                  <a href=""><span class="fab fa-facebook-f"></span></a>
+                </div>
+                <div class="a-social">
+                  <a href=""><span class="fab fa-twitter"></span></a>
+                </div>
+                <div class="a-social">
+                  <a href=""><span class="fab fa-linkedin-in"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="tour-features">
+      <div class="tour-container">
+        <div class="tour-left"></div>
+        <div class="tour-right">
+          <h1>Our Features</h1>
+          <div class="sub-heading">Why Choose Tours!</div>
+          <p class="para">
+            Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices
+            in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit.
+          </p>
+
+          <div class="speciality">
+            <i class="fas fa-certificate"></i>
+            <div>
+              <div class="bold-sub-heading">Professional and Certified</div>
+              <p class="para">
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit.
+              </p>
+            </div>
+          </div>
+          <div class="speciality">
+            <i class="fas fa-money-bill-wave"></i>
+            <div>
+              <div class="bold-sub-heading">Get Instant Tour Bookings</div>
+              <p class="para">
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="featured-tours">
+      <div class="features">
+        <div class="feature-head">
+          <h1>Testimonials</h1>
+          <p>Happy With Customers & Clients</p>
+        </div>
+        <div class="slider-master">
+          <div class="feature-slide">
+            <div class="slides">
+              <div class="img-class">
+                <div class="head-comment">
+                  <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet
+                  <p class="para">
+                    Lorem ipsum dolor sit amet elit. hic odio tenetur. ante
+                    ipsum primis in faucibus orci luctus et ultrices
+                    posuere,tesque libero ut justo Semper.
+                  </p>
+                </div>
+              </div>
+              <div class="data-class">
+                <ul>
+                  <li>
+                    <img
+                      src="https://p.w3layouts.com/demos_new/template_demo/05-02-2022/tours-liberty-demo_Free/1559675193/web/assets/images/testi2.jpg"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    Alexander sakura
+                    <p>subtitle</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
