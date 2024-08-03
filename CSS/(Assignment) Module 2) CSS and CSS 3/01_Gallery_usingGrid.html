@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Photo Gallery</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main {
+        width: 100vw;
+        height: fit-content;
+        display: flex;
+      }
+      .main .left {
+        width: 80%;
+        background-color: red;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .main .right {
+        width: 20%;
+        background-color: black;
+        color: white;
+        text-align: end;
+        padding: 50px 30px;
+        text-transform: uppercase;
+      }
+      .right h1 {
+        font-size: 25px;
+        margin-bottom: 70px;
+      }
+      .right .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-transform: uppercase;
+      }
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+      }
+     .right .socials{
+        display: flex;
+        gap: 15px;
+        justify-content: flex-end;
+        margin-top: 70px;
+      }
+      .right .socials i{
+        display: grid;
+        place-content: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: transparent;
+        transition: 0.5s ease-in-out;
+      }
+      .right .nav-links a:nth-child(1){
+        color: orange;
+      }
+      .right .nav-links a:hover{
+        color: orange;
+      }
+      .socials i:hover{
+        background-color: white;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="left">
+        <div class="container"><img src="" alt="" /></div>
+        <div class="container"><img src="" alt="" /></div>
+        <div class="container"><img src="" alt="" /></div>
+        <div class="container"><img src="" alt="" /></div>
+        <div class="container"><img src="" alt="" /></div>
+        <div class="container"><img src="" alt="" /></div>
+        <div class="container"><img src="" alt="" /></div>
+        <div class="container"><img src="" alt="" /></div>
+        <div class="container"><img src="" alt="" /></div>
+        <div class="container"><img src="" alt="" /></div>
+      </div>
+      <div class="right">
+        <div class="nav">
+          <h1>Shutter</h1>
+          <div class="nav-links">
+            <a id="active" href="#">Home</a>
+            <a href="#">Photos</a>
+            <a href="#">Bio</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="socials">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
