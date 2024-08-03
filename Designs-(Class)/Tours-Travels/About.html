@@ -16,141 +16,8 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style_media.css" />
+    <link rel="stylesheet" href="about.css" />
     <title>About-us</title>
-    <style>
-      .header-img {
-        width: 100vw;
-        height: 55vh;
-        margin-bottom: 30px;
-      }
-      .header-img .banner-about {
-        width: 100%;
-        height: 100%;
-        background: url(https://p.w3layouts.com/demos_new/template_demo/05-02-2022/tours-liberty-demo_Free/1559675193/web/assets/images/inner-banner.jpg);
-        background-repeat: no-repeat;
-        background-position: top left;
-        background-size: cover;
-        overflow: hidden;
-        position: relative;
-      }
-      .nav-button {
-        position: absolute;
-        top: 50%;
-        left: 10%;
-      }
-      .nav-button h1 {
-        font-size: 40px;
-        margin-bottom: 10px;
-      }
-      ul {
-        list-style: none;
-      }
-      #a-home {
-        color: black;
-        font-weight: 700;
-      }
-      .nav-button ul {
-        display: flex;
-        gap: 10px;
-      }
-      .about-sec {
-        height: 80vh;
-      }
-      .about-sec .about-right a {
-        margin: 20px 0;
-      }
-      .a-social {
-        background-color: blue;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        display: grid;
-        place-content: center;
-      }
-      .a-social a {
-        color: white;
-      }
-      .blog-body {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-      }
-      .blog-data {
-        text-align: center;
-        padding: 10px;
-      }
-      .blog-row1 {
-        gap: 10px;
-        place-content: center;
-      }
-      .blog-box .blog-data .blog-name a {
-        font-size: 20px;
-      }
-      .feature-slide {
-        width: 80%;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        animation: none;
-        margin: 10px auto;
-      }
-      .features{
-        background-color:#f2f5f7;
-      }
-      .feature-slide .slides {
-        width: 100%;
-        height:100%;
-        border-radius: 5px;
-        box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.15);
-        overflow: hidden;
-      }
-      .data-class ul img {
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-      }
-      .data-class{
-        background-color: #f2f5f7;
-      }
-      .head-comment{
-        padding: 30px 30px;
-      }
-      .head-comment p{
-        font-size: 14px;
-        padding: 10px;
-        /* color: white; */
-      }
-      /* ========================================== */
-      @media (max-width: 576px) {
-        .header-img {
-          height: 35vh;
-          margin-bottom: 50px;
-        }
-
-        .about-sec {
-          height: 100vh;
-        }
-        .statistics {
-          margin-top: 150px;
-        }
-        .blog-body {
-          grid-template-columns: repeat(1, 1fr);
-        }
-      }
-      @media (min-width: 576px) and (max-width: 800px) {
-        .header-img {
-          height: 40vh;
-          margin-bottom: 70px;
-        }
-        .statistics {
-          margin-top: 400px;
-        }
-        .blog-body {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .blog-box:nth-child(3) {
-          grid-column: 1 / span 1 !important;
-        }
-      }
-    </style>
   </head>
   <body>
     <section class="header">
@@ -411,36 +278,223 @@
           <h1>Testimonials</h1>
           <p>Happy With Customers & Clients</p>
         </div>
-        <div class="slider-master">
-          <div class="feature-slide">
-            <div class="slides">
-              <div class="img-class">
-                <div class="head-comment">
-                  <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet
-                  <p class="para">
-                    Lorem ipsum dolor sit amet elit. hic odio tenetur. ante
-                    ipsum primis in faucibus orci luctus et ultrices
-                    posuere,tesque libero ut justo Semper.
-                  </p>
+        <div class="master-controller">
+          <div class="slider-master">
+            <div class="feature-slide">
+              <div class="slides">
+                <div class="img-class">
+                  <div class="head-comment">
+                    <i class="fas fa-quote-left"></i>
+                    <span class="person-n">Lorem ipsum dolor sit amet</span>
+                    <p class="para">
+                      Lorem ipsum dolor sit amet elit. hic odio tenetur. ante
+                      ipsum primis in faucibus orci luctus et ultrices
+                      posuere,tesque libero ut justo Semper.
+                    </p>
+                  </div>
+                </div>
+                <div class="data-class">
+                  <ul>
+                    <li>
+                      <img
+                        src="https://p.w3layouts.com/demos_new/template_demo/05-02-2022/tours-liberty-demo_Free/1559675193/web/assets/images/testi1.jpg"
+                        alt=""
+                      />
+                    </li>
+                    <li>
+                      Alexander sakura
+                      <p>subtitle</p>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <div class="data-class">
-                <ul>
-                  <li>
-                    <img
-                      src="https://p.w3layouts.com/demos_new/template_demo/05-02-2022/tours-liberty-demo_Free/1559675193/web/assets/images/testi2.jpg"
-                      alt=""
-                    />
-                  </li>
-                  <li>
-                    Alexander sakura
-                    <p>subtitle</p>
-                  </li>
-                </ul>
+              <div class="slides">
+                <div class="img-class">
+                  <div class="head-comment">
+                    <i class="fas fa-quote-left"></i>
+                    <span class="person-n">
+                      Pellen tesque libero ut justo
+                    </span>
+                    <p class="para">
+                      Lorem ipsum dolor sit amet elit. hic odio tenetur. ante
+                      ipsum primis in faucibus orci luctus et ultrices
+                      posuere,tesque libero ut justo Semper.
+                    </p>
+                  </div>
+                </div>
+                <div class="data-class">
+                  <ul>
+                    <li>
+                      <img
+                        src="https://p.w3layouts.com/demos_new/template_demo/05-02-2022/tours-liberty-demo_Free/1559675193/web/assets/images/testi2.jpg"
+                        alt=""
+                      />
+                    </li>
+                    <li>
+                      John Wilson
+                      <p>subtitle</p>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
+            <div class="feature-slide">
+              <div class="slides">
+                <div class="img-class">
+                  <div class="head-comment">
+                    <i class="fas fa-quote-left"></i>
+                    <span class="person-n">Lorem ipsum dolor sit amet</span>
+                    <p class="para">
+                      Lorem ipsum dolor sit amet elit. hic odio tenetur. ante
+                      ipsum primis in faucibus orci luctus et ultrices
+                      posuere,tesque libero ut justo Semper.
+                    </p>
+                  </div>
+                </div>
+                <div class="data-class">
+                  <ul>
+                    <li>
+                      <img
+                        src="https://p.w3layouts.com/demos_new/template_demo/05-02-2022/tours-liberty-demo_Free/1559675193/web/assets/images/testi3.jpg"
+                        alt=""
+                      />
+                    </li>
+                    <li>
+                      Julia sakura
+                      <p>subtitle</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="slides">
+                <div class="img-class">
+                  <div class="head-comment">
+                    <i class="fas fa-quote-left"></i>
+                    <span class="person-n">
+                      Lorem ipsum dolor sit amet
+                    </span>
+                    <p class="para">
+                      Lorem ipsum dolor sit amet elit. hic odio tenetur. ante
+                      ipsum primis in faucibus orci luctus et ultrices
+                      posuere,tesque libero ut justo Semper.
+                    </p>
+                  </div>
+                </div>
+                <div class="data-class">
+                  <ul>
+                    <li>
+                      <img
+                        src="https://p.w3layouts.com/demos_new/template_demo/05-02-2022/tours-liberty-demo_Free/1559675193/web/assets/images/testi1.jpg"
+                        alt=""
+                      />
+                    </li>
+                    <li>
+                      Alexander sakura
+                      <p>subtitle</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
           </div>
         </div>
+      </div>
+    </section>
+    <section class="discount-class">
+      <div class="discount-container">
+        <div class="discount-left">
+          <img src="imgs/thumbs-up img.jpg" alt="" />
+        </div>
+        <div class="discount-right">
+          <p class="dis-30">FOR 30% DISCOUNT</p>
+          <div class="dis-heading">Get Our Promocode</div>
+          <p class="para">
+            Uspendisse efficitur orci urna. In et augue ornare, tempor massa in,
+            luctus sapien. Proin a diam et dui fermentum molestie vel id neque.
+          </p>
+          <div class="dis-30">Never Miss a Deal !</div>
+          <form action="">
+            <input
+              type="email"
+              placeholder="Enter your email id"
+              required="required"
+            />
+            <button type="submit" class="dis-btn">Get Promocode</button>
+          </form>
+          <p class="para">(Or) To Get Our Mobile Apps</p>
+          <div class="apps">
+            <a href=""
+              ><span class="fab fa-apple icon-color" aria-hidden="true"></span
+            ></a>
+            <a href=""
+              ><span
+                class="fab fa-google-play icon-color"
+                aria-hidden="true"
+              ></span
+            ></a>
+            <a href=""
+              ><span class="fab fa-windows icon-color" aria-hidden="true"></span
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer-class">
+      <div class="footer">
+        <div class="contacts">
+          <div class="f-head">Contact Info</div>
+          <div class="comman-para">
+            <p class="f-description">
+              Address : Tours, 10001, 5th Avenue, #06 lane street, NY - 62617.
+            </p>
+            <p class="f-description">
+              Phone Number : <a href="">+91 9558756745</a>
+            </p>
+            <p class="f-description">
+              Email : <a href="">rahulknizare@gmail.com</a>
+            </p>
+          </div>
+          <div class="social-icon">
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-linkedin-in"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-google-plus-g"></i></a>
+            <a href=""><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="links">
+          <div class="f-head">Quick Links</div>
+          <div class="comman-para">
+            <a href="">About us</a>
+            <a href="">Services</a>
+            <a href="">Work with us</a>
+            <a href="">Contact us</a>
+            <a href="">Rewards</a>
+          </div>
+        </div>
+        <div class="links">
+          <div class="f-head">Explore</div>
+          <div class="comman-para">
+            <a href="">Blog Posts</a>
+            <a href="">Privarcy Policy</a>
+            <a href="">Our Partners</a>
+            <a href="">Licence & Users</a>
+            <a href="">Events</a>
+          </div>
+        </div>
+        <div class="subscribe">
+          <div class="f-head">Subscribe</div>
+          <form action="">
+            <div class="f-email"><input type="email" placeholder="Email Address" required /></div>
+            <div class="f-btn"><button type="submit">Subscribe</button></div>
+          </form>
+          <div class="sub-info">Subscribe to our mailing list and get updates to your email inbox.</div>
+        </div>
+      </div>
+      <div class="copyright-info">
+        <p class="para">© 2021 Tours. All rights reserved. Design
+          by <a href="https://github.com/rahul955875">Rahul K. Nizare</a></p>
       </div>
     </section>
   </body>

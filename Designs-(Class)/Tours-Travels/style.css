@@ -937,3 +937,8 @@ background-color: var(--black);
 .copyright-info .para a{
     color: var(--primary_blue);
 }
+
+.footer .social-icon a:hover {
+    background-color: var(--primary_blue);
+    color: var(--white);
+}
