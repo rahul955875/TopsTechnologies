@@ -351,6 +351,9 @@ a{
     font-family:var(--font-ubuntu);
 }
 /* =========================== */
+.features{
+    background-color: var(--white);
+}
 .feature-slide{
     padding: 50px 15px;
     display: grid;
