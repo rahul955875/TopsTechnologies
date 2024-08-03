@@ -545,8 +545,8 @@
     border-radius: 10px;
     grid-template-columns: repeat(1,1fr);
 }
-.discount-left{
-    width: 100%;
+.discount-left {
+    width: 45%;
 }
 .discount-right{
     padding: 20px 0;

@@ -1,0 +1,126 @@
+.header-img {
+    width: 100vw;
+    height: 55vh;
+    margin-bottom: 30px;
+  }
+  .header-img .banner-about {
+    width: 100%;
+    height: 100%;
+    background: url(https://p.w3layouts.com/demos_new/template_demo/05-02-2022/tours-liberty-demo_Free/1559675193/web/assets/images/inner-banner.jpg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+  }
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+  }
+  .nav-button h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  ul {
+    list-style: none;
+  }
+  #a-home {
+    color: black;
+    font-weight: 700;
+  }
+  .nav-button ul {
+    display: flex;
+    gap: 10px;
+  }
+  .about-sec {
+    height: 80vh;
+  }
+  .about-sec .about-right a {
+    margin: 20px 0;
+  }
+/* ==================tours.html===================== */
+.Des-class{
+    background-color: #f2f5f7;
+    padding: 30px 20px 80px 20px;
+}
+.feature-head{
+    text-align: center;
+    padding: 50px;
+}
+.features{
+    margin-top: 0;
+}
+.des-photos{
+    width: 80%;
+    margin: 0 auto;
+    gap: 20px;
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+}
+.des-photos .des-box{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgb(128, 128, 128, 0.2);
+}
+.des-photos img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+.des-box .overlay{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.45);
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    display: grid;
+    place-content: center;
+    padding: 20px 30px;
+    backdrop-filter: blur(1px);
+    transform-origin: center;
+    transition: 0.5s ease;
+}
+.des-box:hover .overlay{
+    transform: scale(1);
+}
+.overlay-heading{
+    font-size: 25px;
+    color: var(--white);
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+.overlay-description{
+    color: var(--white);
+    font-weight: 500;
+    line-height: 30px;
+}
+
+
+
+/* ======================1st media============== */
+
+@media (max-width:576px) {
+    .feature-head {
+        text-align: center;
+        padding:20px;
+    }
+    .feature-head p {
+        font-size: var(--f30);
+    }
+    .des-photos {
+        width: 100%;
+        gap: 40px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* =========================2nd media================= */
+@media (min-width:576px) and (max-width:800px) {
+    .des-photos {
+        grid-template-columns: repeat(2, 1fr);
+    }   
+}
