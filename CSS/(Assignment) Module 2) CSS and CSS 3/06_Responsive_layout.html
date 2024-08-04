@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        place-content: center;
+      }
+      .main {
+        width: 60vw;
+        height: 90vh;
+        display: grid;
+        /* margin: 50px auto; */
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 2fr 8fr 4fr 4fr 4fr;
+        grid-template-areas:
+          "header menu menu menu"
+          "hero hero hero hero"
+          "main main . image"
+          "main main . extra"
+          "banner banner banner banner";
+      }
+      h1 {
+        font-family: sans-serif;
+        font-size: 30px;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        /* text-align: center; */
+      }
+      .slides {
+        border: 2px solid black;
+        display: grid;
+        place-content: center;
+      }
+      .slides:nth-child(1) {
+        grid-area: header;
+        background-color: rgb(2, 2, 32);
+      }
+      .slides:nth-child(2) {
+        grid-area: menu;
+        background-color: rgb(250, 27, 27);
+      }
+      .slides:nth-child(3) {
+        grid-area: hero;
+        background-color: rgb(25, 25, 228);
+      }
+      .slides:nth-child(4) {
+        grid-area: main;
+        background-color: rgba(0, 0, 0, 0.842);
+      }
+      .slides:nth-child(5) {
+        grid-area: image;
+        background-color: grey;
+      }
+      .slides:nth-child(6) {
+        background-color: aqua;
+        grid-area: extra;
+      }
+      .slides:nth-child(7) {
+        grid-area: banner;
+        background-color: gold;
+      }
+      @media (max-width: 576px) {
+        .main {
+          width: 90vw;
+          height: 90vh;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: 1fr 1fr 3fr 3fr 2fr 2fr 2fr;
+          grid-template-areas:
+            "header"
+            "menu"
+            "hero"
+            "main"
+            "banner"
+            "extra"
+            "image" ;
+        }
+      }
+      @media (min-width:576px) and (max-width:800px) {
+        .main {
+          width: 90vw;
+          height: 90vh;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows:1fr 4fr 3fr 2fr 2fr;
+          grid-template-areas:
+            "header header header header"
+            "hero hero hero hero"
+            "menu main main main"
+            "menu banner banner banner"
+            "menu extra extra image"
+            ;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="slides">
+        <h1>header</h1>
+      </div>
+      <div class="slides">
+        <h1>menu</h1>
+      </div>
+      <div class="slides">
+        <h1>hero</h1>
+      </div>
+      <div class="slides">
+        <h1>main</h1>
+      </div>
+      <div class="slides">
+        <h1>image</h1>
+      </div>
+      <div class="slides">
+        <h1>extra</h1>
+      </div>
+      <div class="slides">
+        <h1>banner</h1>
+      </div>
+    </div>
+  </body>
+</html>
