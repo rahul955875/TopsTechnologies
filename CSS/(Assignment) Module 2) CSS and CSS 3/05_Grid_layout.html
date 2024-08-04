@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thubnails Layout</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: grid;
+            place-content: center;
+            background-color: #f2f5f7;
+        }
+        .main{
+            width:90vw;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 30px;
+            padding: 50px;
+        }
+        .thumbnail{
+            font-family: sans-serif;
+            /* border: 2px solid black; */
+            box-shadow: 0 0 10px gray;
+        }
+        .thumbnail .thb-head{
+            height: 60%;
+            display: grid;
+            place-content: center;
+            background-color:rgba(0, 0, 0, 0.744);
+        }
+        .thb-head h1{
+            font-size: 20px;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.799);
+        }
+        .thumbnail .thb-body{
+            padding: 20px;
+        }
+        .thb-body p{
+            font-size: 14px;
+            color: grey;
+            font-weight: bold;
+        }
+        .thb-body .btns{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .btns button{
+            background-color: transparent;
+            font-size: 12px;
+            color: grey;
+            padding: 2px 10px;
+            border:2px solid grey;
+            margin: 10px 0;
+        }
+        .btn{
+            display: flex;
+        }
+        .btns span{
+            font-size: 12px;
+            color: grey;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="thumbnail">
+            <div class="thb-head">
+                <h1>Thumbnail</h1>
+            </div>
+            <div class="thb-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptas omnis quae. Nobis quod suscipit aspernatur eos.</p>
+                <div class="btns">
+                    <div class="btn">
+                        <button>View</button>
+                        <button>Like</button>
+                    </div>
+                    <span>0 views</span>
+                </div>
+            </div>
+        </div>
+        <div class="thumbnail">
+            <div class="thb-head">
+                <h1>Thumbnail</h1>
+            </div>
+            <div class="thb-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptas omnis quae. Nobis quod suscipit aspernatur eos.</p>
+                <div class="btns">
+                    <div class="btn">
+                        <button>View</button>
+                        <button>Like</button>
+                    </div>
+                    <span>0 views</span>
+                </div>
+            </div>
+        </div>
+        <div class="thumbnail">
+            <div class="thb-head">
+                <h1>Thumbnail</h1>
+            </div>
+            <div class="thb-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptas omnis quae. Nobis quod suscipit aspernatur eos.</p>
+                <div class="btns">
+                    <div class="btn">
+                        <button>View</button>
+                        <button>Like</button>
+                    </div>
+                    <span>0 views</span>
+                </div>
+            </div>
+        </div>
+        <div class="thumbnail">
+            <div class="thb-head">
+                <h1>Thumbnail</h1>
+            </div>
+            <div class="thb-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptas omnis quae. Nobis quod suscipit aspernatur eos.</p>
+                <div class="btns">
+                    <div class="btn">
+                        <button>View</button>
+                        <button>Like</button>
+                    </div>
+                    <span>0 views</span>
+                </div>
+            </div>
+        </div>
+        <div class="thumbnail">
+            <div class="thb-head">
+                <h1>Thumbnail</h1>
+            </div>
+            <div class="thb-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptas omnis quae. Nobis quod suscipit aspernatur eos.</p>
+                <div class="btns">
+                    <div class="btn">
+                        <button>View</button>
+                        <button>Like</button>
+                    </div>
+                    <span>0 views</span>
+                </div>
+            </div>
+        </div>
+        <div class="thumbnail">
+            <div class="thb-head">
+                <h1>Thumbnail</h1>
+            </div>
+            <div class="thb-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptas omnis quae. Nobis quod suscipit aspernatur eos.</p>
+                <div class="btns">
+                    <div class="btn">
+                        <button>View</button>
+                        <button>Like</button>
+                    </div>
+                    <span>0 views</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
