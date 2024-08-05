@@ -14,27 +14,66 @@
         width: 100vw;
         height: 100vh;
         display: flex;
+        gap: 30px;
+        place-items: center;
+        padding: 0 80px;
+      }
+      .main .flexbox{
+        height: 450px;
+        background-color: aqua;
+        box-shadow: 0 0 10px rgba(32, 29, 29, 0.3);
+        /* border-radius: 5px; */
+        overflow: hidden;
+        padding: 30px 20px;
+        font-family: sans-serif;
+      }
+      .flexbox h1{
+        font-weight: 800;
+      }
+      .flexbox p{
+        margin: 25px 0;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.813);
       }
       .main .flex-div1 {
-        /* width: 25%; */
-        height: 500px;
-        background-color: red;
+        width: 25%;
       }
       .main .flex-div2 {
-        /* width: 25%; */
-        height: 500px;
-        background-color: yellowgreen;
+        width: 25%;
       }
       .main .flex-div3 {
-        /* width: 50%; */
-        height: 500px;
-        background-color: orange;
+        width: 50%;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+      }
+      .main .flex-div3 p{
+        margin: 10px 0 20px 0;
+      }
+      .btns{
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+      }
+      .btns button ,.full-btn{
+        font-size: 20px;
+        font-weight: bold;
+        width:30%;
+        padding: 10px 0;
+        box-shadow: 0 0 10px rgba(32, 29, 29, 0.3);
+      }
+      .flex-div3 button:hover{
+        color: white;
+        background-color: rgba(0, 0, 0, 0.758);
+      }
+      .full-btn{
+        width: 100%;
       }
     </style>
   </head>
   <body>
     <div class="main">
-      <div class="flex-div1">
+      <div class="flex-div1 flexbox">
         <h1>First Article</h1>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque
@@ -42,9 +81,6 @@
           blanditiis sint quis in magni corporis qui reiciendis, cum nesciunt
           dolorum pariatur incidunt.
         </p>
-      </div>
-      <div class="flex-div2">
-        <h1>Second Article</h1>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque
           consequuntur, debitis, perferendis iste tempora illum labore excepturi
@@ -52,26 +88,42 @@
           dolorum pariatur incidunt.
         </p>
       </div>
-      <div class="flex-div3">
+      <div class="flex-div2 flexbox">
+        <h1>Second Article</h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque
+          consequuntur, debitis, perferendis iste tempora illum labore excepturi
+          blanditiis sint quis in magni corporis qui reiciendis, cum nesciunt
+          dolorum pariatur incidunt.
+        </p>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque
+          consequuntur, debitis, perferendis iste tempora illum labore excepturi
+          blanditiis sint quis in magni corporis qui reiciendis, cum nesciunt
+          dolorum pariatur incidunt.
+        </p>
+      </div>
+      <div class="flex-div3 flexbox">
             <div class="btns">
             <button>Smile</button>
             <button>Laugh</button>
             <button>wink</button>
             <button>Shrug</button>
             </div>
-            <button class="full-btn">Blush</button></div>
+            <button class="full-btn">Blush</button>
             <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-            deleniti nesciunt magni molestias laudantium, sequi necessitatibus
-            praesentium, consectetur dolorum expedita labore ipsa maiores aut?
-            Veritatis est ipsum eaque commodi voluptatem.
-            </p>
-            <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-            dolore quos laborum, nisi qui nostrum! Facilis necessitatibus,
-            laboriosam sunt nam voluptas similique debitis natus deleniti aperiam.
-            Corrupti fugiat ratione possimus!
-            </p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              deleniti nesciunt magni molestias laudantium, sequi necessitatibus
+              praesentium, consectetur dolorum expedita labore ipsa maiores aut?
+              Veritatis est ipsum eaque commodi voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi ipsam cum deserunt impedit expedita, a neque eveniet earum eum voluptates dolorum quisquam dicta deleniti minima est aliquid facere necessitatibus repudiandae?
+              </p>
+              <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+              dolore quos laborum, nisi qui nostrum! Facilis necessitatibus,
+              laboriosam sunt nam voluptas similique debitis natus deleniti aperiam.
+              Corrupti fugiat ratione possimus!
+              </p>
+           
       </div>
     </div>
   </body>
