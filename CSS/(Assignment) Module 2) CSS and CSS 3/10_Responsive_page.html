@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive web</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto+Condensed&family=Sevillana&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap");
+
+      :root {
+        --font-roboto: "Roboto Condensed", sans-serif;
+        --font-ubuntu: "Ubuntu Sans", sans-serif;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .body {
+        width: 100vw;
+        height: 100vh;
+      }
+      .navbar {
+        padding: 50px 0;
+        display: flex;
+        justify-content: space-around;
+      }
+      .nav-left {
+        font-family: var(--font-roboto);
+        font-size: 20px;
+        font-weight: 700;
+      }
+      a {
+        font-size: 16px;
+        text-transform: capitalize;
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.895);
+        font-family: var(--font-roboto);
+      }
+      .nav-middle a:hover {
+        color: rgb(72, 72, 238);
+      }
+      .nav-middle ul {
+        display: flex;
+        gap: 50px;
+        margin-left: 90px;
+        list-style: none;
+      }
+      .nav-right .btns {
+        display: flex;
+        gap: 20px;
+      }
+      .btns button:last-child {
+        background-color: rgba(88, 88, 244, 0.198);
+        padding: 7px 20px;
+        box-shadow: 0 0 10px rgba(128, 128, 128, 0.26);
+      }
+      .nav-right button {
+        font-size: 16px;
+        border: none;
+        background-color: transparent;
+      }
+      .nav-right button:hover {
+        color: blue;
+        background-color: transparent;
+        border: blue;
+      }
+      .navbar .menu-icon {
+        display: none;
+      }
+      .main-containt {
+        width: 100%;
+        box-shadow: 0 10px 10px rgba(128, 128, 128, 0.1);
+        padding-bottom: 30px;
+      }
+      .main {
+        width: 80%;
+        margin: 30px auto;
+        text-align: center;
+      }
+      .main p span {
+        background-color: lightgreen;
+        padding: 3px 5px;
+        border-radius: 30px;
+      }
+      .main p span:nth-child(2) {
+        background-color: rgba(127, 255, 212, 0.15);
+      }
+      .main h1 {
+        font-size: 60px;
+        color: rgba(0, 0, 0, 0.813);
+        font-family: var(--font-ubuntu);
+        margin-top: 30px;
+        line-height: 60px;
+      }
+      .main p {
+        font-family: sans-serif;
+        font-size: 16px;
+        margin: 30px 0 10px 0;
+      }
+      .mailbox form {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+      }
+      .mailbox input {
+        width: 200px;
+        height: 45px;
+        border-radius: 30px 0 0 30px;
+        outline: none;
+        border: 1px solid grey;
+        text-align: center;
+      }
+      .mailbox button {
+        width: 100px;
+        height: 45px;
+        border-radius: 0px 30px 30px 0px;
+        color: white;
+        background-color: rgba(0, 0, 255, 0.644);
+        border: 1px solid grey;
+      }
+      .containt-img {
+        width: 80%;
+        height: 60%;
+        margin: 0 auto;
+      }
+      .containt-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .main .logos {
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 50px;
+        margin: 40px auto;
+        justify-items: center;
+      }
+      .survey {
+        margin: 100px auto;
+        width: 80%;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 2fr 1fr;
+      }
+      .survey-left img {
+        width: 100%;
+      }
+      .survey-right {
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .survey-containt {
+        padding: 20px;
+      }
+      .survey-containt:first-child {
+        background-color: rgba(0, 0, 255, 0.05);
+        border-left: 10px solid blue;
+      }
+      .survey-containt h2 {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .survey-containt p {
+        font-size: 16px;
+        color: grey;
+        margin: 10px 0;
+        line-height: 25px;
+      }
+      /* ========================================= */
+
+      @media (max-width: 576px) {
+        .navbar {
+          padding: 10px 10px;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .nav-left h4 {
+          font-size: 25px !important;
+        }
+        .nav-middle {
+          display: none;
+        }
+        .nav-right {
+          display: none;
+        }
+        .navbar .menu-icon {
+          display: flex;
+          flex-direction: column;
+          /* gap: 10px; */
+        }
+        .navbar .menu-icon i {
+          font-size: 40px;
+        }
+        .main p :first-child {
+          display: none;
+        }
+        .main .heading {
+          font-size: 30px;
+          line-height: 30px;
+        }
+        .main p {
+          text-align: justify;
+        }
+        .mailbox form {
+          flex-direction: column;
+          gap: 10px;
+        }
+        .mailbox input,
+        .mailbox button {
+          border-radius: 5px;
+          width: 100%;
+        }
+        .main .logos {
+          width: 100%;
+          gap: 10px;
+          margin: 20px 0;
+        }
+        .main .logos img {
+          width: 100%;
+        }
+        .survey {
+          margin: 100px auto;
+          width: 90%;
+          grid-template-columns: 1fr;
+        }
+        .main p:first-child {
+          text-align: center;
+        }
+        .main .para {
+          font-size: 10px;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="navigation-bar">
+      <div class="navbar">
+        <div class="nav-left"><h4>team.flow</h4></div>
+        <div class="nav-middle">
+          <ul>
+            <li>
+              <a href="">how its works<i class="ri-arrow-down-s-line"></i></a>
+            </li>
+            <li>
+              <a href="">products<i class="ri-arrow-down-s-line"></i></a>
+            </li>
+            <li>
+              <a href="">pricing<i class="ri-arrow-down-s-line"></i></a>
+            </li>
+            <li>
+              <a href="">resources<i class="ri-arrow-down-s-line"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <div class="btns">
+            <button>Log in</button>
+            <button>Get stated free</button>
+          </div>
+        </div>
+        <div class="menu-icon">
+          <i class="ri-menu-line"></i>
+          <span>menu</span>
+        </div>
+      </div>
+    </section>
+    <section class="main-containt">
+      <div class="main">
+        <p><span>Save 90%</span><span>Get account of $59</span></p>
+        <h1 class="heading">
+          Manage the team<br />
+          everyone wants to be on
+        </h1>
+        <p>
+          Simple platform that lets you master what great managers do best,
+          <br />as develop trust, collaborate, and drive team performance.
+        </p>
+        <div class="mailbox">
+          <form action="">
+            <input
+              type="email"
+              name="email"
+              id=""
+              required
+              placeholder="nama@yourcompany.com"
+            />
+            <button type="submit">Try it free</button>
+          </form>
+        </div>
+        <div class="containt-img">
+          <img src="imgs/Graph 2 1.png" alt="graph-img" />
+        </div>
+        <p class="para">TRUSTED BY OVER <b>10.000+</b> WORLD’S BEST TEAMS</p>
+        <div class="logos">
+          <img src="imgs/google-2015a 1.png" alt="logo" />
+          <img src="imgs/airbnb 1.png" alt="logo" />
+          <img src="imgs/Group.png" alt="logo" />
+          <img src="imgs/hubspot 1.png" alt="logo" />
+          <img src="imgs/slack-2 1.png" alt="logo" />
+        </div>
+      </div>
+    </section>
+    <section class="survey-class">
+      <div class="survey">
+        <div class="survey-left">
+          <img src="imgs/Group 25.png" alt="" />
+        </div>
+        <div class="survey-right">
+          <div class="survey-containt">
+            <h2>Survey your team</h2>
+            <p>
+              Powerful questions that get to the heart of how team members
+              really feel.
+            </p>
+          </div>
+          <div class="survey-containt">
+            <h2>Resolve issues quickly</h2>
+            <p>Anonymous messaging that connects managers and employees.</p>
+          </div>
+          <div class="survey-containt">
+            <h2>Plan your 1-on-1s</h2>
+            <p>Plan meetings together and give a stake employees and teams.</p>
+          </div>
+          <div class="survey-containt">
+            <h2>Track your progress</h2>
+            <p>
+              Easy-to-read reports and sharable results help managers and teams.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
