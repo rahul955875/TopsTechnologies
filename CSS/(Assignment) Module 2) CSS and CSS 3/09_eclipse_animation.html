@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar eclipse</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+      }
+      .main {
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(rgb(255, 136, 0), rgb(109, 90, 4));
+        display: grid;
+        place-content: center;
+      }
+      .sun {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: gold;
+        animation: box-shadow 8s ease infinite 3s;
+        position: relative;
+        overflow: hidden;
+      }
+      .eclipse {
+        position: absolute;
+        right: 100%;
+        bottom: 60%;
+        width: 195px;
+        height: 195px;
+        border-radius: 50%;
+        background: linear-gradient(rgb(255, 136, 0), rgb(109, 90, 4));
+        box-shadow: 0 0 10px 5px rgb(243, 215, 62);
+        transform: scale(0);
+        animation: move 8s ease infinite 1s;
+      }
+      @keyframes move {
+        0% {
+        }
+        40% {
+          transform: scale(1);
+          right: 0;
+          bottom: -4%;
+          width: 210px;
+          height: 210px;
+        }
+        100% {
+          transform: scale(1);
+          right: 0;
+          bottom: -4%;
+          width: 210px;
+          height: 210px;
+        }
+      }
+      @keyframes box-shadow {
+        0% {
+        }
+        60% {
+          box-shadow: 0 0 50px 40px rgb(243, 215, 62);
+        }
+        95% {
+          box-shadow: 0 0 10px 5px rgb(243, 215, 62);
+        }
+        100%{
+            box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="sun">
+        <div class="eclipse"></div>
+      </div>
+    </div>
+  </body>
+</html>
