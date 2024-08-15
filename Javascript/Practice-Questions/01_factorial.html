@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+    <style>
+        h1{
+            font-family: sans-serif;
+            color: rgba(0, 0, 0, 0.856);
+        }
+        #result{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let fact=1;
+        for(i=1; i<=5; i++){
+            fact = fact * i;    
+        }
+        document.write(`<h1 class="fact">Factorial of 5 is : <span id="result">${fact}</span> </h1>`);
+        
+        // var a=1,i=1;
+        // while(i<=5){
+        //     a=a*i;
+        //     i++;
+        // }
+        // document.write(`<h1 class="fact">Factorial of 5 is : <span id="result">${a}</span> </h1>`);
+        </script>
+</body>
+</html>
