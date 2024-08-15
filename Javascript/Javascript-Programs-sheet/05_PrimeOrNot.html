@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q5 Check Prime or not</title>
+  </head>
+  <style>
+    *{
+        font-family: sans-serif;
+    }
+  </style>
+  <body>
+    (5) Write a JS program to take a number and print it prime number or not.
+    <script>
+      let a=15;
+      if(a<=1){
+          document.write(`<h1>Number ${a} is Not prime`);
+      }
+      else if(a==2 || a==3) {
+        document.write(`<h1>Number ${a} is Prime`);
+      }
+      else if(a%2==0 || a%3==0){
+        document.write(`<h1>Number ${a} is not Prime`)
+      }
+       else {
+        document.write(`<h1>Number ${a} is Prime`);
+      }
+    </script>
+  </body>
+</html>
