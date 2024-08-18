@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Prompt</title>
+</head>
+<body>
+    <button onclick="conditional()">Click</button>
+    <script>
+        function conditional(){
+           let userprompt = prompt("Enter your name");
+            if(userprompt==""){
+                alert("please enter name");
+            }
+            else {
+                document.write(`<h1> Welcome ${userprompt} </h1>`);
+            }
+        }
+    </script>
+</body>
+</html>
