@@ -99,9 +99,7 @@
     font-size:16px;
 }
 /* ======================= statistics-sec ============ */
-.statistics-container{
-    height: 100vh;
-}
+
 .statistics-head h1{
     font-size: var(--f30);
 }
@@ -398,7 +396,6 @@
 /* ======================= statistics-sec ============ */
 .statistics-container{
     width: 100vw;
-    height: 70vh;
 }
 
 .statistics-head h1{
@@ -648,7 +645,7 @@
     /* ======================= statistics-sec ============ */
     .statistics-container{
         width: 100vw;
-        height: 70vh;
+
     }
 
     .statistics-head h1{
