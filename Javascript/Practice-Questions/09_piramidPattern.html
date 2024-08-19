@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piramid Pattern</title>
+    <style>
+        body{
+            font-size: 40px;
+            color: blue;
+        }
+        span,i{
+            padding: 8px;
+        }
+        i{
+            color:red;
+            opacity:0;
+        }
+    </style>
+</head>
+<body>
+<script>
+    let n=7;
+    for(let i=1; i<=n; i++){
+        for(let k=1; k<=n; k--){
+            document.write(`<i class="hidden">*</i>`)
+        }
+        for(let j=1; j<=i; j++){
+            document.write(`<span class="star">*</span>`);
+        }
+        document.write(`</br>`);
+    }
+</script>    
+</body>
+</html>
