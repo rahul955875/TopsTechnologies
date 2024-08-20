@@ -81,8 +81,8 @@
     place-content: center;
     padding: 20px 30px;
     backdrop-filter: blur(1px);
-    transform-origin: center;
-    transition: 0.5s ease;
+    transform-origin: center;git 
+    transition: 1s ease-in-out;
 }
 .des-box:hover .overlay{
     transform: scale(1);
