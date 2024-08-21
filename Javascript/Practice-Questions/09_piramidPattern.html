@@ -22,7 +22,7 @@
 <script>
     let n=7;
     for(let i=1; i<=n; i++){
-        for(let k=1; k<=n-i; k++){
+        for(let k=n; k>=i; k--){
             document.write(`<i class="hidden">*</i>`)
         }
         for(let j=1; j<=i; j++){
