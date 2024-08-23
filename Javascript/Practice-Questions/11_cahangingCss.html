@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle css</title>
+    <style>
+        .toggle{
+            font-size: 40px;
+            background-color: blue;
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="toggle()">toggle</button>
+    <button onclick="remove()">Remove css</button>
+    <h1 class="heading">Hello world</h1>
+    <script>
+        function toggle(){
+            let change = document.querySelector("h1");
+            change.className="toggle"
+        }
+        function remove(){
+            let change = document.querySelector("h1");
+            change.className = "heading"
+        }
+    </script>
+</body>
+</html>
