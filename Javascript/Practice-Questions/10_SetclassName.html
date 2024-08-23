@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>set class name</title>
+    <style>
+      .new-heading {
+        font-size: 30px;
+        color: white;
+        background-color: aqua;
+        padding: 20px 40px;
+      }
+      button {
+        font-size: 20px;
+        color: white;
+        background-color: black;
+        padding: 10px 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="classChanger()">Change Css</button>
+    <h1 id="h1" class="heading">Good Morning</h1>
+    <script>
+      function classChanger() {
+        let new_heading = document.querySelector("#h1");
+        if (new_heading.className == "heading") {
+          new_heading.className = "new-heading";
+        } else {
+          new_heading.className = "heading";
+        }
+      }
+    </script>
+  </body>
+</html>
