@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set,remove and get Attibutes</title>
+    <style>
+        button{
+            font-size: 18px;
+            background-color: blue;
+            color: white;
+            padding: 10px;
+        }
+        .buttons{
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        img{
+            display: block;
+            margin: 50px auto;
+            transition: 1s ease-in-out;
+        }
+        .imgset{
+            transform: scale(2);
+            transition: 1s ease-in-out;
+            border: 2px solid magenta;
+            margin:100px auto;
+            filter: hue-rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+    <button onclick="setattibute()">Set attributes</button>
+    <button onclick="removeattribute()">remove attributes</button>
+    <button onclick="getattribute()">get attributes</button>
+</div>
+    <img src="https://tse3.mm.bing.net/th?id=OIP.NQOYUysfhT0aR83cUmPgMAHaE8&pid=Api&P=0&h=180" alt="a wallpaper">
+    <script>
+        function setattibute(){
+            let set = document.querySelector("img");
+            set.setAttribute("class","imgset")
+        }
+        function removeattribute(){
+            let remove = document.querySelector("img");
+            remove.removeAttribute("class","imgset")
+        }
+        function getattribute(){
+            let getattribute = document.querySelector("img");
+            let srcmsg = getattribute.getAttribute("src");
+            let cleanmsg = srcmsg.split("?")[0];
+            let classmsg = getattribute.getAttribute("class");
+            alert(`src of img ${cleanmsg}\nand class is set to ${classmsg || "none"}`);
+        }
+    </script>
+</body>
+</html>
