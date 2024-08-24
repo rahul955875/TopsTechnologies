@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class list operation</title>
+    <style>
+        button{
+            font-size: 18px;
+            background-color: blue;
+            color: white;
+            padding: 5px;
+        }
+        .para{
+            width: 70%;
+            padding: 30px 40px;
+            margin: 30px auto;
+            font-size: 20px;
+            border: 2px solid black;
+        }
+        .newclass{
+            width: 70%;
+            padding: 30px 40px;
+            margin: 30px auto;
+            font-size: 30px;
+            background-color: #eee;
+            border: 2px solid magenta;
+            font-family: sans-serif;
+            transition: 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="addclass()">Add class</button>
+    <button onclick="removecss()">remove class</button>
+    <button onclick="togglecss()">toggle class</button>
+    <button onclick="containscheck()">contains class</button>
+    <div class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ab debitis, veritatis eligendi vero corrupti atque quibusdam non nulla ad ut magnam architecto nemo? Aperiam iste corporis suscipit dignissimos natus.</div>
+    <script>
+        function addclass(){
+            var addclass = document.querySelector(".para");
+            addclass.classList.add("newclass");
+        }
+        function removecss(){
+            var removecss = document.querySelector(".para");
+            removecss.classList.remove("newclass")
+        }
+        function togglecss(){
+            var togglecss = document.querySelector(".para");
+            togglecss.classList.toggle("newclass")
+        }
+        function containscheck(){
+            var addclass = document.querySelector(".para");
+            var showclass = addclass.className;
+            if(addclass.classList.contains("newclass") == true){
+                alert("its contains class" + " " +showclass)
+
+            }
+            else{
+                alert("dont have any class")
+            }
+        }
+    </script>
+</body>
+</html>
