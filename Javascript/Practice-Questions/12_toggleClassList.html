@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle</title>
+    <style>
+        .newclass{
+            padding: 40px 30px;
+            background-color: #eee;
+            font-size: 20px;
+            font-family: sans-serif;   
+        }
+    </style>
+</head>
+<body>
+    <button onclick="togglecss()">toggle css</button>
+    <div id="div1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero quidem natus qui eligendi assumenda, inventore impedit quo vitae id tempora culpa, velit nemo et praesentium quam perferendis, obcaecati consequatur? Asperiores.</div>
+    <script>
+        function togglecss(){
+            let div1 = document.getElementById("div1");
+            div1.classList.toggle("newclass")
+        }
+    </script>
+</body>
+</html>
