@@ -17,14 +17,42 @@
             margin-bottom: 50px;
         }
         #gettime{
-            margin-left:30px;
             padding:5px 20px;
             border-radius: 10px;
+            font-size: 18px;
         }
-        .settime-border{
-            border:2px solid red;
+        p{
+            text-align: center;
         }
-        
+        p button{
+            font-size: 18px;
+            color: green;
+            background-color:white;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        button:hover{
+            background-color: black;
+            color: white;
+        }
+        .print-msg{
+            text-transform: capitalize;
+            font-weight: 600;
+            margin: 80px auto;
+            font-size: 60px;
+            background: linear-gradient(black,blue);
+            background-clip: text;
+            color: transparent;
+            animation: text-ani 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) alternate infinite;
+        }
+        @keyframes text-ani {
+            to{
+                background: linear-gradient(180deg,red,blue);
+                background-clip: text;
+                transform: scale(1.3);
+                filter: drop-shadow(10px 10px 10px green);
+            }
+        }
     </style>
 </head>
 <body>
@@ -35,14 +63,15 @@
     <p class="print-msg"></p>
     <script>
         function getgreeting(){
-            let gettime = document.getElementById("gettime").value;
-            if(gettime == ""){
+            let gettime = document.getElementById("gettime");
+            if(gettime.value == ""){
                 document.querySelector(".print-msg").innerHTML = "Please Select time"
-                gettime.ClassList.add("settime-border");
+                gettime.setAttribute("style","border:2px solid red;");
                 return;
             }
-            let hours = parseInt(gettime.slice(0,2), 10);
+            let hours = parseInt(gettime.value.slice(0,2), 10);
             let greeting = document.querySelector(".print-msg");
+            gettime.setAttribute("style","border:2px solid green");
             if(hours >=0 && hours<12 ){
               greeting.innerHTML = "Good morning !"
             }
@@ -50,7 +79,7 @@
                 greeting.innerHTML = "Good Afternoon !"
             }
             else {
-                greeting.innerHTML = "Good Evening"
+                greeting.innerHTML = "Good Evening !"
             }
 
         }
