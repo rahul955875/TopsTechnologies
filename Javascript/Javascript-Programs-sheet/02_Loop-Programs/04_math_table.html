@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 math table</title>
+    <style>
+        *{
+            margin: 0;
+            font-family: sans-serif;
+        }
+        i{
+            background-color: #ddd;
+            padding: 20px;
+            width: 100%;
+            display: block;
+            margin-bottom: 50px;
+        }
+        #table{
+            margin-left: 40px;
+        }
+        #table p{
+            padding: 5px;
+        }
+        input,button{
+            margin-left: 20px;
+            margin-bottom: 30px;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 15px;
+            text-transform: capitalize;
+        }
+        button{
+            margin-left: 0;
+        }
+        button:hover{
+            color: white;
+            background-color: black;
+        }
+        input:focus{
+            outline: none;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <i>(4) Write a program to print any maths table. (i.e. 10*1=10)
+    </i>
+    <p><input type="number" id="num" placeholder="Enter number"> <button onclick="print_table()">enter value</button></p>
+    <h3 id="table"></h3>
+    <script>
+        function print_table(){
+        let math_table = document.getElementById("table");
+        let n =  document.getElementById("num").value;
+        math_table.innerHTML=``;
+        for(let i=1; i<=10; i++){
+            let newelment = document.createElement("p");
+            newelment.innerHTML = (`${n} &cross; ${i} = ${n*i}`);
+            math_table.appendChild(newelment);
+        }
+    }
+    </script>
+</body>
+</html>
