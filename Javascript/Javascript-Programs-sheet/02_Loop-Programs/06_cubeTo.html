@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>05 get square</title>
+    <title>04 math table</title>
     <style>
         *{
             margin: 0;
@@ -54,19 +54,10 @@
     <i>(5) Write a program to print square of 1 to n number using any loop.
 
     </i>
-    <p><input type="number" id="num" placeholder="Enter number"> <button onclick="print_square()">get square</button></p>
+    <p><input type="number" id="num" placeholder="Enter number"> <button onclick="print_cube()">get square</button></p>
     <h3 id="square"></h3>
     <script>
-        function print_square(){
-        let square = document.getElementById("square");
-        let n =  document.getElementById("num").value;
-        square.innerHTML=``;
-        for(let i=1; i<=n; i++){
-            let newelment = document.createElement("p");
-            newelment.innerHTML = (`${i}<sup>2</sup> = ${i*i}`);
-            square.appendChild(newelment);
-        }
-    }
+       
     </script>
 </body>
 </html>
