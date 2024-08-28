@@ -13,18 +13,22 @@
   <body>
     (5) Write a JS program to take a number and print it prime number or not.
     <script>
-      let a=15;
+      let a=17;
+      let isprime = true;
       if(a<=1){
-          document.write(`<h1>Number ${a} is Not prime`);
+        isprime = false;
       }
-      else if(a==2 || a==3) {
-        document.write(`<h1>Number ${a} is Prime`);
+      for(i=2; i<a; i++){
+        if(a%i==0){
+          isprime=false;
+          break;
+        }
       }
-      else if(a%2==0 || a%3==0){
-        document.write(`<h1>Number ${a} is not Prime`)
+      if(isprime){
+        document.write(`<h1>Number ${a} is prime</h1>`);
       }
-       else {
-        document.write(`<h1>Number ${a} is Prime`);
+      else{
+        document.write(`<h1>Number ${a} is not prime</h1>`)
       }
     </script>
   </body>
