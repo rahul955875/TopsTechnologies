@@ -6,13 +6,54 @@
     <title>Q6 time selection</title>
     <style>
         *{
+            margin: 0;
             font-family: sans-serif;
         }
+        i{
+            background-color: #ddd;
+            padding: 20px;
+            width: 100%;
+            display: block;
+            margin-bottom: 50px;
+        }
+        #gettime{
+            margin-left:30px;
+            padding:5px 20px;
+            border-radius: 10px;
+        }
+        .settime-border{
+            border:2px solid red;
+        }
+        
     </style>
 </head>
 <body>
+    <i>(6) Write a JS program to print Good morning, Good afternoon and Good evening message as per time selection. (use
+        input type time).
+    </i>
+    <p><input type="time" id="gettime"> <button onclick="getgreeting()">Greeting</button></p>
+    <p class="print-msg"></p>
     <script>
-        var time = document.write(`<div><input type="time"></div>`)
+        function getgreeting(){
+            let gettime = document.getElementById("gettime").value;
+            if(gettime == ""){
+                document.querySelector(".print-msg").innerHTML = "Please Select time"
+                gettime.ClassList.add("settime-border");
+                return;
+            }
+            let hours = parseInt(gettime.slice(0,2), 10);
+            let greeting = document.querySelector(".print-msg");
+            if(hours >=0 && hours<12 ){
+              greeting.innerHTML = "Good morning !"
+            }
+            else if(hours>=12 && hours<17){
+                greeting.innerHTML = "Good Afternoon !"
+            }
+            else {
+                greeting.innerHTML = "Good Evening"
+            }
+
+        }
     </script>
 </body>
 </html>
