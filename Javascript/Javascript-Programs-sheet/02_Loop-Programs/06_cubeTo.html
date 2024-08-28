@@ -16,10 +16,10 @@
             display: block;
             margin-bottom: 50px;
         }
-        #square{
+        #cube{
             margin-left: 40px;
         }
-        #square p{
+        #cube p{
             padding: 5px;
         }
         input,button{
@@ -41,23 +41,25 @@
             outline: none;
             border: 2px solid green;
         }
-        h3{
-            display:flex;
-            flex-direction:column;
-            flex-wrap: wrap;
-            height:400px;
-        }
         
     </style>
 </head>
 <body>
-    <i>(5) Write a program to print square of 1 to n number using any loop.
-
+    <i>(6) Write a program to print cube of 1 to 10 number using any loop.
     </i>
-    <p><input type="number" id="num" placeholder="Enter number"> <button onclick="print_cube()">get square</button></p>
-    <h3 id="square"></h3>
+    <p><input type="number" id="num" placeholder="Enter number"> <button onclick="print_cube()">get cube</button></p>
+    <h3 id="cube"></h3>
     <script>
-       
+        function print_cube(){
+       let n = document.getElementById("num").value;
+       let cube = document.getElementById("cube");
+       cube.innerHTML = " ";
+       for(let i=1; i<=n; i++){
+        let newelment = document.createElement("p");
+        newelment.innerHTML = `${i}<sup>3</sup> = ${i*i*i}`
+        cube.appendChild(newelment);
+       }
+    }
     </script>
 </body>
 </html>
