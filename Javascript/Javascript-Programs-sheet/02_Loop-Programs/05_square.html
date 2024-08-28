@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 math table</title>
+    <style>
+        *{
+            margin: 0;
+            font-family: sans-serif;
+        }
+        i{
+            background-color: #ddd;
+            padding: 20px;
+            width: 100%;
+            display: block;
+            margin-bottom: 50px;
+        }
+        #square{
+            margin-left: 40px;
+        }
+        #square p{
+            padding: 5px;
+        }
+        input,button{
+            margin-left: 20px;
+            margin-bottom: 30px;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 15px;
+            text-transform: capitalize;
+        }
+        button{
+            margin-left: 0;
+        }
+        button:hover{
+            color: white;
+            background-color: black;
+        }
+        input:focus{
+            outline: none;
+            border: 2px solid green;
+        }
+        h3{
+            display:flex;
+            flex-direction:column;
+            flex-wrap: wrap;
+            height:400px;
+        }
+        
+    </style>
+</head>
+<body>
+    <i>(5) Write a program to print square of 1 to n number using any loop.
+
+    </i>
+    <p><input type="number" id="num" placeholder="Enter number"> <button onclick="print_square()">get square</button></p>
+    <h3 id="square"></h3>
+    <script>
+        function print_square(){
+        let square = document.getElementById("square");
+        let n =  document.getElementById("num").value;
+        square.innerHTML=``;
+        for(let i=1; i<=n; i++){
+            let newelment = document.createElement("p");
+            newelment.innerHTML = (`${i}<sup>2</sup> = ${i*i}`);
+            square.appendChild(newelment);
+        }
+    }
+    </script>
+</body>
+</html>
