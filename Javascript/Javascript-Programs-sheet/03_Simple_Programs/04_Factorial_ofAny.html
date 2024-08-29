@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04_Factorial</title>
+    <style>
+      * {
+        margin: 0;
+        font-family: sans-serif;
+        box-sizing: border-box;
+      }
+      i {
+        background-color: #ddd;
+        padding: 20px;
+        width: 100%;
+        display: block;
+        margin-bottom: 50px;
+      }
+      #getInput {
+        padding: 10px 15px;
+        border-radius: 10px;
+        font-size: 18px;
+        transition: 0.3s ease;
+      }
+      #getInput:focus{
+        box-shadow: 0 0 10px rgba(0, 0, 255, 0.408);
+      }
+      p {
+        text-align: center;
+      }
+      p button {
+        font-size: 18px;
+        color: green;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      button:hover {
+        background-color: black;
+        color: white;
+      }
+      .print-msg {
+        width: 0;
+        text-wrap: nowrap;
+        text-transform: capitalize;
+        font-weight: 600;
+        margin: 80px auto;
+        font-size: 60px;
+        background: linear-gradient(black, blue);
+        background-clip: text;
+        color: transparent;
+        overflow: hidden;
+      }
+      .animate {
+        animation: text-ani 3s ease-out alternate infinite;
+      }
+      @keyframes text-ani {
+        to {
+          background: linear-gradient(180deg, red, blue);
+          background-clip: text;
+          width: 100%;
+          /* transform: scale(1.3); */
+          filter: drop-shadow(10px 10px 10px orange);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <i>(4) Write a JS program to print factorial of any number</i>
+    <p>
+      <input type="number" placeholder="Get Factorial..." id="getInput" />
+      <button onclick="getFactorial()">Get Factorial</button>
+    </p>
+    <p class="print-msg"></p>
+    <script>
+      function getFactorial() {
+        let getInput = document.getElementById("getInput");
+        let msg = document.querySelector(".print-msg");
+        msg.classList.remove("animate");
+        msg.offsetWidth;
+        msg.classList.add("animate");
+        if (getInput.value == "") {
+          msg.innerHTML = "Enter integer to get factorial";
+          getInput.setAttribute("style", "border:2px solid red");
+          return;
+        }
+        getInput.setAttribute("style", "border:2px solid green");
+        let fact = 1;
+        for (let i = 1; i <= getInput.value; i++) {
+          fact = fact * i;
+        }
+        msg.innerHTML = `Factorial of ${getInput.value} is ${fact}`;
+      }
+    </script>
+  </body>
+</html>
