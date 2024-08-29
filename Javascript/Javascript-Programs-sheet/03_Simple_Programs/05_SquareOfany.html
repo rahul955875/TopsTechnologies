@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05 Get Square</title>
+    <style>
+      * {
+        margin: 0;
+        font-family: sans-serif;
+        box-sizing: border-box;
+      }
+      i {
+        background-color: #ddd;
+        padding: 20px;
+        width: 100%;
+        display: block;
+        margin-bottom: 50px;
+      }
+      #getInput {
+        padding: 10px 15px;
+        border-radius: 10px;
+        font-size: 18px;
+        transition: 0.3s ease;
+      }
+      #getInput:focus {
+        box-shadow: 0 0 10px rgba(0, 0, 255, 0.408);
+      }
+      p {
+        text-align: center;
+      }
+      p button {
+        font-size: 18px;
+        color: green;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      button:hover {
+        background-color: black;
+        color: white;
+      }
+      .print-msg {
+        text-transform: capitalize;
+        font-weight: 600;
+        margin: 80px auto;
+        font-size: 60px;
+        background: linear-gradient(black, blue);
+        background-clip: text;
+      }
+    </style>
+  </head>
+  <body>
+    <i>(5) Write a JS program to calculate square of number.</i>
+    <p>
+      <input type="number" placeholder="Get Square..." id="getInput" />
+      <button onclick="getSquare()">Get Factorial</button>
+    </p>
+    <p class="print-msg"></p>
+    <script>
+      function getSquare() {
+        let getInput = document.getElementById("getInput");
+        let msg = document.querySelector(".print-msg");
+
+        if (getInput.value == "") {
+          msg.innerHTML = "first Enter any number";
+          getInput.setAttribute("style", "border:2px solid red");
+        }
+         else {
+          getInput.setAttribute("style", "border:2px solid green");
+            let square = Math.pow(getInput.value,2);
+          msg.innerHTML = `Square of ${getInput.value} is ${square}`;
+        }
+      }
+    </script>
+  </body>
+</html>
