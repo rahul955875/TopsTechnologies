@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remove evnetlister</title>
+    <style>
+        button {
+        font-size: 18px;
+        color: green;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      /* button:hover {
+        background-color: black;
+        color: white;
+      } */
+    </style>
+</head>
+<body>
+    <button id="btn">1 time click</button>
+    <p id="printmsg"    ></p>
+    <script>
+        let btn = document.getElementById("btn");
+        let msg = document.getElementById("printmsg");
+        function print(){
+            msg.innerHTML = "can only click once";
+            btn.removeEventListener("click",print);
+            btn.setAttribute("disabled","true");
+        }
+        btn.addEventListener("click",print);
+    </script>
+</body>
+</html>
