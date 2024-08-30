@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition realtime</title>
+    <style>
+        body{
+            padding: 50px;
+        }
+        input {
+        padding: 10px 15px;
+        border-radius: 10px;
+        font-size: 18px;
+        transition: 0.3s ease;
+      }
+      input:focus {
+        box-shadow: 0 0 10px rgba(0, 0, 255, 0.408);
+      }
+      p{
+        font-size: 25px;
+        font-family: sans-serif;
+      }
+    </style>
+</head>
+<body>
+    <input type="text" id="input1" placeholder="Add number">
+    <b>+</b>
+    <input type="text" id="input2" placeholder="Add number">
+    <p id="print-msg"></p>
+    <script>
+        let input1 = document.getElementById("input1");
+        let input2 = document.getElementById("input2");
+        let print = document.getElementById("print-msg");
+        let add = () =>{
+            let Addition = Number(input1.value) + Number(input2.value);
+            print.innerHTML = `Addition of ${input1.value} and ${input2.value} is : ${Addition}`
+        }
+        input1.addEventListener("input",add);
+        input2.addEventListener("input",add);
+        
+    </script>
+</body>
+</html>
