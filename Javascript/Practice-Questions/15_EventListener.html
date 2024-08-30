@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event listener</title>
+    <style>
+      button {
+        font-size: 18px;
+        color: green;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      button:hover {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="msg()">btn1</button>
+    <button id="btn2">btn2</button>
+    <script>
+        function msg(){
+            alert("welcome user");
+        }
+        document.getElementById("btn2").addEventListener("click",function(){
+            alert("welcome using evnetlister")
+        })
+        window.addEventListener("load",msg);
+        window.addEventListener("click",function(){
+            alert("this is window event");
+        })
+    </script>
+  </body>
+</html>
