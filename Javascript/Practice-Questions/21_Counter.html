@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <style>
+      body {
+        padding: 50px;
+      }
+      button {
+        font-size: 18px;
+        margin: 5px;
+        color: green;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      button:hover {
+        background-color: black;
+        color: white;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 255, 0.408);
+      }
+      button:active{
+        background-color: red;
+      }
+      #print-msg {
+        margin: 10px;
+        font-size: 25px;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn1">start</button>
+    <button id="btn2">stop</button>
+    <p id="print-msg"></p>
+    <script>
+      let count = 1;
+      let Counter;
+      let print = document.getElementById("print-msg");
+      function restart() {
+        clearInterval(Counter);
+        Counter = setInterval(() => {
+          print.innerHTML = count++;
+          // count++;
+        }, 1000);
+      }
+      restart();
+      function stopcounter() {
+        clearInterval(Counter);
+      }
+
+      document.getElementById("btn2").addEventListener("click", stopcounter);
+      document.getElementById("btn1").addEventListener("click", restart);
+    </script>
+  </body>
+</html>
