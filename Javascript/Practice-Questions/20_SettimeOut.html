@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>set timeout</title>
+    <style>
+      body {
+        padding: 50px;
+      }
+      input {
+        padding: 10px 15px;
+        border-radius: 10px;
+        font-size: 18px;
+        transition: 0.3s ease;
+      }
+      input:focus {
+        box-shadow: 0 0 10px rgba(0, 0, 255, 0.408);
+      }
+      h1 {
+        font-size: 25px;
+        font-family: sans-serif;
+      }
+      button {
+        font-size: 18px;
+        color: green;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      button:hover {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="number" id="input1" placeholder="Stop time after seconds" />
+    <h1 id="time"></h1>
+    <button id="restart">restat</button>
+    <script>
+      let time = document.getElementById("time");
+      let getime;
+      function clock() {
+          clearInterval(getime);
+          getime = setInterval(() => {
+              let d = new Date();
+              time.innerHTML = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
+            }, 1000);
+        }
+        clock();
+        function stoptime(){
+            let user = document.getElementById("input1").value;
+            setTimeout(() => {
+                if(user>0){
+                    clearInterval(getime);
+                }
+            }, user * 1000);
+        }
+        document.getElementById("input1").addEventListener("change", stoptime);
+        document.getElementById("restart").addEventListener("click",clock);
+    </script>
+  </body>
+</html>
