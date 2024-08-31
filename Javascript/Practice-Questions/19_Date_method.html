@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date methode</title>
+    <style>
+      p {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <script>
+      let p1 = document.getElementById("p1");
+      let p2 = document.getElementById("p2");
+      let p3 = document.getElementById("p3");
+      let p4 = document.getElementById("p4");
+      let d = new Date();
+      p1.innerHTML = `today : ${d}`;
+      p2.innerHTML = `${d.getDate()}-${d.getMonth() + 1}-${d.getFullYear()}`;
+      p3.innerHTML = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}:${d.getMilliseconds()}`;
+      var day = d.getDay();
+      switch (day) {
+        case 0:
+          p4.innerHTML = "sunday";
+          break;
+        case 1:
+          p4.innerHTML = `monday`;
+          break;
+        case 2:
+          p4.innerHTML = "tuesday";
+          break;
+        case 3:
+          p4.innerHTML = "wednesday";
+          break;
+        case 4:
+          p4.innerHTML = "thursday";
+          break;
+        case 5:
+          p4.innerHTML = "friday";
+          break;
+        case 6:
+          p4.innerHTML = "saturday";
+          break;
+      }
+    </script>
+  </body>
+</html>
