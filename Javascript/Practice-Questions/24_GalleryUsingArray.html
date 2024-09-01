@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery using Array</title>
+    <style>
+        .gallery{
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+        .gallery img{
+            width: 100%;
+            object-fit: cover;
+            height:100%;
+            border-radius: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="gallery"></div>
+    <script>
+        let setimg = ["https://wallpapercave.com/wp/wp3155700.jpg","https://img.freepik.com/premium-photo/leaf-closeups-high-quality-high-resolution_1087582-20674.jpg?size=626&ext=jpg&ga=GA1.1.1132989525.1721567502&semt=ais_hybrid","https://img.freepik.com/free-photo/ai-generated-fall-leaves_23-2150648493.jpg?size=626&ext=jpg&ga=GA1.1.1132989525.1721567502&semt=ais_hybrid",
+            "https://img.freepik.com/free-photo/fresh-autumn-leaves-reveal-vibrant-organic-pattern-generated-by-ai_188544-15037.jpg?size=626&ext=jpg&ga=GA1.1.1132989525.1721567502&semt=ais_hybrid","https://img.freepik.com/free-photo/vibrant-autumn-maple-leaves-nature-beauty-showcased-generated-by-ai_188544-15039.jpg?size=626&ext=jpg&ga=GA1.1.1132989525.1721567502&semt=ais_hybrid",
+            "https://img.freepik.com/premium-photo/hd-wallpaper_925707-6803.jpg?size=626&ext=jpg&ga=GA1.1.1132989525.1721567502&semt=ais_hybrid"
+        ];
+        let setgallery = document.querySelector(".gallery");
+        // using for loop
+
+        // for(let i=0; i<setimg.length; i++){
+        //     setgallery.innerHTML +=`
+        //     <img src="${setimg[i]}"></img>`
+        // }
+
+        // using for of loop
+        // for (let i of setimg) {
+        //     setgallery.innerHTML +=`
+        //     <img src="${i}" alt="img"></img>`
+        // }
+
+        // using foreach loop
+        setimg.forEach(i => {
+            setgallery.innerHTML +=`
+            <img src="${i}"></img>`
+        });
+        
+    </script>
+</body>
+</html>
