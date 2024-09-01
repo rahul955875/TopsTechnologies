@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <script>
+      let myarr = ["html", "css", "javascript", "react"];
+      myarr = new Array("java","python","c");
+      console.log(myarr);
+    //   myarr[10]="sql"
+    //   document.write(myarr[2]);
+      console.log(myarr.length)
+    
+      for(let a of myarr){
+        document.write(`<div>${a}</div>`)
+      }
+      document.write("<div>====================</div>")
+      for(let i=0; i<=myarr.length-1; i++){
+        document.write(`<div>${myarr[i]}</div>`)
+      }
+    </script>
+  </body>
+</html>
