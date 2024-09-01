@@ -14,13 +14,20 @@
     //   document.write(myarr[2]);
       console.log(myarr.length)
     
+      document.write("<div>========for of============</div>")
       for(let a of myarr){
         document.write(`<div>${a}</div>`)
       }
-      document.write("<div>====================</div>")
+      document.write("<div>========for============</div>")
       for(let i=0; i<=myarr.length-1; i++){
-        document.write(`<div>${myarr[i]}</div>`)
-      }
+          document.write(`<div>${myarr[i]}</div>`)
+        }
+        document.write("<div>========foreach============</div>")
+
+      myarr.forEach(pg => {
+        document.writeln(pg);
+      });
+      
     </script>
   </body>
 </html>
