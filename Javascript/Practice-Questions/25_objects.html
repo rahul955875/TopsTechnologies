@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        let obj1 = {name:"rahul", role:"web-developer"};
+        obj1.address = "surat"
+        // console.log(obj1.name,obj1.role,obj1.address);
+        console.log(obj1)
+        document.write(obj1.name)
+        // obj1 = new Object();
+        obj1.name = "ram";
+        console.log(obj1.name)
+        // ============================
+        for (let i in obj1) {
+                // console.log(obj1.role)
+                // document.writeln(`${i}:${obj1[i]}`);
+                document.write("<p>============</p>")
+                document.writeln(i," : ",obj1[i]);
+            }
+            console.log(Object.keys(obj1).length);
+            let objarray = Object.keys(obj1);
+            document.write("<p>============</p>")
+        document.write(objarray[0])
+        
+    </script>
+</body>
+</html>
