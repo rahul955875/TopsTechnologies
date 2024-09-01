@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>string objects</title>
+  </head>
+
+  <body>
+    <script>
+      var str = "this is string";
+      console.log(str);
+      console.log(str.charAt(5*2));
+      console.log(str.charCodeAt(10));
+      console.log(str.concat(" to conacat"));
+      console.log(str.indexOf("i"));
+      console.log(str.lastIndexOf("i"));
+      console.log(str.search("is"));
+      console.log(str.match(/is/));
+      console.log(str.substr(2, 6)); // from ,length
+      console.log(str.substring(2, 6)); // from , to
+      console.log(str.slice(2, 6)); // from, to
+      console.log(str.toLowerCase());
+      console.log(str.toUpperCase());
+      str = "          hello           ";
+      console.log(str);
+      console.log(str.valueOf());
+      console.log(str.trim());
+    </script>
+  </body>
+</html>
