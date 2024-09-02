@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert data using object</title>
+    <style>
+        table{
+            width:70%;
+            border-collapse: collapse;
+            text-align: center;
+            margin: auto;
+            text-transform: capitalize;
+        }
+        th{
+            padding: 10px;
+        }
+        td{
+            height:200px;
+            padding: 5px;
+            
+        }
+        tbody tr td img{
+            width:200px;
+            height: 100%;
+            object-fit:cover;
+        }
+        tbody tr:nth-child(2) td img{
+            /* width: 50px; */
+            object-position:0px -20px;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>last Name</th>
+                <th>Roll no.</th>
+                <th>College Name</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script>
+        let mydata = [
+            {
+                name:"Sharuk",
+                lastname:"khan",
+                rollno:1001,
+                City:"Mumbai",
+                Image:"https://i.pinimg.com/originals/26/e6/5a/26e65ae26c57c8660640ced6952d94e4.jpg"
+            },
+            {
+                name:"Hritik",
+                lastname:"roshan",
+                rollno:1002,
+                City:"delhi",
+                Image:"https://i.pinimg.com/736x/41/47/df/4147dff295744609a183726b94aeeff2.jpg"
+            },
+            {
+                name:"Ajay",
+                lastname:"Devgan",
+                rollno:1003,
+                City:"Mumbai",
+                Image:"https://st1.bollywoodlife.com/wp-content/uploads/2021/03/Ajay-Devgn.jpg"
+            },
+        ];
+        let tbody = document.getElementsByTagName("tbody")[0];
+        for(let i=0; i<mydata.length; i++){
+        tbody.innerHTML +=`<tr>
+            <td>${mydata[i].name}</td>
+            <td>${mydata[i].lastname}</td>
+            <td>${mydata[i].rollno}</td>
+            <td>${mydata[i].City}</td>
+            <td><img src="${mydata[i].Image}" alt="img" /></td>
+            
+            </tr>`
+        }
+    </script>
+</body>
+</html>
