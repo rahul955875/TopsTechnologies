@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this keyword</title>
+</head>
+<body>
+    <script>
+        function user(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        let person = new user("rajnikant",75);
+        console.log(person);
+        console.log(person.age)
+        console.log(person.name)
+    </script>
+</body>
+</html>
