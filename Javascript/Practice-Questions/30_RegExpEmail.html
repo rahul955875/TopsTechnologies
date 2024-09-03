@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validate email</title>
+</head>
+<body>
+   <script>
+    
+     let email = "rahul_05@gmail.com";
+    let ptn = /^[a-z0-9_%]+@[a-z]+\.[a-z]+$/i;
+    if(ptn.test(email)){
+        console.log("true");
+    }
+    else{
+        console.log("false");
+    }
+   </script>
+</body>
+</html>
