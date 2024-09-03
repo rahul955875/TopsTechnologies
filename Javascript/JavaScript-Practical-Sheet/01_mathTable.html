@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04 math table</title>
+    <style>
+      * {
+        margin: 0;
+        font-family: sans-serif;
+      }
+      i {
+        background-color: #ddd;
+        padding: 20px;
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+      }
+      .border{
+        border: 2px solid black;
+        height:max-content;
+        width: 400px;
+        padding: 30px 20px;
+        margin: 0 30px;
+      }
+      #table {
+        margin-left: 40px;
+      }
+      #table p {
+        padding: 5px;
+      }
+      input,
+      button {
+        /* margin-left: 20px; */
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 15px;
+        text-transform: capitalize;
+      }
+      button {
+        margin-left: 0;
+        margin-bottom: 30px;
+      }
+      button:hover {
+        color: white;
+        background-color: black;
+      }
+      input:focus {
+        outline: none;
+        border: 2px solid green;
+        box-shadow: 0 0 10px rgba(0, 0, 255, 0.408);
+      }
+      b{
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <i>(1) Write a javascript code and display maths table as follow. </i>
+    <div class="border">
+      <p>
+        <b>Enter Any Number : </b>
+        <input type="number" id="num" placeholder="Enter number" />
+    </p>
+    <button onclick="print_table()">enter value</button>
+      <h3 id="table">Table will print here</h3>
+    </div>
+    <script>
+      function print_table() {
+        let math_table = document.getElementById("table");
+        let n = document.getElementById("num").value;
+        math_table.innerHTML = ``;
+        for (let i = 1; i <= 10; i++) {
+          let newelment = document.createElement("p");
+          newelment.innerHTML = `${n} &cross; ${i} = ${n * i}`;
+          math_table.appendChild(newelment);
+        }
+      }
+    </script>
+  </body>
+</html>
