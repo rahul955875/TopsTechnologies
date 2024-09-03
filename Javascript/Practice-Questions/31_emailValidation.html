@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check your email</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            padding: 20px 50px;
+        }
+        h1{
+            font-size: 40px;
+            text-transform: capitalize;
+        }
+        input {
+        padding: 10px 15px;
+        border-radius: 10px;
+        font-size: 25px;
+        transition: 0.3s ease;
+      }
+      input:focus {
+        box-shadow: 0 0 10px rgba(0, 0, 255, 0.408);
+      }
+    </style>
+</head>
+<body>
+    <h1>this is only validates gmail.com address</h1>
+    <input type="text" id="input" placeholder="Enter your email">
+    <h1 id="print"></h1>
+    <script>
+        let user = document.getElementById("input");
+        let print = document.getElementById("print")
+        function validate(){
+            let ptn = /^[a-z0-9._]+@gmail.com$/i;
+            if(ptn.test(user.value)){
+                print.innerHTML = `Valid email address`;
+            }
+            else{
+                print.innerHTML=`Invalid email address`
+            }
+        }
+        user.addEventListener("input",validate)
+    </script>
+</body>
+</html>
