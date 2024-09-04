@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04 Even or odd checker</title>
+    <style>
+      * {
+        margin: 0;
+        font-family: sans-serif;
+        box-sizing: border-box;
+      }
+      i {
+        background-color: #ddd;
+        padding: 20px;
+        width: 100%;
+        display: block;
+        margin-bottom: 50px;
+      }
+      .main {
+        border: 2px solid black;
+        width: 550px;
+        height: max-content;
+        padding: 40px 20px;
+        margin: 30px 40px;
+      }
+      p,
+      label {
+        text-align: center;
+        font-size: 20px;
+      }
+
+      input {
+        padding: 10px 15px;
+        border-radius: 10px;
+        font-size: 18px;
+        transition: 0.3s ease;
+      }
+      input:focus {
+        box-shadow: 0 0 10px rgba(0, 0, 255, 0.408);
+      }
+      .boxshadow {
+        transition: 0.3s ease-in-out;
+        box-shadow: 0 0 20px 0px grey;
+      }
+      .error {
+        color: red;
+      }
+      .blue {
+        color: blue;
+      }
+      .inputfield {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 0 10px 0;
+      }
+      button {
+        font-size: 18px;
+        color: green;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px 30px;
+      }
+      button:hover {
+        background-color: black;
+        box-shadow: 0 0 10px rgba(0, 0, 255, 0.408);
+        color: white;
+      }
+      #print {
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <i
+      >(4) Write a user input js program to input any number and it display even
+      or odd.</i
+    >
+    <div class="main">
+      <p>Check inputed number even or odd</p>
+      <div class="inputfield">
+        <label for="input">Enter any number :</label>
+        <input type="number" id="input" />
+      </div>
+      <button id="btn">Check</button>
+      <p id="print">Answer will show here</p>
+    </div>
+    <script>
+      let input = document.getElementById("input");
+      let print = document.getElementById("print");
+      function checker() {
+        if (input.value === "") {
+          print.innerHTML = `Please Enter Any Number`;
+          print.classList.add("error");
+        } else {
+          print.classList.remove("error");
+          if (input.value % 2 === 0) {
+            print.innerHTML = `Answer is : <span class="blue">Number is Even</span>`;
+          } else {
+            print.innerHTML = `Answer is : <span class="blue">Number is Odd</span>`;
+          }
+        }
+      }
+      document.getElementById("btn").addEventListener("click", checker);
+      document.querySelector(".main").addEventListener("mouseover",()=>{
+        document.querySelector(".main").classList.add("boxshadow");
+      })
+
+      document.querySelector(".main").addEventListener("mouseout",()=>{
+        document.querySelector(".main").classList.remove("boxshadow");
+      })
+
+    </script>
+  </body>
+</html>
