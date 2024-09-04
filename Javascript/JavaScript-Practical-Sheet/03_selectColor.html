@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set color</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      font-family: sans-serif;
+      box-sizing: border-box;
+    }
+    i {
+      padding: 20px;
+      background-color: #ddd;
+      width: 100%;
+      display: block;
+      margin-bottom: 50px;
+    }
+    
+    input:focus {
+      box-shadow: 0 0 10px rgba(0, 0, 255, 0.408);
+    }
+    #box {
+      width: 200px;
+      height: 200px;
+      border: 2px solid black;
+      border-radius: 10px;
+      transition: 0.3s ease-out;
+    }
+    .container {
+      border: 2px solid black;
+      width: max-content;
+      height: max-content;
+      /* padding: 20px 30px; */
+      margin: 30px 30px;
+      
+    }
+    label {
+      font-size: 25px;
+      font-weight: 600;
+    }
+    .container p:first-child {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      border-bottom: 2px solid grey;
+      padding: 20px;
+    }
+    input[type="color"] {
+      width: 80px;
+      height: 40px;
+      vertical-align: middle;
+    }
+    p button {
+      font-size: 18px;
+      background-color: white;
+      border-radius: 10px;
+      padding: 10px;
+      transition: 0.2s ease-out;
+    }
+    button:hover {
+      background-color: black;
+      color: white;
+    }
+    .container .box-container{
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        padding: 20px;
+    }
+  
+  </style>
+  <body>
+    <i
+      >(3) Write a javascript code to select color from color palate and display
+      it in particular division.</i
+    >
+    <div class="container">
+      <p>
+        <label for="pickColor">Set color : </label>
+        <input type="color" id="pickColor" />
+        <button onclick="setColor()">Set Color</button>
+      </p>
+      <div class="box-container">
+        <div id="box"></div>
+        <h2 id="colorname">#color</h2>
+      </div>
+    </div>
+    <script>
+      let pickColor = document.getElementById("pickColor");
+      let box = document.getElementById("box");
+      let colorname = document.getElementById("colorname");
+      function setColor() {
+        colorname.innerHTML = `
+        ${pickColor.value}`;
+        box.style.backgroundColor = pickColor.value;
+      }
+    </script>
+  </body>
+</html>
