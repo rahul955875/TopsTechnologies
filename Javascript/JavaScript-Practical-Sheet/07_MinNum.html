@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimum Number</title>
+    <style>
+        * {
+        margin: 0;
+        font-family: sans-serif;
+        box-sizing: border-box;
+      }
+      i {
+        background-color: #ddd;
+        padding: 20px;
+        width: 100%;
+        display: block;
+        margin-bottom: 50px;
+      }
+      input {
+        padding:10px;   
+        text-align: center;
+        width:150px;
+        margin-left: 10px;
+        border-radius: 10px;
+        font-size: 18px;
+        transition: 0.3s ease;
+      }
+      input:focus {
+        box-shadow: 0 0 10px rgba(0, 0, 255, 0.408);
+      }
+     .error{
+            color: red;
+        }
+        #print{
+            padding: 30px 10px;
+        }
+        .main{
+            border: 2px solid black;
+            width: 500px;
+            height: max-content;
+            padding: 20px;
+            margin: 40px;
+        }
+    </style>
+  </head>
+  <body>
+    <i>(7) Write a program to display minimum number of given two numbers using user input.</i>
+    <div class="main">
+    <p>
+      <input type="text" id="input1" placeholder="First number" />
+      <input type="text" id="input2" placeholder="Second number" />
+    </p>
+    <h2 id="print">Minimum Number is :</h2>
+</div>
+    <script>
+        let input1 = document.getElementById("input1");
+        let input2 = document.getElementById("input2");
+        let print = document.getElementById("print");
+        function minNum(){
+            if(input1.value==="" || input2.value===""){
+                print.innerText = `Enter Number To Input field`
+                print.classList.add("error");
+                return;
+            }
+            print.classList.remove("error");
+            if(isNaN(input1.value) || isNaN(input2.value)){
+                print.innerText = `Please enter valid number`
+                print.classList.add("error");
+            }
+            else{
+                let getMin = Math.min(Number(input1.value),Number(input2.value));
+                print.innerText = `Minimum Number is : ${getMin}`
+            }
+        }
+        input1.addEventListener("input",minNum);
+        input2.addEventListener("input",minNum);
+    </script>
+  </body>
+</html>
