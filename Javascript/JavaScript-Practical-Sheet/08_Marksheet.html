@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marksheet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        td {
+            padding: 10px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Marksheet For Information Technology</h1>
+        <caption>Enter Marks</caption>
+        <table>
+            <tr>
+                <td>1. C language</td>
+                <td><input type="number" class="input" /></td>
+                <td><p class="print"></p></td>
+            </tr>
+            <tr>
+                <td>2. C++ language</td>
+                <td><input type="number" class="input" /></td>
+                <td><p class="print"></p></td>
+            </tr>
+            <tr>
+                <td>3. Database</td>
+                <td><input type="number" class="input" /></td>
+                <td><p class="print"></p></td>
+            </tr>
+            <tr>
+                <td>4. HTML</td>
+                <td><input type="number" class="input" /></td>
+                <td><p class="print"></p></td>
+            </tr>
+            <tr>
+                <td>5. CSS</td>
+                <td><input type="number" class="input" /></td>
+                <td><p class="print"></p></td>
+            </tr>
+            <tr>
+                <td>6. PHP</td>
+                <td><input type="number" class="input" /></td>
+                <td><p class="print"></p></td>
+            </tr>
+            <tr>
+                <td>7. Core Java</td>
+                <td><input type="number" class="input" /></td>
+                <td><p class="print"></p></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button id="result">Result</button></td>
+            </tr>
+        </table>
+        <footer>
+            <p>Total is: <span id="total">000</span> / 350</p>
+            <p>Percentage is: <span id="percentage"></span>%</p>
+            <p>You are: <span id="final"></span></p>
+        </footer>
+    </div>
+    <script>
+        let inputs = document.querySelectorAll(".input");
+        let prints = document.querySelectorAll(".print");
+        let totalElement = document.getElementById("total");
+        let percentageElement = document.getElementById("percentage");
+        let finalElement = document.getElementById("final");
+        
+        document.getElementById("result").addEventListener("click", function() {
+            let total = 0;
+            let valid = true;
+            
+            inputs.forEach((input, index) => {
+                console.log(input.value);
+                console.log(index)
+                let value = Number(input.value);
+                if (isNaN(value) || value < 0 || value > 50) {
+                    prints[index].innerText = "Invalid Marks";
+                    valid = false;
+                } else {
+                    prints[index].innerText = "";
+                    total += value;
+                }
+            });
+
+            if (valid) {
+                let percentage = (total / 350) * 100;
+                totalElement.innerText = total;
+                percentageElement.innerText = percentage.toFixed(2);
+                finalElement.innerText = percentage >= 40 ? "Pass" : "Fail"; // Example pass/fail criteria
+            } else {
+                totalElement.innerText = "000";
+                percentageElement.innerText = "";
+                finalElement.innerText = "";
+            }
+        });
+    </script>
+</body>
+</html>
