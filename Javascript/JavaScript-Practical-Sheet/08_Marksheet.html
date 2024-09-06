@@ -87,7 +87,7 @@
             
             inputs.forEach((input, index) => {
                 console.log(input.value);
-                console.log(index)
+                console.log(index);
                 let value = Number(input.value);
                 if (isNaN(value) || value < 0 || value > 50) {
                     prints[index].innerText = "Invalid Marks";
@@ -101,8 +101,8 @@
             if (valid) {
                 let percentage = (total / 350) * 100;
                 totalElement.innerText = total;
-                percentageElement.innerText = percentage.toFixed(2);
-                finalElement.innerText = percentage >= 40 ? "Pass" : "Fail"; // Example pass/fail criteria
+                percentageElement.innerText = percentage;
+                finalElement.innerText = percentage >= 40 ? "Pass" : "Fail";
             } else {
                 totalElement.innerText = "000";
                 percentageElement.innerText = "";
