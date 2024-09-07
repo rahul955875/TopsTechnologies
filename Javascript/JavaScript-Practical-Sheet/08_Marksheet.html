@@ -11,18 +11,60 @@
         box-sizing: border-box;
         font-family: sans-serif;
       }
-      .error {
+      .main {
+        max-width: 700px;
+        border: 2px solid black;
+        padding: 40px;
+        margin: 30px auto;
+        display: grid;
+        place-content: center;
+      }
+      .print,.fail {
         color: red;
+      }
+      .pass{
+        color:green;
+      }
+      .main h1 {
+        padding: 0 0 20px 0;
+      }
+      caption {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px 0;
+      }
+      table td {
+        padding: 10px;
+      }
+      table td:first-child {
+        width: 150px;
+      }
+      table td:nth-child(2) {
+        width: 200px;
+      }
+      input {
+        padding: 10px;
+        border-radius: 10px;
+      }
+      footer {
+        display: flex;
+        justify-content: space-around;
+        padding: 30px 0;
+        font-size: 18px;
+      }
+      #result{
+        font-size: 18px;
+        padding: 7px 40px;
+        border-radius: 20px;
       }
     </style>
   </head>
   <body>
     <div class="main">
       <h1>Marksheet For Information Technology</h1>
-      <caption>
-        Enter Marks
-      </caption>
-      <table>
+
+      <table border="1" rules="all">
         <tr>
           <td>1. C language</td>
           <td><input type="number" class="input" /></td>
@@ -62,6 +104,9 @@
           <td></td>
           <td><button id="result">Result</button></td>
         </tr>
+        <caption>
+          Enter Marks
+        </caption>
       </table>
       <footer>
         <p>Total is: <span id="total">000</span> / 350</p>
@@ -77,12 +122,13 @@
       let final = document.getElementById("final");
       function main() {
         let totalmarks = 0;
-        let decison = "none";
+        let decison = "none"; 
         inputs.forEach((element, index) => {
           let value = Number(element.value);
-          if (value === "" || value == null || value < 0 || value > 50) {
+          if (value < 0 || value > 50 || element.value==="") {
             prints[index].innerHTML = `Invalid Marks`;
-          } else {
+        } else {
+              prints[index].innerHTML = ``;
             // print[index].innerHTML = null;
             totalmarks += value;
           }
@@ -97,8 +143,12 @@
         if (decison.match("fail")) {
           console.log(decison);
           final.innerHTML = "fail";
+          final.classList.remove("pass");
+          final.classList.add("fail");
         } else {
           final.innerHTML = "pass";
+          final.classList.remove("fail");
+          final.classList.add("pass");
         }
       }
       document.getElementById("result").addEventListener("click", main);
