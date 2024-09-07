@@ -11,10 +11,14 @@
         box-sizing: border-box;
       }
       .main{
-        max-width: 700px;
+        max-width: 650px;
         border: 2px solid black;
         margin: 50px auto;
         padding:50px;
+      }
+      .main h2{
+        text-align: center;
+        margin-bottom: 40px;
       }
       p{
         width: 450px;
@@ -38,8 +42,17 @@
         flex-wrap: wrap;
       }
       .math{
+        margin: 30px auto 0 auto;
+        width: 450px;
         display: flex;
+      }
+      .math .h3{
+        flex: 1;
+        margin-left: 40px;
         
+      }
+      .math .btn{
+        flex: 1 ;
       }
     </style>
   </head>
@@ -60,7 +73,7 @@
           <button class="button4">/</button>
           <button class="button5">%</button>
         </div>
-        <div>
+        <div class="h3">
             <h3>Answer is : <span id="ans"></span></h3>
         </div>
       </div>
@@ -97,10 +110,10 @@
              ans.innerHTML = Number(input1.value) - Number(input2.value);
          }
         function multi(){
-             ans.innerHTML = Number(input1.value) * Number(input2.value);
+             ans.innerHTML = (Number(input1.value) * Number(input2.value)).toFixed(3);
         }
         function divide(){
-             ans.innerHTML = Number(input1.value) / Number(input2.value);
+             ans.innerHTML = (Number(input1.value) / Number(input2.value)).toFixed(3);
         }
         function modulo(){
              ans.innerHTML = Number(input1.value) % Number(input2.value);
