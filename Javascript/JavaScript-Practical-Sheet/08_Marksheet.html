@@ -122,7 +122,7 @@
       let final = document.getElementById("final");
       function main() {
         let totalmarks = 0;
-        let decison = "none"; 
+        let decison = false; 
         inputs.forEach((element, index) => {
           let value = Number(element.value);
           if (value < 0 || value > 50 || element.value==="") {
@@ -134,13 +134,13 @@
           }
 
           if (value < 20) {
-            decison += "fail";
+            decison= true;
           }
         });
         total.innerHTML = totalmarks;
         percentage.innerHTML = ((totalmarks / 350) * 100).toFixed(2);
 
-        if (decison.match("fail")) {
+        if (decison) {
           console.log(decison);
           final.innerHTML = "fail";
           final.classList.remove("pass");
