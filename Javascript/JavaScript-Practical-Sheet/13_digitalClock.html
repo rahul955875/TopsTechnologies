@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="clock-conatainer">
+            <h1 id="clock"></h1>
+        </div>
+    </div>
+    <script>
+        let clock = document.getElementById("clock");
+        
+        setInterval(() => {
+            let d = new Date();
+            let hours = d.getHours();
+            let minutes = d.getMinutes();
+            let seconds = d.seconds();
+            
+        }, 1000);
+        
+    </script>
+</body>
+</html>
