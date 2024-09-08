@@ -10,25 +10,52 @@
             padding: 0;
             box-sizing: border-box;
         }
+        .main{
+            display: grid;
+            height: 100vh;
+            place-content: center;
+        }
+        .clock-container{
+            border: 2px solid black;
+            width: 500px;
+            margin-bottom: 100px;
+            border-radius: 10px;
+            background: linear-gradient(red,brown 90%,white,brown ,red);
+        }
+        h1{
+            text-align: center;
+            font-size: 50px;
+            padding: 40px 20px;
+            font-family: sans-serif;
+            color: white;
+            -webkit-text-stroke: 2px black;
+        }
     </style>
 </head>
 <body>
     <div class="main">
-        <div class="clock-conatainer">
+        <div class="clock-container">
             <h1 id="clock"></h1>
         </div>
     </div>
     <script>
-        let clock = document.getElementById("clock");
-        
-        setInterval(() => {
+        let clockshow = document.getElementById("clock");
+        function clock(){
             let d = new Date();
             let hours = d.getHours();
             let minutes = d.getMinutes();
-            let seconds = d.seconds();
-            
-        }, 1000);
+            let seconds = d.getSeconds();
+            let ampm = hours>=12 ? "PM" : "AM" ;
+            minutes = minutes<10 ? "0" + minutes : minutes;
+            seconds = seconds<10 ? "0" + seconds : seconds;
+
+            clockshow.innerHTML = `${hours % 12 || 12}:${minutes}:${seconds} ${ampm}`
+        }
+        clock();
+        setInterval(clock,1000);
         
+        // let num = 24;
+        // document.write(num%12 || 12)
     </script>
 </body>
 </html>
