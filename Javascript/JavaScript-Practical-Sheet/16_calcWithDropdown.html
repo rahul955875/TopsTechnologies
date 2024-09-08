@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calc width dropdown</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      .field{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+        align-items: center;
+      }
+      input,#dropdown {
+        width: 200px;
+        /* border: 1px solid; */
+        padding: 10px;
+        border-radius: 10px;
+      }
+      label,h3{
+        font-size: 18px;
+      }
+      h3{
+        margin: 20px 0 0 0;
+      }
+      .main{
+        max-width: 550px;
+        border: 2px solid black;
+        margin: 50px auto;
+        padding:50px;
+      }
+        .red{
+            color: red;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="field">
+        <label for="input1">Enter 1st Number</label
+        ><input type="number" id="input1" placeholder="Enter 1st" />
+      </div>
+      <div class="field">
+        <label for="input2">Enter 2nd Number</label
+        ><input type="number" id="input2" placeholder="Enter 2nd" />
+      </div>
+      <div class="field">
+        <label for="dropdown">Select Operation</label>
+        <select name="operation" id="dropdown">
+          <option value="-1">--select--</option>
+          <option value="1">Addition</option>
+          <option value="2">Subtraction</option>
+          <option value="3">Multiply</option>
+          <option value="4">Divide</option>
+          <option value="5">Modulo</option>
+        </select>
+      </div>
+      <h3 id="ans">Answer is :</h3>
+    </div>
+    <script>
+      let input1 = document.getElementById("input1");
+      let input2 = document.getElementById("input2");
+      let dropdown = document.getElementById("dropdown");
+      let ans = document.getElementById("ans");
+      function mathOp(){
+          if(input1.value==="" || input2.value===""){
+              ans.innerHTML = `<span class="red">Enter in both field</span>`;
+          }
+          else{
+                let num1 = Number(input1.value);
+                let num2 = Number(input2.value);
+            switch (dropdown.value) {
+                case "1":
+                    ans.innerHTML = `Answer is : <span class="red">${num1 + num2}</span>`
+                    break;
+                case "2":
+                    ans.innerHTML = `Answer is : <span class="red">${num1 - num2}</span>`
+                    break;
+                case "3":
+                    ans.innerHTML = `Answer is : <span class="red">${num1 * num2}</span>`
+                    break;
+                case "4":
+                    ans.innerHTML = `Answer is : <span class="red">${num1 / num2}</span>`
+                    break;
+                case "5":
+                    ans.innerHTML = `Answer is : <span class="red">${num1 % num2}</span>`
+                    break;
+                default:
+                    ans.innerHTML = `<span class='red'>Select the operation</span>`;
+                    break;
+            }
+      }
+    }
+      dropdown.addEventListener("change",mathOp);
+    </script>
+  </body>
+</html>
