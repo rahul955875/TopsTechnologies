@@ -1,58 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Name Validation</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        input {
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      input {
         padding: 10px;
         border-radius: 10px;
       }
-      button{
+      button {
         font-size: 25px;
         padding: 10px 20px;
       }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="main">
-        <form action="#">
-            <input type="text" id="Name" placeholder="Enter Full name" onblur="return checkname()">
-            <div id="msg">tuyyu</div>
-            <button type="submit" id="Submit" onclick="return checkname()">Submit</button>
-        </form>
+      <form action="#">
+        <input
+          type="text"
+          id="Name"
+          placeholder="Enter Full name"
+          onblur="checkname()"
+        />
+        <div id="msg">tuyyu</div>
+        <button type="submit" id="Submit" onclick="return checkname()">
+          Submit
+        </button>
+      </form>
     </div>
     <script>
-        let name = document.getElementById("Name");
-        let msg = document.getElementById("msg");
-        function checkname(){
-            if(name.value==="" || name.value===null){
-                msg.innerHTML = `empty Name not acceptable`
-                return false;
-            }
-            else{
-                msg.innerHTML = null;
-            }
-            let ptn = /^[a-zA-z\s]*$/
-            if(!ptn.test(name.value)){
-                msg.innerHTML = `Invalid name`
-                return false;
-            }
-            else if(name.value<5){
-                msg.innerHTML = `name should be minimum 5 letters`
-                return false;
-            }
-            else{
-                msg.innerHTML = null;
-            }
-            return true;
+      let fname = document.getElementById("Name");
+      let msg = document.getElementById("msg");
+      function checkname() {
+        if (fname.value === "" || fname.value === null) {
+          msg.innerHTML = `empty Name not acceptable`;
+          return false;
         }
+        let ptn = /^[a-zA-z\s]*$/;
+        if (!ptn.test(fname.value)) {
+          msg.innerHTML = `Invalid name`;
+          return false;
+        } else if (fname.value.length < 5) {
+          msg.innerHTML = `name should be minimum 5 letters`;
+          return false;
+        } else {
+          msg.innerHTML = null;
+        }
+        fname.addEventListener("input",()=>{
+            fname.value = fname.value.toUpperCase();
+        })
+        return true;
+      }
     </script>
-</body>
+  </body>
 </html>
