@@ -72,7 +72,7 @@
         if (fname.value === "" || fname.value === null) {
           msg.innerHTML = `empty Name not acceptable`;
           fname.classList.add("error");
-          fname.focus();
+          // fname.focus();
           return false;
         }
         let ptn = /^[a-zA-z\s]*$/;
