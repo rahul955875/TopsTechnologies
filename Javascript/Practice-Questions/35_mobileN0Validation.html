@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile no. Validation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      .main {
+        border: 2px solid black;
+        border-radius: 5px;
+        width: 400px;
+        margin: 100px auto;
+        padding: 20px 40px;
+      }
+      .main h1 {
+        text-align: center;
+        text-decoration: underline blue;
+        padding-bottom: 24px;
+        padding-top: 6px;
+      }
+
+      input,
+      button {
+        outline: none;
+        width: 100%;
+        margin-bottom: 16px;
+        padding: 12px;
+        border-radius: 10px;
+      }
+      button:hover {
+        color: white;
+        background-color: black;
+      }
+      #msg {
+        margin-bottom: 10px;
+        font-size: 14px;
+        text-transform: capitalize;
+      }
+      .error {
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Name Validation</h1>
+      <form action="sfk.html" onsubmit=" return checkno()">
+        <input
+          type="text"
+          id="mNumber"
+          placeholder="Enter Mo.No" maxlength="10"
+          onkeyup="return checkno()" onblur="checkno()"
+        />
+        <div id="msg"></div>
+        <button type="submit" id="Submit">
+          Submit
+        </button>
+      </form>
+    </div>
+    <script>
+     let no = document.getElementById("mNumber");
+     let msg = document.getElementById("msg");
+     function checkno(){
+        if(no.value==="" || no.value === null){
+            msg.innerHTML = "Please enter your no";
+            no.classList.add("error");
+            return false;
+        }
+        let ptn = /^[6-9]+[0-9]*$/;
+        if(!ptn.test(no.value)){
+            msg.innerHTML = `Invalid No`;
+            no.classList.add("error");
+            return false;
+        }
+        else if(no.value.length < 10){
+            msg.innerHTML = `Lenght of No must be 10 `;
+            return false;
+        }
+        else{
+            msg.innerHTML = null;
+            no.classList.remove("error");
+        }
+        return true;
+     }  
+    </script>
+  </body>
+</html>
