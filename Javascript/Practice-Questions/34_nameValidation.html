@@ -9,27 +9,56 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: sans-serif;
       }
-      input {
-        padding: 10px;
+      .main {
+        border: 2px solid black;
+        border-radius: 5px;
+        width: 400px;
+        margin: 100px auto;
+        padding: 20px 40px;
+      }
+      .main h1 {
+        text-align: center;
+        text-decoration: underline blue;
+        padding-bottom: 24px;
+        padding-top: 6px;
+      }
+
+      input,
+      button {
+        outline: none;
+        width: 100%;
+        margin-bottom: 16px;
+        padding: 12px;
         border-radius: 10px;
       }
-      button {
-        font-size: 25px;
-        padding: 10px 20px;
+      button:hover {
+        color: white;
+        background-color: black;
+      }
+      #msg {
+        margin-bottom: 10px;
+        font-size: 14px;
+        text-transform: capitalize;
+      }
+      .error {
+        border: 2px solid red;
+        /* border-color: red; */
       }
     </style>
   </head>
   <body>
     <div class="main">
-      <form action="#">
+      <h1>Name Validation</h1>
+      <form action="inde.html" onsubmit="checkname()">
         <input
           type="text"
           id="Name"
           placeholder="Enter Full name"
-          onblur="checkname()"
+          onkeyup="return checkname()"
         />
-        <div id="msg">tuyyu</div>
+        <div id="msg"></div>
         <button type="submit" id="Submit" onclick="return checkname()">
           Submit
         </button>
@@ -38,26 +67,33 @@
     <script>
       let fname = document.getElementById("Name");
       let msg = document.getElementById("msg");
+
       function checkname() {
         if (fname.value === "" || fname.value === null) {
           msg.innerHTML = `empty Name not acceptable`;
+          fname.classList.add("error");
+          fname.focus();
           return false;
         }
         let ptn = /^[a-zA-z\s]*$/;
         if (!ptn.test(fname.value)) {
           msg.innerHTML = `Invalid name`;
+          fname.classList.add("error");
+
           return false;
         } else if (fname.value.length < 5) {
           msg.innerHTML = `name should be minimum 5 letters`;
+          fname.classList.add("error");
           return false;
         } else {
+          fname.classList.remove("error");
           msg.innerHTML = null;
         }
-        fname.addEventListener("input",()=>{
-            fname.value = fname.value.toUpperCase();
-        })
         return true;
       }
+      fname.addEventListener("input", () => {
+        fname.value = fname.value.toUpperCase();
+      });
     </script>
   </body>
 </html>
