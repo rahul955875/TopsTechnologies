@@ -67,21 +67,21 @@
     <script>
       let fname = document.getElementById("Name");
       let msg = document.getElementById("msg");
-
       function checkname() {
-        if (fname.value === "" || fname.value === null) {
+        Fname = fname.value.trim();
+        if (Fname === "" || Fname === null) {
           msg.innerHTML = `empty Name not acceptable`;
           fname.classList.add("error");
           // fname.focus();
           return false;
         }
         let ptn = /^[a-zA-z\s]*$/;
-        if (!ptn.test(fname.value)) {
+        if (!ptn.test(Fname)) {
           msg.innerHTML = `Invalid name`;
           fname.classList.add("error");
 
           return false;
-        } else if (fname.value.length < 5) {
+        } else if (Fname.length < 5) {
           msg.innerHTML = `name should be minimum 5 letters`;
           fname.classList.add("error");
           return false;
