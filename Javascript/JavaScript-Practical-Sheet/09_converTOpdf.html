@@ -58,12 +58,13 @@
         padding: 7px 40px;
         border-radius: 20px;
       }
-      #print{
+      #print,#topdf{
+        margin-bottom: 10px;
         padding: 10px;
         font-size: 16px;
       }
       @media print {
-        #print{
+        #print,#topdf{
             display: none;
         }
       }
@@ -167,11 +168,12 @@
       document.getElementById("result").addEventListener("click", main);
       let printbtn = document.getElementById("print");
       printbtn.addEventListener("click",()=>{
-        print();
+        window.print();
       })
       let topdf = document.getElementById("topdf");
       topdf.addEventListener("click", () =>{
-        html2pdf();
+        let pdf = document.querySelector("body");
+        html2pdf().from(pdf).save();
       })
     </script>
   </body>
