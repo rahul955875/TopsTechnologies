@@ -10,11 +10,45 @@
             padding: 0;
             box-sizing: border-box;
         }
+        .main{
+            background: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg")no-repeat;
+            background-position: center;
+            background-size: cover;
+            height:100vh;
+            /* filter: brightness(); */
+        }
+        .navbar{
+            width:300px;
+            height: inherit;
+            background-color:white;
+            /* padding: 30px 20px; */
+        }
+        a{
+            text-decoration: none;
+            font-size: 20px;
+            display: block;
+            padding: 20px;
+        }
+        ul{
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            /* gap: 10px; */
+           
+        }
+        .cancel{
+            width: max-content;
+            font-size: 40px;
+            margin-left: auto;
+            padding-right: 10px;
+            padding-top: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="main">
         <div class="navbar">
+            <div class="cancel">&Cross;</div>
             <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="">About</a></li>
