@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>change counting</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .navbar {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        display: flex;
+        padding: 20px 64px;
+        background-color: rgba(74, 190, 74, 0.5);
+        backdrop-filter: blur(10px) brightness(60%);
+        align-items: center;
+        box-shadow: 0 0 20px white;
+        justify-content: space-between;
+      }
+      .navchange {
+        background-color: rgba(255, 255, 0, 0.5);
+        transition: 2s ease-out;
+      }
+      .logo {
+        filter: drop-shadow(0 0 10px white);
+      }
+      .logo img {
+        width: 50px;
+        object-fit: cover;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .navbar ul {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .navbar a {
+        font-size: 18px;
+        padding: 20px;
+        color: white;
+        text-shadow: 0 0 10px wheat;
+      }
+      /* main {
+        margin-top: 40px;
+      } */
+      .img-sec .img {
+        width: 100%;
+        height: 100vh;
+        filter: drop-shadow(0 0 20px black);
+      }
+      .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* filter: brightness(150%); */
+        animation: light 3s ease-in-out infinite alternate;
+      }
+      @keyframes light {
+        0% {
+          filter: brightness(80%);
+        }
+        50% {
+          filter: brightness(120%) hue-rotate(50deg);
+        }
+        100% {
+          filter: brightness(80%);
+        }
+      }
+      .img-sec h2 {
+        font-size: 50px;
+        text-align: center;
+        padding: 80px 0;
+      }
+      .counter {
+        padding: 50px;
+        background-color: #ddd;
+      }
+      .counter ul {
+        user-select: none;
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 50px;
+        color: blue;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <img
+            src="https://wallsdesk.com/wp-content/uploads/2016/05/BMW-Logo-PNG.png"
+            alt="logo"
+          />
+        </div>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Show Room</a></li>
+          <li><a href="">Contact us</a></li>
+          <li><a href="">About us</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="img-sec">
+        <div class="img">
+          <img
+            src="https://data.1freewallpapers.com/download/bmw-green-m3-competition-2020-4k-5k-cars.jpg"
+            alt="car"
+          />
+        </div>
+        <div class="counter">
+          <ul>
+            <li id="c1" class="count">000</li>
+            <li id="c2" class="count">1000</li>
+            <li id="c3" class="count">3000</li>
+            <li id="c4" class="count">3900</li>
+          </ul>
+        </div>
+        <div class="img">
+          <img
+            src="https://www.wallpaperflare.com/static/116/432/915/bmw-3-csl-car-green-bmw-wallpaper.jpg"
+            alt="car"
+          />
+        </div>
+      </div>
+    </main>
+    <script>
+      let navbar = document.querySelector(".navbar");
+      let count = document.querySelectorAll(".count");
+      let isscrolled = false;
+      window.addEventListener("scroll", () => {
+        let s = this.scrollY;
+        // if(s>550){
+        //     navbar.classList.add("navchange");
+        // }
+        if (s > window.innerHeight * 0.9) {
+          navbar.classList.add("navchange");
+        } else {
+          navbar.classList.remove("navchange");
+        }
+        if (s > window.innerHeight * 0.4 && !isscrolled) {
+          isscrolled = true;
+          let startvalue = 0;
+          let counter = setInterval(() => {
+            count.forEach((e) => {
+              let num = Number(e.innerHTML);
+              console.log(num)
+              if (startvalue <= num) {
+                e.innerHTML = startvalue;
+                console.log(startvalue)
+                startvalue++;
+              }
+            });
+          }, 1);
+          setTimeout(() => {
+            clearInterval(counter);
+          }, 2000);
+        }
+      });
+    </script>
+  </body>
+</html>
