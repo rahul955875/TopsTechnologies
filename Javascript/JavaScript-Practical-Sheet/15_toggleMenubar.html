@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Toggle Menubar</title>
     <style>
         *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: sans-serif;
         }
         .main{
             background: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg")no-repeat;
@@ -18,37 +20,67 @@
             /* filter: brightness(); */
         }
         .navbar{
+            position: fixed;
+            display: flex;
+            flex-direction: column;
             width:300px;
             height: inherit;
-            background-color:white;
+            background-color:rgba(0, 0, 100, 0.5);
+            backdrop-filter: blur(20px)brightness(200%);
             /* padding: 30px 20px; */
+            transform-origin: left;
+            transform: translatex(-300px);
         }
         a{
             text-decoration: none;
             font-size: 20px;
             display: block;
-            padding: 20px;
+            padding: 20px 40px;
+            color: white;
+        }
+        a:hover{
+            background-color: rgba(0, 0, 0, 0.3);
         }
         ul{
             list-style-type: none;
             display: flex;
             flex-direction: column;
+            user-select: none;
             /* gap: 10px; */
            
         }
+        #menubtn{
+            position: absolute;
+            font-size: 25px;
+            padding: 10px 15px;
+            border-radius: 10px;
+            margin: 20px;
+        }
         .cancel{
-            width: max-content;
+            background-color:transparent;
+            border: none;
             font-size: 40px;
-            margin-left: auto;
-            padding-right: 10px;
+            margin-left:auto;
+            padding-right: 20px;
             padding-top: 10px;
+            color: white;
+            cursor: pointer;
+            user-select: none;
+        }
+        @media (max-width:500px) {
+            .navbar{
+                width: 100%;
+                transform: translatex(-100%);
+            }
+            
         }
     </style>
 </head>
 <body>
     <div class="main">
+        <button id="menubtn"><i class="fa-solid fa-bars"></i></button>
         <div class="navbar">
-            <div class="cancel">&Cross;</div>
+            <button class="cancel">&Cross;</button>
             <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="">About</a></li>
@@ -60,5 +92,22 @@
             </ul>
         </div>
     </div>
+    <script>
+        let menubtn = document.getElementById("menubtn");
+        let navbar = document.querySelector(".navbar")
+        menubtn.addEventListener("click",() =>{
+            menubtn.style.display = "none"
+            navbar.style.transform = "translatex(0)"
+            navbar.style.transition = ".5s ease";
+        });
+        let cancel = document.querySelector(".cancel");
+        cancel.addEventListener("click",()=>{
+            navbar.style.transition = ".5s ease";
+            navbar.style.transform = "translatex(-100%)"
+            cancel.style.transition = ".5s ease";
+            cancel.style.transform = "rotate(360deg)"
+            menubtn.style.display = "block"
+        })
+    </script>
 </body>
 </html>
