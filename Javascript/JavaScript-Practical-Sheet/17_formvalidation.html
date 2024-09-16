@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration form</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        padding: 0 10px;
+        font-family: sans-serif;
+        overflow-x: hidden;
+      }
+      .main {
+        border: 2px solid black;
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 20px 30px;
+        --black: rgba(0, 0, 0, 0.85);
+      }
+      .main h1 {
+        font-size: 40px;
+        color: var(--black);
+        padding: 10px 0 40px 0;
+      }
+      .main table {
+        width: 100%;
+      }
+      .main table td:first-child {
+        width: 20%;
+      }
+      .main table td:last-child {
+        width: 80%;
+      }
+      .main table td:last-child input[type="text"],
+      input[type="password"],
+      select,
+      textarea {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px 20px;
+        margin: 10px 0;
+      }
+      .main input[type="submit"] {
+        font-size: 20px;
+        padding: 10px 40px;
+        color: white;
+        background-color: blue;
+        outline: none;
+        border: none;
+        transition: 0.2s ease;
+      }
+      .main input[type="submit"]:hover {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Register here</h1>
+      <form action="" method="get">
+        <table>
+          <tr>
+            <td>First name</td>
+            <td><input type="text" id="fname" name="fname" /></td>
+          </tr>
+          <tr>
+            <td>Last name</td>
+            <td><input type="text" id="lname" name="lname" /></td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+            <td>
+              <input type="radio" id="radio" name="gender" /> Male
+              <input type="radio" id="radio" name="gender" /> Female
+            </td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>
+              <textarea rows="3"
+                name="textarea"
+                id="address"
+                placeholder="Enter character between 35 to 200"
+                maxlength="200"
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>City</td>
+            <td>
+              <select name="city" id="city">
+                <option value="-1">--select--</option>
+                <option value="surat">Surat</option>
+                <option value="surat">Ahmedabad</option>
+                <option value="surat">Bharuch</option>
+                <option value="surat">baroda</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Mobile No.</td>
+            <td><input type="text" id="mobileNo" /></td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td><input type="text" id="email" /></td>
+          </tr>
+          <tr>
+            <td>Password</td>
+            <td>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter 8 to 15 character"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Confirm Password</td>
+            <td><input type="password" id="cpassword" placeholder="" /></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type="submit" /></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
