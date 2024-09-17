@@ -58,12 +58,21 @@
       .main input[type="submit"]:hover {
         background-color: black;
       }
+      #msg {
+        color: red;
+        font-size: 20px;
+        padding: 10px;
+      }
+      .error {
+        outline: none;
+        border: 2px solid red;
+      }
     </style>
   </head>
   <body>
     <div class="main">
       <h1>Register here</h1>
-      <form action="" method="get">
+      <form action="" method="get" onsubmit="return check()">
         <table>
           <tr>
             <td>First name</td>
@@ -77,13 +86,14 @@
             <td>Gender</td>
             <td>
               <input type="radio" id="radio" name="gender" /> Male
-              <input type="radio" id="radio" name="gender" /> Female
+              <input type="radio" id="radio2" name="gender" /> Female
             </td>
           </tr>
           <tr>
             <td>Address</td>
             <td>
-              <textarea rows="3"
+              <textarea
+                rows="3"
                 name="textarea"
                 id="address"
                 placeholder="Enter character between 35 to 200"
@@ -105,7 +115,7 @@
           </tr>
           <tr>
             <td>Mobile No.</td>
-            <td><input type="text" id="mobileNo" /></td>
+            <td><input type="text" id="mobileNo" maxlength="10" minlength="10" /></td>
           </tr>
           <tr>
             <td>Email</td>
@@ -127,10 +137,87 @@
           </tr>
           <tr>
             <td></td>
+            <td id="msg"></td>
+          </tr>
+          <tr>
+            <td></td>
             <td><input type="submit" /></td>
           </tr>
         </table>
       </form>
     </div>
+    <script>
+      let fname = document.getElementById("fname");
+      let lname = document.getElementById("lname");
+      let addr = document.getElementById("address");
+      let city = document.getElementById("city");
+      let mobile = document.getElementById("mobileNo");
+      let email = document.getElementById("email");
+      let pass = document.getElementById("password");
+      let cpass = document.getElementById("cpassword");
+      let msg = document.getElementById("msg");
+      function check() {
+        if (
+          fname.value.trim() === "" ||
+          lname.value.trim() === "" ||
+          addr.value.trim() === "" ||
+          city.value === "-1" ||
+          mobile.value === "" ||
+          email.value === "" ||
+          pass.value === "" ||
+          cpass.value === ""
+        ) {
+          msg.innerHTML = "All field should not be empty.";
+          return false;
+        }
+        else{
+          msg.innerHTML = "";
+        }
+        return true;
+      }
+      // ====================
+      function namecheck(fieldname) {
+        let ptn = /^[a-zA-Z\s]*$/;
+        if (!ptn.test(fieldname.value) || fieldname.value.trim() === "") {
+          msg.innerHTML = "Invalid name";
+          fieldname.classList.add("error");
+          return false;
+        } else {
+          msg.innerHTML = "";
+          fieldname.classList.remove("error");
+        }
+        return true;
+      }
+      fname.addEventListener("input",()=> namecheck(fname));
+      lname.addEventListener("input",()=> namecheck(lname));
+      // ==========mobile===============
+      mobile.addEventListener("input",()=>{
+        let ptn = /^[6-9][0-9]*$/
+        if(!ptn.test(mobile.value)){
+          mobile.classList.add("error");
+          msg.innerHTML = "invalid mobile NO."
+          return false;
+        }
+        else{
+          msg.innerHTML = "";
+          mobile.classList.remove("error")
+          return true;
+        }
+      })
+      // ===========email=======
+      email.addEventListener("input",()=>{
+        let ptn = /^[a-zA-Z][a-zA-Z0-9%$+-]*@[a-zA-Z]*.[a-zA-Z]{5}$/
+        if(!ptn.test(email.value)){
+          email.classList.add("error");
+          msg.innerHTML = "invalid email";
+          return false;
+        }
+        else{
+          email.classList.remove("error");
+          msg.innerHTML = "";
+          return tr
+        }
+      })
+    </script>
   </body>
 </html>
