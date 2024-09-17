@@ -3,12 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Registration form</title>
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        user-select: none;
       }
       body {
         width: 100vw;
@@ -67,6 +75,16 @@
         outline: none;
         border: 2px solid red;
       }
+      .prow {
+        position: relative;
+      }
+      .fa-solid {
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        right: 1%;
+        transform: translate(-50%, -50%);
+      }
     </style>
   </head>
   <body>
@@ -85,7 +103,7 @@
           <tr>
             <td>Gender</td>
             <td>
-              <input type="radio" id="radio" name="gender" /> Male
+              <input type="radio" id="radio" name="gender" checked/> Male
               <input type="radio" id="radio2" name="gender" /> Female
             </td>
           </tr>
@@ -115,13 +133,15 @@
           </tr>
           <tr>
             <td>Mobile No.</td>
-            <td><input type="text" id="mobileNo" maxlength="10" minlength="10" /></td>
+            <td>
+              <input type="text" id="mobileNo" maxlength="10" minlength="10" />
+            </td>
           </tr>
           <tr>
             <td>Email</td>
             <td><input type="text" id="email" /></td>
           </tr>
-          <tr>
+          <tr class="prow">
             <td>Password</td>
             <td>
               <input
@@ -129,11 +149,15 @@
                 id="password"
                 placeholder="Enter 8 to 15 character"
               />
+              <i class="fa-solid fa-eye"></i>
             </td>
           </tr>
-          <tr>
+          <tr class="prow">
             <td>Confirm Password</td>
-            <td><input type="password" id="cpassword" placeholder="" /></td>
+            <td>
+              <input type="password" id="cpassword" placeholder="" />
+              <i class="fasolid2 fa-solid fa-eye"></i>
+            </td>
           </tr>
           <tr>
             <td></td>
@@ -169,10 +193,17 @@
         ) {
           msg.innerHTML = "All field should not be empty.";
           return false;
-        }
-        else{
+        } else {
           msg.innerHTML = "";
         }
+        if(!namecheck(fname)){
+          return false;
+        }
+        if(!namecheck(lname)){
+          return false;
+        }
+        // only fanme and lname is check for form submission
+        // ======other funcions are not checked====
         return true;
       }
       // ====================
@@ -188,34 +219,88 @@
         }
         return true;
       }
-      fname.addEventListener("input",()=> namecheck(fname));
-      lname.addEventListener("input",()=> namecheck(lname));
+      fname.addEventListener("input", () => namecheck(fname));
+      lname.addEventListener("input", () => namecheck(lname));
       // ==========mobile===============
-      mobile.addEventListener("input",()=>{
-        let ptn = /^[6-9][0-9]*$/
-        if(!ptn.test(mobile.value)){
+      mobile.addEventListener("input", () => {
+        let ptn = /^[6-9][0-9]*$/;
+        if (!ptn.test(mobile.value) || mobile.value.trim().length<10) {
           mobile.classList.add("error");
-          msg.innerHTML = "invalid mobile NO."
+          msg.innerHTML = "invalid mobile NO.";
           return false;
-        }
-        else{
+        } else {
           msg.innerHTML = "";
-          mobile.classList.remove("error")
+          mobile.classList.remove("error");
           return true;
         }
-      })
+      });
       // ===========email=======
-      email.addEventListener("input",()=>{
-        let ptn = /^[a-zA-Z][a-zA-Z0-9%$+-]*@[a-zA-Z]*.[a-zA-Z]{5}$/
-        if(!ptn.test(email.value)){
+      email.addEventListener("blur", () => {
+        let ptn = /^[a-zA-Z][a-zA-Z0-9%$+-]*@[a-zA-Z0-9-]+\.[a-zA-Z]{2,5}$/;
+
+        if (!ptn.test(email.value)) {
           email.classList.add("error");
           msg.innerHTML = "invalid email";
           return false;
-        }
-        else{
+        } else {
           email.classList.remove("error");
           msg.innerHTML = "";
-          return tr
+          return true;
+        }
+      });
+      // ==-==================addreess=========
+      addr.addEventListener("blur", () => {
+        if (addr.value.trim().length < 35 || addr.value.trim().length > 200) {
+          msg.innerHTML = "address must be within range of 35 to 200";
+          addr.classList.add("error");
+          return false;
+        } else {
+          msg.innerHTML = "";
+          addr.classList.remove("error");
+          return true;
+        }
+      });
+
+      // =============pass=======
+      let fasolid = document.querySelector(".fa-solid");
+      let fasolid2 = document.querySelector(".fasolid2");
+      function passVis(p,cls){
+        if(p.type==="text"){
+          p.type = "password";
+          cls.classList.remove("fa-eye-slash");
+          cls.classList.add("fa-eye");
+          
+        }
+        else{
+          cls.classList.remove("fa-eye");
+          cls.classList.add("fa-eye-slash");
+          p.type = "text";
+        }
+      }
+      fasolid.addEventListener("click", ()=> {passVis(pass,fasolid)});
+      fasolid2 .addEventListener("click", ()=> {passVis(cpass,fasolid2)});
+      pass.addEventListener("blur",()=>{
+        if(pass.value.trim().length < 8 || pass.value.trim().length >15){
+          pass.classList.add("error");
+          msg.innerHTML = "password must be in given length"
+        }
+        else{
+          pass.classList.remove("error");
+          msg.innerHTML = ""
+        }
+        
+      })
+      // ====================
+      cpass.addEventListener("input",()=>{
+        if(cpass.value !== pass.value){
+          cpass.classList.add("error");
+          msg.innerHTML = "password not match"
+          return false;
+        }
+        else{
+          msg.innerHTML = ""
+          cpass.classList.remove("error");
+          return true;
         }
       })
     </script>
