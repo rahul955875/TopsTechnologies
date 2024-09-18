@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .sliders {
+            position: relative;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+        }
+
+        img {
+            height: 600px;
+            width: 100%;
+            object-fit: cover;
+            animation: fade 0.5s ease;
+        }
+
+        .controls {
+            position: absolute;
+            top: 250px;
+            z-index: 11;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        button {
+            height: 50px;
+            width: 50px;
+            background-color: white;
+            color: black;
+            border: transparent;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        button:active {
+            scale: 0.9;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sliders">
+        <div class="slide">
+            <img src="https://www.cardiffmtc.org.uk/media/2015/06/desktop-wallpaper-hd-full-screen-flowers-background-3d-full-hd-wallpaper-download-for-pc-android-mobile-wallpapers-windows-7-name-nature-animation.jpg"
+                alt="">
+
+        </div>
+        <div class="slide">
+            <img src="https://cdn.wallpapersafari.com/72/58/WLHYwR.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="https://images.pexels.com/photos/1042423/pexels-photo-1042423.jpeg?cs=srgb&dl=pexels-kasperphotography-1042423.jpg&fm=jpg"
+                alt="">
+        </div>
+        <div class="slide">
+            <img src="https://wallpapertag.com/wallpaper/full/5/8/b/1006830-gorgerous-world-beautiful-places-wallpapers-1920x1200.jpg"
+                alt="">
+        </div>
+
+        <div class="controls">
+            <button class="prev" onclick="call(-1)">&lt;</button>
+            <button class="next" onclick="call(1)">&gt;</button>
+        </div>
+    </div>
+
+
+    <script>
+        debugger
+        let index = 0;
+        function call(x) {
+            index += x
+            slideShow(index)
+        }
+        slideShow(index);
+
+        function slideShow(n) {
+            let slide = document.getElementsByClassName("slide");
+
+            if (n == slide.length) {
+                // index = 0;
+                n = 0;
+            }
+            if (n < 0) {
+                // slide = slide.length - 1;
+                n = slide.length - 1
+            }
+            for (const y of slide) {
+                y.style.display = "none"
+            }
+            slide[n].style.display = "block"
+        }
+
+
+    </script>
+</body>
+
+</html>

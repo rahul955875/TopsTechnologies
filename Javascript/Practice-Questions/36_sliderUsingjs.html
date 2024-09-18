@@ -21,6 +21,21 @@
         height: 100%;
         object-position: center;
         object-fit: cover;
+        animation: fade 0.3s ease-in-out;
+      }
+      @keyframes fade {
+        0%{
+            opacity: 0.5;
+            /* filter: brightness(100%); */
+        }
+        100%{
+            opacity: 1;
+            /* filter: brightness(150%); */
+        }
+      }
+      #btn1:hover , #btn2:hover{
+        background-color:blue;
+        color: white;
       }
       .btns {
         width: 100%;
@@ -28,6 +43,7 @@
         display: flex;
         justify-content: space-between;
         height: 100%;
+        padding: 0 10px;
       }
       #btn1,
       #btn2 {
