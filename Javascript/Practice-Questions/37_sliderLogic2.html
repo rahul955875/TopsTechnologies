@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
+not
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Slider logic 2</title>
     <style>
         * {
             margin: 0;
@@ -91,29 +91,27 @@
 
 
     <script>
-        debugger
-        let index = 0;
+        let index = 1;
         function call(x) {
             index += x
             slideShow(index)
         }
         slideShow(index);
 
-        function slideShow(n) {
+        function slideShow(index) {
             let slide = document.getElementsByClassName("slide");
 
-            if (n == slide.length) {
-                // index = 0;
-                n = 0;
+            if (index == slide.length) {
+                index = 0;
+            
             }
-            if (n < 0) {
-                // slide = slide.length - 1;
-                n = slide.length - 1
+            if (index < 0) {
+                index = slide.length - 1
             }
             for (const y of slide) {
                 y.style.display = "none"
             }
-            slide[n].style.display = "block"
+            slide[index].style.display = "block"
         }
 
 
