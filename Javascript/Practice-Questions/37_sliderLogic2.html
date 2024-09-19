@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-not
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -91,9 +91,11 @@ not
 
 
     <script>
-        let index = 1;
+        let index = 0;
         function call(x) {
+            
             index += x
+            console.log(index);
             slideShow(index)
         }
         slideShow(index);
@@ -101,12 +103,15 @@ not
         function slideShow(index) {
             let slide = document.getElementsByClassName("slide");
 
-            if (index == slide.length) {
-                index = 0;
+            if (index >= slide.length) {
+                index = index % slide.length;
             
             }
             if (index < 0) {
-                index = slide.length - 1
+                index = (index % slide.length) + slide.length;
+                 index = index % slide.length;
+                console.log("inner",index)
+
             }
             for (const y of slide) {
                 y.style.display = "none"
