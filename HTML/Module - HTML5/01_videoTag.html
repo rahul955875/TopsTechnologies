@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video tag</title>
+    <style>
+        .main{
+            display: grid;
+            place-content: center;
+            width: 100%;
+            height:600px;
+        }
+        video{
+            max-width: 600px;
+            /* height: 100vh; */
+        }
+        h1{
+            text-transform: capitalize;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>HTML5 video tag</h1>
+        <div class="videobox">
+            <video autoplay controls muted loop>
+                <source src="https://cdn.pixabay.com/video/2024/03/02/202693-918730367_large.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>     
+</body>
+</html>
