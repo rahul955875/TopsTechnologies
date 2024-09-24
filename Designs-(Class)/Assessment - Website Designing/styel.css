@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto+Condensed&family=Sevillana&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root{
+    --font-cursive:"Sevillana", cursive;
+    --font-roboto:"Roboto Condensed", sans-serif;
+    --font-great:"Great Vibes", cursive;
+    --font-ubuntu:"Ubuntu Sans", sans-serif;;
+/* ======================================================= */
+    --f10:10px;
+    --f14:14px;
+    --f15:15px;
+    --f16:16px;
+    --f18:18px;
+    --f20:20px;
+    --f25:25px;
+    --f30:30px;
+    --f35:35px;
+    --f40:40px;
+    --f50:50px;
+    --f80:80px;
+    --f100:100px;
+    --p160:160px;
+    /* ========================================================== */
+    --p5:5px;
+    --p10:10px;
+    --p15:15px;
+    --p20:20px;
+    --p30:30px;
+    --p40:40px;
+    --p50:50px;
+    --p80:80px;
+    --p100:100px;
+    --p150:150px;
+    
+    /* ===================================================== */
+    --black:black;
+    --white:white;
+    --salmon:salmon;
+    --light:rgba(219, 219, 229, 0.439);
+    --grey:grey;
+    --lightgrey:rgba(185, 180, 180, 0.404);
+    --lightblue:rgb(37, 37, 223);
+    --lightseagreen:lightseagreen;
+    --primary_blue:#336dd5;
+    --light:#f2f5f7;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--font-ubuntu);
+}
+header{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 80px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+}
+header .logo{
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+header .logo img{
+    width:40px;
+    height: 100%;
+    object-fit: cover;
+    background-color:var(--white);
+    border-radius: 50%;
+}
+header .logo h1{
+    text-transform: uppercase;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+header ul{
+    display: flex;
+    gap: 10px;
+}
+nav ul a{
+    /* font-size: 18px; */
+    text-transform: capitalize;
+    padding: 15px 10px;
+    color: var(--white);
+}
+.main{
+    width: 100%;
+    height:100vh;
+        background: url()no-repeat;
+        background-size: cover;
+        /* background-position:center; */
+}
