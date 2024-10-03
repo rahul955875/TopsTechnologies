@@ -50,6 +50,7 @@
     box-sizing: border-box;
 }
 body{
+    background-color: var(--primary_blue);
     font-family: var(--font-ubuntu);
 }
 header{
@@ -168,4 +169,67 @@ margin: 30px 0;
 }
 .btn a:hover{
     background-color: var(--primary_blue);
+}
+.container{
+    width: 100%;
+    padding: 50px;
+    
+}
+.container .row{
+    width: 90%;
+    display: flex;
+    margin:auto;
+    overflow: hidden;
+}
+.row .box{
+    min-width:400px;
+    background-image: url("https://themewagon.github.io/edu-meeting/assets/images/service-item-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 20px;
+    text-align: center;
+    color: var(--white);
+    padding: 40px;
+    margin-right: 30px;
+    animation: slider 20s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+}
+.box .icon{
+    max-width: 60px;
+    margin: 0 auto;
+}
+.icon span{
+    font-size: var(--f40);
+    color:orange;
+    border: solid;
+    border-radius:50%;
+    padding: 10px;
+}
+.down-content h4{
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.down-content p{
+    color: var(--white);
+    font-size: 13px;
+    line-height: 25px;
+}
+@keyframes slider {
+   0%{
+    transform: translateX(0);
+   }
+    10%{
+    transform: translateX(-100%);
+   }
+   20%{
+    transform: translateX(calc(-200% + 90px));
+    }
+   30%{
+    transform: translateX(calc(-300% + 90px));
+    }
+    100%{
+        transform: translateX(-1100%);
+    }
 }
