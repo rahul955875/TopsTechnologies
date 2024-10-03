@@ -192,7 +192,7 @@ margin: 30px 0;
     color: var(--white);
     padding: 40px;
     margin-right: 30px;
-    animation: slider 20s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+    animation: slider 20s ease-in-out infinite;
 }
 .box .icon{
     max-width: 60px;
@@ -220,16 +220,31 @@ margin: 30px 0;
    0%{
     transform: translateX(0);
    }
-    10%{
-    transform: translateX(-100%);
+    15%{
+    transform: translateX(calc(-100% + -30px));
    }
-   20%{
-    transform: translateX(calc(-200% + 90px));
+   25%{
+    transform: translateX(calc(-200% + -60px));
     }
-   30%{
-    transform: translateX(calc(-300% + 90px));
+   35%{
+    transform: translateX(calc(-300% + -90px));
     }
-    100%{
-        transform: translateX(-1100%);
+   45%{
+    transform: translateX(calc(-400% + -120px));
     }
+   70%{
+    transform: translateX(calc(-500% + -150px));
+    }
+   80%{
+    transform: translateX(calc(-600% + -180px));
+    }
+   90%{
+    transform: translateX(calc(-700% + -210px));
+    }
+   100%{
+    transform: translateX(calc(-800% + -240px));
+    }
+   
+
+    
 }
