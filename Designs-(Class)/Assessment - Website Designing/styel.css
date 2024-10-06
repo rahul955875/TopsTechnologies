@@ -108,6 +108,7 @@ nav ul a:hover{
     background: url(http://news.uns.purdue.edu/images/campus-students.jpg)no-repeat;
     background-size: cover;
     padding: 50px 150px;
+    position: relative;
     /* background-position: cetne; */
 }
 .main::before{
@@ -173,6 +174,10 @@ margin: 30px 0;
 .container{
     width: 100%;
     padding: 50px;
+    position: absolute;
+    top: 75%;
+    left: 0;
+    /* background-color: red; */
     
 }
 .container .row{
@@ -246,9 +251,6 @@ margin: 30px 0;
     transform: translateX(calc(-800% + -240px));
     }
 }
-.container{
-    position: relative;
-}
 .btns{
     width: 100%;
     padding: 0 30px;
@@ -270,4 +272,131 @@ margin: 30px 0;
     align-items: center;
     border-radius: 50px;
     padding: 30px;
+}
+.upcoming-meetings{
+        background-image: url(https://themewagon.github.io/edu-meeting/assets/images/meetings-bg.jpg);
+        background-position:center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 230px;
+        padding-bottom: 110px;
+}
+.mettings-container{
+    width: 100%;
+    padding: 0 120px;
+    margin: auto;
+}
+/* ======== */
+.section-heading{
+    text-align: center;
+    color: var(--white);
+    text-transform: uppercase;
+}
+.section-heading h2{
+    font-weight: 900;
+    border-bottom: 1px solid grey;
+    padding-bottom:var(--p20) ;
+}
+.categories{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    margin-right: 45px;
+    height: max-content;
+}
+.categories h4{
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f272b;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+.categories ul{
+    padding-bottom: 10px;
+}
+.categories ul li{
+    /* display: inline-block; */
+    margin-bottom: 20px;
+    word-spacing: 1px;
+}
+.categories ul li a{
+    color: var(--black);
+    font-weight: 600;
+}
+.main-button-red{
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+    margin-top: 15px;
+}
+.main-button-red a{
+    font-size: 13px;
+    color: #fff;
+    background-color: #a12c2f;
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .3s;
+    width: 100%;
+    text-align: center;
+}
+.flex-container{
+    display: grid;
+    grid-template-columns: 33.33% 66.66%;
+    padding-top: var(--p50);
+}
+.box-row{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+.box-row .box-item{
+    background-color: #fff;
+    border-radius: var(--p20);
+    overflow: hidden;
+    /* padding: var(--p20); */
+}
+.box-item img{  
+    width: 100%;
+    object-fit: cover;
+}
+.thumb{
+    position: relative;
+}
+.thumb .price{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    background-color: #fff;
+    border-radius: 10px;
+    font-weight: 900;
+    padding: 10px;
+}
+.down-content{
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    gap: var(--p20);
+}
+.down-content .date span{
+    display: block;
+    color: var(--black);
+    font-size: var(--f20);
+}
+.down-content .date h6{
+    color: #a12c2f;
+    font-size: 16px;
+}
+.box-item .down-content a{
+    color: var(--black);
+}
+.down-content p{
+    font-size: var(--f14);
+    color:rgba(0, 0, 0);
+    /* font-weight: 600; */
+    font-size: 15px;
 }
