@@ -33,3 +33,31 @@ function dropDown(icon, p) {
   }
   flag = !flag;
 }
+
+
+const wrapper = document.querySelector('.course-box-wrapper');
+const items = document.querySelectorAll('.owl-item');
+const prevBtn = document.querySelector('.c-btn:first-child');
+const nextBtn = document.querySelector('#next-btn');
+
+let currentIndex = 0; 
+const totalItems = items.length -3; 
+
+
+function updateSlider() {
+  const width = items[0].clientWidth + 30;
+  wrapper.style.transform = `translateX(-${(currentIndex * width)}px)`;
+}
+
+nextBtn.addEventListener('click', () => {
+
+  currentIndex = (currentIndex + 1) % totalItems;
+  updateSlider();
+});
+
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+  updateSlider();
+});
+
+// updateSlider();
