@@ -171,7 +171,7 @@ margin: 30px 0;
 .btn a:hover{
     background-color: var(--primary_blue);
 }
-.container{
+.service-container{
     width: 100%;
     padding: 50px;
     position: absolute;
@@ -180,13 +180,13 @@ margin: 30px 0;
     /* background-color: red; */
     
 }
-.container .row{
+.service-container .service-row{
     width: 90%;
     display: flex;
     margin:auto;
     overflow: hidden;
 }
-.row .box{
+.service-row .service-box{
     min-width:400px;
     background-image: url("https://themewagon.github.io/edu-meeting/assets/images/service-item-bg.jpg");
     background-repeat: no-repeat;
@@ -200,24 +200,24 @@ margin: 30px 0;
     animation: slider 20s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
     
 }
-.box .icon{
+.service-box .icon{
     max-width: 60px;
     margin: 0 auto;
 }
-.icon span{
+.service-box .icon span{
     font-size: var(--f40);
     color:orange;
     border: solid;
     border-radius:50%;
     padding: 10px;
 }
-.down-content h4{
+.service-down-content h4{
     margin-top: 25px;
     margin-bottom: 15px;
     font-size: 18px;
     font-weight: 600;
 }
-.down-content p{
+.service-down-content p{
     color: var(--white);
     font-size: 13px;
     line-height: 25px;
@@ -399,4 +399,135 @@ margin: 30px 0;
     color:rgba(0, 0, 0);
     /* font-weight: 600; */
     font-size: 15px;
+}
+.apply-now{
+    background-image: url(https://themewagon.github.io/edu-meeting/assets/images/apply-bg.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 140px 0px;
+}
+.apply-container{
+    width: 100%;
+    padding-right: 120px;
+    padding-left: 120px;
+    /* margin: auto; */
+}
+.apply-row{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 30px;
+}
+.apply-box{
+    align-self: center;
+}
+.apply-box-item{
+    width: 100%;
+
+}
+.apply-item{
+    background-color: rgba(250,250,250,0.15);
+    padding: 40px;
+    margin-bottom: 30px;
+}
+.apply-item h3{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.apply-item p{
+    color: #fff;
+    margin-bottom: 20px;
+}
+.apply-main-button-red a,.apply-main-button-yellow a{
+    font-size: 13px;
+    color: #fff;
+    background-color: #a12c2f;
+    padding: 12px 30px;
+    display: inline-block;
+    border-radius: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .3s;
+}
+.apply-main-button-yellow a{
+    background-color:rgb(135, 135, 6);
+
+}
+.accordions{
+    border-radius: 20px;
+    padding: 40px;
+    background-color: #fff;
+    margin-left: 45px;
+}
+.accordions .accordion {
+    border-bottom: 1px solid #eee;
+}
+.accordion-head.is-open {
+    color: #f5a425;
+    border-bottom: none;
+}
+.accordion-head .icon span{
+    transform: rotate(90deg);
+    float: right;
+    transition: transform 200ms ease-in-out;
+}
+.accordion-body{
+    overflow: hidden;
+    height: 0;
+    transition: height 300ms ease-in-out;
+    border-bottom: 1px solid #fff;
+    padding: 16px 20px;
+}
+.active{
+    height: 120px;
+}
+.accordion-body .content {
+    padding: 20px;
+    padding-top: 0;
+}
+.accordion-body .content p{
+    font-size: 14px;
+    line-height: 25px;
+    color: #2a2a2a;
+}
+.accordion-head {
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1f272b;
+    cursor: pointer;
+    transition: color 200ms ease-in-out;
+    border-bottom: 1px solid #fff;
+}
+.accordion-head .icon {
+    float: right;
+    transition: transform 200ms ease-in-out;
+}
+.accordions .last-accordion {
+    border-bottom: none;
+}
+/* ==================course section ============== */
+.our-course{
+    background-image: url(https://themewagon.github.io/edu-meeting/assets/images/meetings-bg.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 140px;
+    padding-bottom: 130px;
+}
+.course-heading h2{
+    line-height: 40px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(250,250,250,0.15);
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
 }
