@@ -52,6 +52,7 @@
 body{
     background-color: var(--primary_blue);
     font-family: var(--font-ubuntu);
+    overflow-x: hidden;
 }
 header{
     width: 100%;
@@ -393,6 +394,8 @@ margin: 30px 0;
 }
 .box-item .down-content a{
     color: var(--black);
+    display: block;
+    padding: 10px 0;
 }
 .down-content p{
     font-size: var(--f14);
@@ -530,4 +533,75 @@ margin: 30px 0;
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
+}
+.course-container{
+    width: 100%;
+    padding: 0 110px;
+}
+.owl-item{
+    width: 300px;
+    margin-right: 30px;
+}
+.course-box img{
+    width: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+}
+.course-down-content{
+    background-color: #fff;
+}
+.course-down-content h4{
+    padding: 25px;
+    font-size: 18px;
+    color: #1f272b;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+.course-down-content .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+.course-down-content .info ul li{
+    display: inline-block;
+    margin-right: 1px;
+    color: #f5a425;
+    font-size: 14px;
+}
+.course-down-content .info .dollar{
+    color: #a12c2f;
+    font-size: 15px;
+    font-weight: 600;
+}
+.course-box-wrapper{
+    display: flex;
+    width: fit-content;
+    overflow: hidden;
+}
+.course-box{
+    overflow-x: hidden;
+}
+.course-row{
+    position: relative;
+}
+.c-btns{
+    padding: 0 50px;
+    display: flex;
+    width: 120%;
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    justify-content: space-between;
+}
+.c-btn{
+    background-color: var(--white);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: var(--f20);
 }
