@@ -52,7 +52,7 @@
 body{
     background-color: var(--primary_blue);
     font-family: var(--font-ubuntu);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 header{
     width: 100%;
@@ -537,6 +537,7 @@ margin: 30px 0;
 .course-container{
     width: 100%;
     padding: 0 110px;
+    position: relative;
 }
 .owl-item{
     width: 300px;
@@ -584,16 +585,14 @@ margin: 30px 0;
 .course-box{
     overflow-x: hidden;
 }
-.course-row{
-    position: relative;
-}
+
 .c-btns{
-    padding: 0 50px;
+    padding: 0 20px;
     display: flex;
-    width: 120%;
+    width: 100%;
     position: absolute;
     top: 50%;
-    left: -10%;
+    left: 0%;
     justify-content: space-between;
 }
 .c-btn{
@@ -802,3 +801,202 @@ section.contact-us #contact textarea {
     color: #f5a425;
 }
 /* ========= */
+header span{
+    display: none !important;
+}
+
+
+
+
+
+
+
+
+
+/* ================media for 576px=============== */
+@media (max-width:576px) {
+    
+    header{
+        width: 100vw;
+        padding: 20px 15px;
+    }
+    header ul{
+        display: none;
+    }
+    header span{
+        display: block !important;
+    }
+    header .logo h1{
+        font-size: 20px;
+    }
+    .main{
+        height:100dvh;
+        padding: 50px 10px;
+        background-position: center;
+    }
+    .main .text-caption {
+        top: 60%;
+        padding-bottom: 100px;
+    }
+    .text-caption h2{
+        margin: var(--p10) 0;
+        font-size: 20px;
+        
+    }
+    
+    .service-container{
+    
+        padding: 50px 10px;
+        top: 100%;
+        
+    }
+    .service-container .service-row{
+        width: 100%;
+    }
+    .service-row .service-box{
+        min-width:290px;
+        padding: 20px;
+    }
+    .btns{
+        display: none !important;
+    } 
+    
+    .upcoming-meetings{
+            padding-top: 350px;
+    }
+    .mettings-container{
+        padding: 0 15px;
+    }
+    /* ======== */
+ 
+    .section-heading h2{
+        font-size: var(--f20);
+    }
+    .categories{
+        margin-right: 0px;
+    }
+    .flex-container{
+       gap: 30px;
+        grid-template-columns: 1fr;
+       
+    }
+    .box-row{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .apply-now{
+        background-image: url(https://themewagon.github.io/edu-meeting/assets/images/apply-bg.jpg);
+        background-position: center center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 140px 0px;
+    }
+    .apply-container{
+        
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .apply-row{
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+    
+    .apply-item p{
+        line-height: 1.5;
+    }
+    .apply-main-button-yellow a{
+        background-color:rgb(135, 135, 6);
+    
+    }
+    .accordions{
+        padding: 0px;
+        margin-left: 0px;
+    }
+    /* ==================course section ============== */
+    
+    .course-heading h2{
+        text-align: center;
+    }
+    .course-container{
+        padding: 0 15px;
+    }
+    .owl-item{
+        width: 300px;
+        
+    }
+    .c-btns{
+        padding: 0 110px;
+        top: 105%;
+    }
+    section.our-facts{
+        padding: 140px 15px 125px 15px;
+    }
+    .our-facts .fact-container{
+        grid-template-columns: 1fr;
+    }
+    .fact-heading h2{
+        font-size: 32px;
+        text-align: center;
+        padding-right: 0px;
+    }
+    /* ============= */
+    .count-area-content{
+        text-align: center;
+        background-color: rgba(250,250,250,0.15);
+        border-radius: 20px;
+        padding: 35px 30px 45px 30px;
+        margin: 15px 0px;
+    }
+    .count-digit{
+        margin: 5px 0px;
+        color: #f5a425;
+        font-weight: 700;
+        font-size: 36px;
+    }
+    .count-title{
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+        letter-spacing: 0.5px;
+    }
+    .fact-flex{
+        grid-template-columns: 1fr;
+        padding:  0 15px;
+    }
+
+    .fact-bottom-down{
+        top: -5%;
+    }
+    .video{
+        margin-left: 0px;
+        margin-top: 0;
+    }
+    /* =====================contact-us================== */
+    .contact-us{
+        padding: 140px 0px 0px 0px;
+    }
+    .contact-us form#contact{
+        padding: 20px;
+    }
+    section.contact-us #contact h2 {
+        text-align: center;
+    }
+    
+    
+    
+    .contact-container{
+        padding: 0 15px;
+        grid-template-columns:1fr;
+        
+    }
+    .form-row-input{
+        grid-template-columns: repeat(1,1fr);
+        gap: 0px;
+    }
+    
+    .footer .f-des {
+        line-height: 1.58;
+       margin-bottom: 0px;
+    }
+       
+}
