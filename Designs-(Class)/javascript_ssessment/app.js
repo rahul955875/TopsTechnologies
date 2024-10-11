@@ -2,8 +2,17 @@ const input = document.querySelector("#input");
 const add = document.querySelector("#Add");
 const container = document.querySelector(".container-body");
 
+window.addEventListener("keydown" , (e)=>{
+    // console.log(e.key);
+    if(e.key == "Enter"){
+        addNotes();
+    }
+})
 add.addEventListener("click", () => {
-  let todo = input.value.trim();
+    addNotes()
+  });
+function addNotes(){
+    let todo = input.value.trim();
   if (todo) {
     let newNode = document.createElement("li");
 
@@ -30,4 +39,4 @@ add.addEventListener("click", () => {
   } else {
     alert("enter your todays task");
   }
-});
+}
