@@ -6,10 +6,24 @@
 }
 .main{
     max-width: 600px;
-    background-color: grey;
+    background :url(https://wallpapercave.com/wp/cHf83fj.jpg);
+    box-shadow: 0 0 10px 5px black;
     padding: 50px;
     margin: 50px auto;
+    position: relative;
+    z-index: 1;
 }
+/* .main::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.06);
+    /* backdrop-filter: blur(10px); */
+
 .input-sec{
     display: flex;
     gap: 5px;
@@ -22,6 +36,10 @@
     outline: none;
     border-radius: 10px;
     border: none;
+    transition: 0.5s ease;
+}
+.input-sec input:focus{
+    box-shadow: 0 0 10px white;
 }
 .input-sec input::placeholder{
     text-align: center;
@@ -32,38 +50,50 @@
     font-size: 20px;
     border-radius: 10px;
 }
+.input-sec button:hover{
+    background-color: green;
+    color: white;
+}
 .main .container-body{
     padding: 20px;
-    border: solid;
+    /* border: solid; */
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
     margin-top: 10px;
     border-radius: 10px;
     height: 350px;
-    /* overflow-y: scroll; */
-    /* overflow-x: hidden; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    word-break: break-all;
 }
 .container-body::-webkit-scrollbar{
     width: 10px;
     border-radius: 20px;
-    background-color: black;
+    /* background-color: black; */
 }
 .container-body::-webkit-scrollbar-thumb{
-    background-color:#ddd;
+    background-color: rgba(128, 128, 128, 0.74);
     border-radius: 20px;
 }
 .main .container-body li{
-    width:200px;
-    /* text-wrap: wrap; */
+    width:95%;
     display: inline-block;
     list-style: none;
     font-size: 20px;
     text-transform: capitalize;
     color: white;
-    padding: 10px 0;
-    background-color: red;
+    padding: 20px 0;
+    border-bottom: 1px solid white;
 }
 .main .container-body .deleBtn{
     width: 20px;
     height: 20px;
     border-radius: 50%;
     border: none;
+    vertical-align: middle;
+    font-weight: bold;
+}
+.deleBtn:hover{
+    background-color: red;
+    color: white;
 }
