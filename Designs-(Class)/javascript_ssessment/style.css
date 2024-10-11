@@ -9,9 +9,18 @@
     background :url(https://wallpapercave.com/wp/cHf83fj.jpg);
     box-shadow: 0 0 10px 5px black;
     padding: 50px;
-    margin: 50px auto;
+    margin: 30px auto;
     position: relative;
     z-index: 1;
+}
+.heading{
+    border-radius: 10px;
+    width: 600px;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #ddd;
+    padding: 20px;
 }
 /* .main::after{
     content: "";
