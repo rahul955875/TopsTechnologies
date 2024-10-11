@@ -1,4 +1,16 @@
 // console.log("running")
+const header = document.querySelector("header");
+window.addEventListener("scroll", ()=>{
+  let s = window.scrollY;
+  if(s>(window.innerHeight)*1){
+    header.style.transition = "0.5s ease"
+    header.style.background = "rgba(0,0,0,0.5)"
+  }
+  else{
+    header.style.background = ""
+  }
+
+})
 const btn1 = document.querySelector(".btn1");
 const btn2 = document.querySelector(".bnt2");
 const boxes = document.querySelectorAll(".service-box");
