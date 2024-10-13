@@ -14,12 +14,11 @@ function isPalindrome(num) {
 let count = 0;
 let userInput = 111;
 while (count < 3) {
-    let num = parseInt(userInput);
     
-    if (isPalindrome(num)) {
-        console.log(`${num} is a palindrome.`);
+    if (isPalindrome(userInput)) {
+        console.log(`${userInput} is a palindrome.`);
     } else {
-        console.log(`${num} is not a palindrome.`);
+        console.log(`${userInput} is not a palindrome.`);
     }
     userInput++;
     count++;
