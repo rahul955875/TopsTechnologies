@@ -16,6 +16,19 @@
     </style>
 </head>
 <body>
+    <h1>hello world</h1>
     <input type="file" name=""  accept=".jpg">
+    <script>
+        document.body.style.background = "#ddd"
+        let arr = ["apple", "banana", "pinaple"];
+        let ul = document.createElement("ul");
+        for(let i=0; i<arr.length; i++){
+            let li = document.createElement("li");
+            li.textContent = arr[i];
+            ul.appendChild(li);
+        }
+        document.body.appendChild(ul);
+
+    </script>
 </body>
 </html>
