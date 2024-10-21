@@ -5,38 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Slider</title>
     <style>
-        body{
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-      .cotainer {
-        width:;
-        height: 400px;
-        padding: 20px;
-        display: flex;
-        overflow-x: hidden;
+      body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        padding: 40px;
         box-sizing: border-box;
+      }
+      .con-wrapper{
+        position: relative;
+      }
+      .cotainer {
+        overflow: hidden;
+        height: 400px;
+        display: flex;
+        width: 100%;
         background-color: #eee;
-    }
-    .box{
-        width: 100vw;
+      }
+      .box {
+        box-sizing: border-box;
+        min-width: 100%;
         align-items: center;
         font-size: 50px;
         display: flex;
         height: 100%;
         justify-content: center;
         border: 5px solid;
-        background-color:khaki;
+        background-color: khaki;
+      }
+      .btns{
+        position: absolute;
+        top: 50%;
+        transform: translate(0%, -50%);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+      }
+       .box:not(:nth-child(1)){
+        display: none;
+       }
+      .btns #left, #right{
+        font-size: 40px;
+        width: 50px;
+        border-radius: 20px;
       }
     </style>
   </head>
   <body>
-    <div class="cotainer">
-      <div class="box">1</div>
-      <div class="box">2</div>
-      <div class="box">3</div>
+    <div class="con-wrapper">
+      <div class="cotainer" id="container">
+        <div class="box">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box">3</div>
+      </div>
+      <div class="btns">
+        <button id="left"><</button>
+        <button id="right">></button>
+      </div>
     </div>
+    <script>
+        let container = document.getElementById("container")
+        const left = document.getElementById("left")
+        const right = document.getElementById("rigth")
+        left.addEventListener("click", ()=>{
+            container.appendChild("#box2")
+        })
+    </script>
   </body>
 </html>
