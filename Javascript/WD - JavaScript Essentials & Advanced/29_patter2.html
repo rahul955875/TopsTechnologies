@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 30px;
+        }
+    </style>
+    
+</head>
+<body>
+<!-- //1) Use pattern in console.log in JS?
+// 1
+// 1 0
+// 1 0 1
+// 1 0 1 0
+// 1 0 1 0 1
+ -->
+<!-- using loop  -->
+<script>
+    for (let i = 1; i <= 5; i++) {
+      for (let j = 1; j <= i; j++) {
+        if (j % 2 == 0) {
+          document.write("0 ");
+        } else {
+          document.write("1 ");
+        }
+      }
+      document.write("<br>");
+    }
+  </script>
+  
+  <!--A
+      B C 
+      D E F
+      G H I J
+      K L M N O -->
+      <br><br>
+   <!-- using string.fromCharcode    -->
+  <script>
+  let ch = 65;
+  for(let i=1; i<=5; i++){
+      for(j=1; j<=i; j++){
+          document.write(String.fromCharCode(ch)+" ")
+          ch++;
+      }
+      document.write("<br>")
+  }
+  </script>
+  <br><br>
+  <!-- 3) 1
+  //     2 3
+  //     4 5 6
+  //     7 8 9 10
+  //     11 12 13 14 15
+   -->
+  <script>
+      let p = 1;
+      for(let i=1; i<=5; i++){
+          for(let j=1; j<=i; j++){
+              document.write(p + " ")
+              p++
+          }
+          document.write("<br>")
+      }
+  </script>
+  <br><br>
+  <!-- 4) *
+  //     * *
+  //     * * *
+  //     * * * *
+  //     * * * * *
+   -->
+  <script>
+      for(let i=1; i<=5; i++){
+          for(let j=1; j<=i; j++){
+              document.write("* ");
+          }
+          document.write("<br>")
+      }
+  </script>
+      
+</body>
+</html>
