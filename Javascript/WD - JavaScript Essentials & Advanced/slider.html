@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>slider</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .main {
+        width: 100%;
+        overflow: hidden;
+      }
+      .slider {
+        gap: 20px;
+        transition: 0.5s ease;
+        width: max-content;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .box {
+        width: 280px;
+        height: 300px;
+        border: 2px solid;
+      }
+      .box1 {
+        background-color: red;
+      }
+      .box2 {
+        background-color: green;
+      }
+      .box3 {
+        background-color: teal;
+      }
+      .box4 {
+        background-color: yellow;
+      }
+      .box5 {
+        background-color: pink;
+      }
+      .box6 {
+        background-color: #eee;
+      }
+      .box7 {
+        background-color: gold;
+      }
+      .box8 {
+        background-color: magenta;
+      }
+      .box9 {
+        background-color: maroon;
+      }
+      .box10 {
+        background-color: darkorange;
+      }
+      .btns {
+        width: 100%;
+        display: flex;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        padding: 0 20px;
+        box-sizing: border-box;
+        justify-content: space-between;
+      }
+      .btns #left,
+      #right {
+        font-size: 40px;
+        font-weight: bold;
+        background-color: white;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        text-align: center;
+      }
+      #left:hover,
+      #right:hover {
+        background-color: aqua;
+      }
+      .sliderwrapper{
+        background-color: black;
+        padding: 0 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="sliderwrapper">
+        <div class="slider">
+          <div class="box box1"></div>
+          <div class="box box2"></div>
+          <div class="box box3"></div>
+          <div class="box box4"></div>
+          <div class="box box5"></div>
+          <div class="box box6"></div>
+          <div class="box box7"></div>
+          <div class="box box8"></div>
+          <div class="box box9"></div>
+          <div class="box box10"></div>
+        </div>
+      </div>
+    </div>
+    <div class="btns">
+      <div id="left"><</div>
+      <div id="right">></div>
+    </div>
+    <script>
+      let left = document.getElementById("left");
+      let right = document.getElementById("right");
+      let slider = document.querySelector(".slider");
+      let boxs = document.querySelectorAll(".box");
+      let totalbox = boxs.length ;
+      let index = 0;
+      // console.log(totalbox)
+      function sliderUpdate() {
+        let width = boxs[0].clientWidth + 30;
+        slider.style.transform = `translateX(${index * width}px)`;
+      }
+      right.addEventListener("click", () => {
+        index = (index + 1) % totalbox;
+        sliderUpdate();
+      });
+      left.addEventListener("click", () => {
+        index = (index - 1) % totalbox;
+        sliderUpdate();
+      });
+    </script>
+  </body>
+</html>
