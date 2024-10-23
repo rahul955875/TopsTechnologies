@@ -56,7 +56,7 @@
     <div class="con-wrapper">
       <div class="cotainer" id="container">
         <div class="box">1</div>
-        <div class="box" id="box2">2</div>
+        <div class="box">2</div>
         <div class="box">3</div>
       </div>
       <div class="btns">
@@ -67,9 +67,12 @@
     <script>
         let container = document.getElementById("container")
         const left = document.getElementById("left")
-        const right = document.getElementById("rigth")
+        const right = document.getElementById("right")
+        right.addEventListener("click", ()=>{
+            container.append(container.querySelector(".box:first-child"))
+        })
         left.addEventListener("click", ()=>{
-            container.appendChild("#box2")
+          container.prepend(container.querySelector(".box:last-child"))
         })
     </script>
   </body>
