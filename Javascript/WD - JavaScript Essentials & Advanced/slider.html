@@ -17,16 +17,37 @@
       .slider {
         gap: 20px;
         transition: 0.5s ease;
-        width: max-content;
+        width: 100%;
         height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
       }
+      .box:not(
+          :nth-child(1),
+          :nth-child(2),
+          :nth-child(3),
+          :nth-child(4),
+          :nth-child(5)
+        ) {
+        display: none;
+      }
       .box {
-        width: 280px;
+        width: 100%;
         height: 300px;
         border: 2px solid;
+        animation: ani 1.5s ease forwards;
+      }
+
+      @keyframes ani {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0px);
+        }
       }
       .box1 {
         background-color: red;
@@ -83,7 +104,7 @@
       #right:hover {
         background-color: aqua;
       }
-      .sliderwrapper{
+      .sliderwrapper {
         background-color: black;
         padding: 0 20px;
       }
@@ -111,24 +132,15 @@
       <div id="right">></div>
     </div>
     <script>
-      let left = document.getElementById("left");
-      let right = document.getElementById("right");
-      let slider = document.querySelector(".slider");
-      let boxs = document.querySelectorAll(".box");
-      let totalbox = boxs.length ;
-      let index = 0;
-      // console.log(totalbox)
-      function sliderUpdate() {
-        let width = boxs[0].clientWidth + 30;
-        slider.style.transform = `translateX(${index * width}px)`;
-      }
+      const slider = document.querySelector(".slider");
+      const left = document.querySelector("#left");
+      const right = document.querySelector("#right");
+
       right.addEventListener("click", () => {
-        index = (index + 1) % totalbox;
-        sliderUpdate();
+        slider.append(slider.querySelector(".slider .box:first-child"));
       });
       left.addEventListener("click", () => {
-        index = (index - 1) % totalbox;
-        sliderUpdate();
+        slider.prepend(slider.querySelector(".slider .box:last-child"));
       });
     </script>
   </body>
