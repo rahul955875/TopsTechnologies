@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lexical and block scope</title>
+</head>
+<body>
+    <script> 
+        // debugger
+        // console.log(name1)
+        let name = "let1" //script variable
+        var name1 = 'var'
+        name2 = "no keyword"
+        function sayHi(){
+            // console.log(a)
+            let b = 'b'
+            var a = "hi" // locale variable
+            a1 = "hello" //window varaible
+            console.log(a,b,a1)
+        }
+        sayHi()
+        console.log(a1) //can access after call
+        // console.log(str1)
+
+        console.dir(sayHi)
+    </script>
+</body>
+</html>
