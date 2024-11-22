@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher order function</title>
+</head>
+<body>
+    <script>
+        // debugger
+        // this is a higher order function 
+        function aHigherOrder(f){
+            return f()
+        }
+        function passing(){
+
+            return 'this is a function'
+        }
+        /* a higher order function that accept other function as a argument. */
+        console.log(aHigherOrder(passing))
+        aHigherOrder(function(){
+            console.log("function without name") //called callback function
+        })
+    </script>
+</body>
+</html>
