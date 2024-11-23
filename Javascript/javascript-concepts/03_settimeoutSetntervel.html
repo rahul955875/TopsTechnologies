@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let timer1 = setTimeout('console.log("hi1")',1000)
+        let timer2 = setInterval('console.log("hi2")',1000)
+        setTimeout('clearInterval(timer2)',3000)
+
+        setTimeout('console.log("hello1")',0) // 2 in call back queue
+        console.log('hello2') //1 because of its in call stack
+
+        setTimeout(() => {
+            console.log('hi js')
+        }, 1000);
+    </script>
+</body>
+</html>
