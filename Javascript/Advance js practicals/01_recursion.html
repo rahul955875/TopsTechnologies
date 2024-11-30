@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion</title>
+</head>
+<body style="font-size: 40px;">
+    <pre id="print"></pre>
+    <script>
+        const print = document.getElementById("print")
+        function count(start,end){
+            if(start > end) return
+            print.textContent += `${start}\n`
+            count(start + 10,end)
+        }
+        count(10,100)
+    </script>
+</body>
+</html>
