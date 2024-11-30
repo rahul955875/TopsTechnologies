@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        const count = 1;
+        try {
+        count++;
+        console.log(count);
+      } catch (e) {
+        throw new Error("this is an error");
+      }finally{
+        console.log(`this is should be executed`)
+      }
+    </script>
+  </body>
+</html>
