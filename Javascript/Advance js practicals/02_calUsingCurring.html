@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculation using curring</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="inputfeild">
+        <label for="height">Enter Height :</label>
+        <input type="number" id="height" />
+      </div>
+      <div class="inputfeild">
+        <label for="width">Enter width :</label>
+        <input type="number" id="width" />
+      </div>
+      <div class="inputfeild">
+        <label for="padding">Enter padding :</label>
+        <input type="number" id="padding" />
+      </div>
+      <div class="inputfeild">
+        <label for="border">Enter border :</label>
+        <input type="number" id="border" />
+      </div>
+      <div class="inputfeild">
+        <label for="margin">Enter margin :</label>
+        <input type="number" id="margin" />
+      </div>
+
+      <button id="calbtn">calculate</button>
+    </div>
+    <h3 id="print"></h3>
+    <script>
+     const print = document.getElementById("print")
+      const cal = document.getElementById("calbtn");
+      function caluculate(height) {
+        return function (width) {
+          return function (padding) {
+            return function (border) {
+              return function (margin) {
+                return height + width + padding * 4 + border * 4 + margin * 4;
+              };
+            };
+          };
+        };
+      }
+      cal.addEventListener("click", () => {
+        const height = +document.getElementById("height").value;
+      const width = +document.getElementById("width").value;
+      const padding = +document.getElementById("padding").value;
+      const border = +document.getElementById("border").value;
+      const margin = +document.getElementById("margin").value;1
+      print.innerHTML = `Total dimension/space of div is : ${(caluculate(height)(width)(padding)(border)(margin))}`;
+      });
+    </script>
+  </body>
+</html>
