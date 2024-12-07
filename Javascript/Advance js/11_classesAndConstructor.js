@@ -12,7 +12,7 @@ console.log(insPerson1.getDetails())
 const insPerson2 = new person('lucky','dog')
 // console.log(insPerson.fname);
 console.log(insPerson2.getDetails())
-
+s
 person.prototype.greet = function hi(){
     return `hi`
 }

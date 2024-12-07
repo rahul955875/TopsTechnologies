@@ -8,6 +8,15 @@
       rel="stylesheet"
     />
     <title>Layout using bootstrap</title>
+    <style>
+      .carousel-dark .carousel-control-next-icon,
+      .carousel-dark .carousel-control-prev-icon {
+        filter: none;
+      }
+      .carousel-indicators [data-bs-target] {
+        background-color: #fff !important;
+      }
+    </style>
   </head>
   <body>
     <div class="main">
@@ -56,7 +65,11 @@
         </div>
       </nav>
       <section class="carousel">
-        <div id="carouselExampleDark" class="carousel carousel-dark slide" style="background-color: grey;">
+        <div
+          id="carouselExampleDark"
+          class="carousel carousel-dark slide"
+          style="background-color: grey"
+        >
           <div class="carousel-indicators">
             <button
               type="button"
@@ -80,30 +93,60 @@
             ></button>
           </div>
           <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="3000" style="height: 300px;">
+            <div
+              class="carousel-item active"
+              data-bs-interval="3000"
+              style="height: 400px"
+            >
               <!-- <img src="..." class="d-block w-100" alt="..." /> -->
-              <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
+              <div
+                class="carousel-caption text-white d-none d-md-block text-end"
+                style="bottom: 6rem"
+              >
+                <h2 class="fw-bolder fs-1">One more for good measure</h2>
                 <p>
-                  Some representative placeholder content for the first slide.
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. In
+                  laboriosam ipsa atque consequatur voluptas dolorem nam
+                  voluptate possimus nihil perferendis velit vel sequi nisi
+                  minus iste, asperiores consectetur ex odit.
                 </p>
               </div>
             </div>
-            <div class="carousel-item" data-bs-interval="2000" style="height: 300px;">
+            <div
+              class="carousel-item"
+              data-bs-interval="3000"
+              style="height: 400px"
+            >
               <!-- <img src="..." class="d-block w-100" alt="..." /> -->
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
+              <div
+                class="carousel-caption text-white d-none d-md-block text-end"
+                style="bottom: 6rem"
+              >
+                <h2 class="fw-bolder fs-1">no more for good measure</h2>
                 <p>
-                  Some representative placeholder content for the second slide.
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. In
+                  laboriosam ipsa atque consequatur voluptas dolorem nam
+                  voluptate possimus nihil perferendis velit vel sequi nisi
+                  minus iste, asperiores consectetur ex odit.
                 </p>
               </div>
             </div>
-            <div class="carousel-item" style="height: 300px;">
+            <div
+              class="carousel-item"
+              data-bs-interval="3000"
+              style="height: 400px"
+            >
               <!-- <img src="..." class="d-block w-100" alt="..." /> -->
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
+              <div
+                class="carousel-caption text-white d-none d-md-block text-end"
+                style="bottom: 6rem"
+              >
+                <h2 class="fw-bolder fs-1">One more for good measure</h2>
                 <p>
-                  Some representative placeholder content for the third slide.
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. In
+                  laboriosam ipsa atque consequatur voluptas dolorem nam
+                  voluptate possimus nihil perferendis velit vel sequi nisi
+                  minus iste, asperiores consectetur ex odit.
                 </p>
               </div>
             </div>
@@ -128,6 +171,56 @@
           </button>
         </div>
       </section>
+      <!-- card-section starts -->
+      <section class="cards-section mt-5">
+        <div class="container d-flex justify-content-center">
+          <div class="row g-5">
+            <div class="col-12 col-lg-4">
+              <div class="card d-flex justify-content-center align-items-center text-center shadow" style="width: 18rem">
+                <img src="https://img.freepik.com/premium-vector/businessman-profile-cartoon_18591-58479.jpg" class="card-img-top rounded-circle border border-2 w-50" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">john cena</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-dark">
+                    spanGo somewhere →</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="card d-flex justify-content-center align-items-center text-center shadow" style="width: 18rem">
+                <img src="https://img.freepik.com/premium-vector/businessman-profile-cartoon_18591-58479.jpg" class="card-img-top rounded-circle border border-2 w-50" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">john cena</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-dark">
+                    spanGo somewhere →</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="card d-flex justify-content-center align-items-center text-center shadow" style="width: 18rem">
+                <img src="https://img.freepik.com/premium-vector/businessman-profile-cartoon_18591-58479.jpg" class="card-img-top rounded-circle border border-2 w-50" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">john cena</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-dark">
+                    spanGo somewhere →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- card-section ends -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
