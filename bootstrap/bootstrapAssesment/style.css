@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    padding-inline: 150px;
+}
+.navbar ul a:hover ,.active{
+    color: rgb(215, 235, 103) !important;
+}
+.letter-spacing{
+    letter-spacing: 7px;
+}
+.box{
+    height: 100px;
+    background-color: #ddd;
+}
+.portfolio{
+    background-color: #f1eded;
+}
+.carousel-dark .carousel-indicators [data-bs-target] {
+    background-color: orange;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
