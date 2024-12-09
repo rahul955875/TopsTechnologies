@@ -14,7 +14,7 @@
     height: 100px;
     background-color: #ddd;
 }
-.portfolio, .contact-wrapper{
+.portfolio, .contact-wrapper,.loction .container{
     background-color: #f1eded;
 }
 .carousel-dark .carousel-indicators [data-bs-target] {
