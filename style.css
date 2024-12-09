@@ -2,8 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* outline: 0px solid red; */
+}
+body{
+    width: 100vw;
+    overflow-x: hidden;
 }
 
+.navbar-section{
+    width: 100vw;
+}
 .navbar ul a:hover ,.active{
     color: rgb(215, 235, 103) !important;
 }
@@ -14,7 +22,7 @@
     height: 100px;
     background-color: #ddd;
 }
-.portfolio, .contact-wrapper{
+.portfolio, .contact-wrapper, .loction .container{
     background-color: #f1eded;
 }
 .carousel-dark .carousel-indicators [data-bs-target] {
