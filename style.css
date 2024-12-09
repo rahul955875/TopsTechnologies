@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar ul a:hover ,.active{
+    color: rgb(215, 235, 103) !important;
+}
+.letter-spacing{
+    letter-spacing: 7px;
+}
+.box{
+    height: 100px;
+    background-color: #ddd;
+}
+.portfolio, .contact-wrapper{
+    background-color: #f1eded;
+}
+.carousel-dark .carousel-indicators [data-bs-target] {
+    background-color: orange;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+
+
+/* ============media query=============== */
+@media (max-width:576px) {
+    .navbar ul{
+        padding: 10px 20px;
+        background-color:rgba(0, 0, 0, 0.594);
+    }
+    .letter-spacing{
+        letter-spacing: 3px;
+    }
+    .fs-10{
+        font-size: 14px;
+    }
+    .cwt{
+        width: 65% !important;
+        transform: translate(-50%, -25%) !important;
+    }
+}
