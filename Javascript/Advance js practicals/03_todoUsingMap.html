@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo list uisng map</title>
+    <style>
+      .main {
+        width: 600px;
+        height: 500px;
+        padding: 30px 20px;
+        box-shadow: 0 0 5px black;
+        margin: 50px auto;
+      }
+      .inputfeild {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      label {
+        width: 38%;
+        font-size: 20px;
+      }
+      input {
+        flex: 1;
+        padding: 10px 10px;
+        font-size: 20px;
+      }
+      button {
+        font-size: 20px;
+        padding: 10px 20px;
+        border-radius: 0 10px 10px 0;
+      }
+      #print {
+        height: 85%;
+        overflow-y: scroll;
+      }
+      #print li {
+        font-family: sans-serif;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid black;
+        padding: 10px;
+        font-size: 25px;
+        text-transform: capitalize;
+      }
+      li div {
+        border: 1px solid red;
+        border-radius: 50%;
+        font-size: 18px;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        padding: 5px;
+        place-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="inputfeild">
+        <label for="inputValue">Enter Technical language :</label>
+        <input type="text" class="inputValue" id="inputValue" />
+        <button id="calbtn">Add</button>
+      </div>
+      <h2 id="print"></h2>
+    </div>
+    <script>
+      const inputValue = document.getElementById("inputValue");
+      const Add = document.getElementById("calbtn");
+      const print = document.getElementById("print");
+      let listCancel;
+      let listItem;
+      Add.addEventListener("click", () => {
+        if (inputValue.value == "") {
+          inputValue.value = "Empty list";
+        } else {
+          listItem = document.createElement("li");
+          listItem.className = "list";
+          listCancel = document.createElement("div");
+          listCancel.textContent = "X";
+          listItem.textContent = inputValue.value;
+          listItem.appendChild(listCancel);
+          print.appendChild(listItem);          
+        }
+
+      });
+      
+    </script>
+  </body>
+</html>
