@@ -74,19 +74,28 @@
       let listItem;
       Add.addEventListener("click", () => {
         if (inputValue.value == "") {
-          inputValue.value = "Empty list";
+          return
         } else {
           listItem = document.createElement("li");
           listItem.className = "list";
           listCancel = document.createElement("div");
           listCancel.textContent = "X";
+          listCancel.className = "cancelBtn";
           listItem.textContent = inputValue.value;
           listItem.appendChild(listCancel);
-          print.appendChild(listItem);          
+          print.appendChild(listItem);
+          
+          inputValue.value =''
+          const listCancelAll = [...document.querySelectorAll(".cancelBtn")];
+          const listItemAll = [...document.querySelectorAll('.list')]
+          console.log(listCancelAll);
+          listCancelAll.map((e, i) => {
+            e.addEventListener("click", () => {
+              print.removeChild(listItemAll[i])
+            });
+          });
         }
-
       });
-      
     </script>
   </body>
 </html>
