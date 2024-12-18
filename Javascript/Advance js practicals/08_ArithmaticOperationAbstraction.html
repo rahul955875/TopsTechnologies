@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arithmetic Operation</title>
+    <style>
+      .main {
+        width: 400px;
+        box-shadow: 0 0 5px gray;
+        padding: 10px;
+        margin: 100px auto;
+      }
+      input,
+      select {
+        margin: 10px;
+        padding: 5px;
+        font-size: 16px;
+      }
+      .result {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h2>Perform Arithmetic Operation</h2>
+
+      <input type="number" id="num1" placeholder="Enter first number" />
+      <br />
+      <input type="number" id="num2" placeholder="Enter second number" />
+      <br />
+
+      <select id="operation">
+        <option value="add">Addition</option>
+        <option value="subtract">Subtraction</option>
+        <option value="multiply">Multiplication</option>
+        <option value="divide">Division</option>
+      </select>
+
+      <span class="result" id="result">Result : </span>
+    </div>
+    <script>
+      class calOperation {
+        constructor(num1, num2) {
+          this.num1 = num1;
+          this.num2 = num2;
+        }
+
+        add() {
+          return this.num1 + this.num2;
+        }
+
+        subtract() {
+          return this.num1 - this.num2;
+        }
+
+        multiply() {
+          return this.num1 * this.num2;
+        }
+
+        divide() {
+          if (this.num2 === 0) return "Cannot divide by zero";
+          return this.num1 / this.num2;
+        }
+      }
+
+      const num1Input = document.getElementById("num1");
+      const num2Input = document.getElementById("num2");
+      const operationSelect = document.getElementById("operation");
+      const resultDisplay = document.getElementById("result");
+
+      operationSelect.addEventListener("change", performOperation);
+      num1Input.addEventListener("input", performOperation);
+      num2Input.addEventListener("input", performOperation);
+
+      function performOperation() {
+        const num1 = Number(num1Input.value) || 0;
+        const num2 = Number(num2Input.value) || 0;
+        const operation = operationSelect.value;
+
+        const calculator = new calOperation(num1, num2);
+        let result;
+
+        switch (operation) {
+          case "add":
+            result = calculator.add();
+            break;
+          case "subtract":
+            result = calculator.subtract();
+            break;
+          case "multiply":
+            result = calculator.multiply();
+            break;
+          case "divide":
+            result = calculator.divide();
+            break;
+          default:
+            result = "Invalid Operation";
+        }
+        resultDisplay.textContent = `Result : ${result}`;
+      }
+    </script>
+  </body>
+</html>
