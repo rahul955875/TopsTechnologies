@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Factorial</title>
+    <style>
+      .main {
+        width: 400px;
+        margin: 100px auto;
+        min-height: 200px;
+        box-shadow: 0 0 5px grey;
+        padding: 20px;
+      }
+      input,
+      button {
+        font-size: 20px;
+      }
+      .print {
+        font-size: 25px;
+        /* letter-spacing: 10px; */
+        color: blue;
+        word-spacing: 10px;
+        word-break: break-all;
+        margin-top: 30px;
+      }
+      .header {
+        display: flex;
+      }
+      input {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <input type="number" id="input" />
+        <button id="display">Display</button>
+      </div>
+      <div class="print"></div>
+    </div>
+    <script>
+      const input = document.querySelector("#input");
+      const display = document.querySelector("#display");
+      const print = document.querySelector(".print");
+    
+      function factorial(num) {
+        if (num <= 1) return 1; 
+        return num * factorial(num - 1);
+      }
+
+      display.addEventListener("click", () => {
+        const num = Number(input.value);
+        if (isNaN(num) || num < 0) {
+          print.textContent = "Please enter a valid number.";
+          return;
+        }
+
+        const fact = factorial(num);
+        print.textContent = `Factorial of ${num} is: ${fact}`;
+      });
+    </script>
+  </body>
+</html>
