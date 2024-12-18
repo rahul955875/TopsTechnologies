@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table data uising encapsulation</title>
+    <style>
+      table {
+        width: 50%;
+        border-collapse: collapse;
+        margin: 20px auto;
+        text-align: center;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="employeeTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Employee Name</th>
+          <th>Date of Join</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+
+    <script>
+      
+      class encapData {
+        constructor(data) {
+          this.data = data;
+        }
+
+        getData() {
+          return this.data;
+        }
+      }
+
+      class tableData {
+        constructor(data, tableId) {
+          this.data = data;
+          this.table = document.querySelector(tableId);
+        }
+
+        display() {
+          const tbody = this.table.querySelector("tbody");
+          tbody.innerHTML = "";
+
+          this.data.forEach((rowData) => {
+            const row = document.createElement("tr");
+            
+            Object.values(rowData).forEach((value) => {
+              const td = document.createElement("td");
+              td.textContent = value;
+              row.appendChild(td);
+            });
+
+            tbody.appendChild(row);
+          });
+        }
+      }
+
+      const employeeData = [
+        {
+          ID: 1,
+          "Employee Name": "Akash",
+          "Date of Join": "30-10-2024",
+          Salary: 25000,
+        },
+        {
+          ID: 2,
+          "Employee Name": "Dipesh",
+          "Date of Join": "30-02-2024",
+          Salary: 35000,
+        },
+      ];
+
+      const encapsulatedData = new encapData(employeeData);
+
+      const tableshow = new tableData(
+        encapsulatedData.getData(),
+        "#employeeTable"
+      );
+      tableshow.display();
+    </script>
+  </body>
+</html>
