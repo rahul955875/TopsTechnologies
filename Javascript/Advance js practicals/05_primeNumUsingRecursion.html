@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime number using recursion</title>
+    <style>
+        .main{
+            width: 500px;
+            margin: 100px auto;
+            min-height: 400px;
+            box-shadow: 0 0 5px grey;
+            padding: 20px;
+        }
+        .header{
+            display: flex;
+        }
+        input{
+            width: 100%;
+            margin-left: 5px;
+        }
+        label,input,button{
+            font-size: 18px;
+        }
+        h3{
+        text-align: center;
+        }
+        .print{
+            font-size: 25px;
+            /* letter-spacing: 10px; */
+            color: blue;
+            word-spacing: 5px;
+            /* word-break: break-all; */
+        }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <input type="number" id="start" />
+        <input type="number" id="end" />
+        <button id="display">Display</button>
+      </div>
+      <h3>-----Prime numbers are-----</h3>
+      <div class="print"></div>
+    </div>
+    <script>
+        
+        let startNum = document.querySelector('#start')
+        let endNum = document.querySelector('#end');
+        const display = document.querySelector('#display')
+        const print = document.querySelector('.print')
+        let validStart = 0;
+        display.addEventListener('click',()=>{
+            print.textContent = ''
+            validStart = Number(startNum.value)   
+            validEnd = Number(endNum.value)   
+            
+            if(isNaN(validStart)|| isNaN(validEnd)|| validEnd<=0 ){
+                return print.textContent = 'Enter valid inputs in field'
+            }
+            printPrime(validStart,validEnd)
+            endNum.value = ''
+            startNum.value = ''
+        })
+        function isPrime(n){
+            if(n<=1) return false
+            for(let i=2; i<n; i++){
+                if(n%i===0){
+                    return false
+                }
+            }
+            return true
+        }
+        function printPrime(start,end){
+            if (end < start) return
+            if(isPrime(start)){
+                print.textContent += `${start} `
+            } 
+            printPrime(++start,end)
+        }
+        
+    </script>
+  </body>
+</html>

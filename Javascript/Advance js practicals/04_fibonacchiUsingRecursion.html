@@ -40,12 +40,14 @@
         <div class="print"></div>
     </div>
     <script>
+        'use strict'
         const  inputValue = document.querySelector("#input")
         const display = document.querySelector("#submit")
         const print = document.querySelector(".print")
         let prevNum = 0;
         let NextNum = 1;
         let sum = 0;
+        let validInput = 0
         // display.addEventListener('click',fiboNum(inputValue.value))
         function fiboNum(limit){
             if(limit <= 0) return
