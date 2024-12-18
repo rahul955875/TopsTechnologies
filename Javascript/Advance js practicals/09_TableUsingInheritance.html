@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 400px;
+        margin: 20px auto;
+        text-align: center;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 10px;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>_ID</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+
+    <script>
+      class Category {
+        constructor(id, categoryName) {
+          this.id = id;
+          this.categoryName = categoryName;
+        }
+
+        getGeneralRow() {
+          return `
+                    <tr>
+                    <td rowspan="2">${this.id}</td>
+                     <td>${this.categoryName}</td>
+                    </tr>
+                `;
+        }
+      }
+      class Mobile extends Category {
+        constructor(id, categoryName, modelId, brand) {
+          super();
+          this.id = id;
+          this.categoryName = categoryName;
+          this.modelId = modelId;
+          this.brand = brand;
+        }
+
+        getFullRow() {
+          return (
+            this.getGeneralRow() +
+            `
+            <tr>
+             <td>
+                <table>
+                   <tr>
+                      <td>${this.modelId}</td>
+                      <td>${this.brand}</td>
+                 </tr>
+                </table>
+              </td>
+              </tr>
+                `
+          );
+        }
+      }
+
+      const tableBody = document.getElementById("tableBody");
+      const mobileData = new Mobile(1, "Mobile", 101, "Samsung");
+
+      tableBody.innerHTML = mobileData.getFullRow();
+    </script>
+  </body>
+</html>
