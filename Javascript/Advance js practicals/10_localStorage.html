@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10-Local storage</title>
+    <style>
+      .main {
+        width: 400px;
+        height: auto;
+        border: 2px solid black;
+        padding: 20px;
+        margin: 50px auto;
+        box-shadow: 0 0 5px gray;
+      }
+      .form-data {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      input,
+      button {
+        padding: 10px;
+        font-size: 20px;
+      }
+      table{
+        width: auto;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <form class="form-data">
+        <input
+          type="text"
+          placeholder="Enter Your Name"
+          required
+          id="username"
+        />
+        <input
+          type="email"
+          placeholder="Enter Your Email"
+          required
+          id="email"
+        />
+        <input
+          type="password"
+          placeholder="Enter Your Password"
+          required
+          id="password"
+        />
+        <button type="click" id="submit">Submit</button>
+      </form>
+    </div>
+    <table id="userTable" border="1">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>UserName</th>
+          <th>Email</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <script>
+      const userTable = document.querySelector("#userTable");
+      const username = document.querySelector("#username");
+      const email = document.querySelector("#email");
+      const password = document.querySelector("#password");
+      const submit = document.querySelector("#submit");
+      const tbody = document.querySelector("#tbody");
+
+      submit.addEventListener("click", () => {
+        const personDetails = {
+          username: username.value,
+          email: email.value,
+          password: password.value,
+        };
+        // console.log(personDetails);
+        localStorage.setItem("userDetails1", JSON.stringify(personDetails));
+        getData();
+      });
+      function getData() {
+        const userData = localStorage.getItem("userDetails1");
+        // console.log(userData);
+        if (userData) {
+          const parseData = JSON.parse(userData);
+          userTable.style.display = "table";
+          tbody.innerHTML = `
+            <tr>
+                <td>${localStorage.key(0)}</td>
+                <td>${parseData.username}</td>
+                <td>${parseData.email}</td>
+                <td><button id='clear'>delete</td>
+            </tr>`;
+          document.querySelector("#clear").addEventListener("click", () => {
+            localStorage.clear();
+            userTable.style.display = "none";
+          });
+        } else {
+          tbody.innerHTML = `You dont have any data yet in local stoage`;
+        }
+      }
+      getData()
+    //   userTable.style.display = 'none'
+    </script>
+  </body>
+</html>
