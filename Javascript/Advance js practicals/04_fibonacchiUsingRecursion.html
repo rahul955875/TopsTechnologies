@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .main{
+            width: 500px;
+            margin: 100px auto;
+            min-height: 400px;
+            box-shadow: 0 0 5px grey;
+            /* overflow-y: scroll; */
+            padding: 20px;
+        }
+        label,input,button{
+            font-size: 20px;
+        }
+        h3{
+        text-align: center;
+        }
+        .print{
+            font-size: 25px;
+            /* letter-spacing: 10px; */
+            color: blue;
+            word-spacing: 10px;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <label for="input">Enter Number : </label>
+            <input type="number" id="input" required>
+            <button id="submit">Display</button>
+        </div>
+        <h3>-----Fibonacchi Series-----</h3>
+        <div class="print"></div>
+    </div>
+    <script>
+        const  inputValue = document.querySelector("#input")
+        const display = document.querySelector("#submit")
+        const print = document.querySelector(".print")
+        let prevNum = 0;
+        let NextNum = 1;
+        let sum = 0;
+        // display.addEventListener('click',fiboNum(inputValue.value))
+        function fiboNum(limit){
+            if(limit <= 0) return
+            print.textContent += `${sum} `
+            prevNum = NextNum;
+            NextNum = sum
+            sum = prevNum + NextNum
+            fiboNum(limit-1)
+        }
+        // fiboNum(10)
+        display.addEventListener('click',()=>{
+            print.textContent = ""
+            sum = 0;
+            prevNum = 0;
+            NextNum = 1;
+            validInput = Number(inputValue.value)
+            if(isNaN(validInput) || validInput<=0 ){
+                return print.textContent = 'Enter valid number'
+            }
+            else{
+                fiboNum(validInput)
+            }
+        })
+
+    </script>
+</body>
+</html>
