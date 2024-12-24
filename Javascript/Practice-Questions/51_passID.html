@@ -11,14 +11,16 @@
     <p id="p1">o-BEST-PERFORMING-WINDOWS-LAPTOP-facebook</p>
     <div id="pera" class="class1">o-BEST-PERFORMING-WINDOWS-LAPTOP-facebook</d>
 <script>
-    //can pass id directly to get element
-    const btn = document.querySelector('#click')
+    'use strict'
+    // x = 5
     function update(id){
         console.log(id)
     }
     function newupdate(id){
-        btn.addEventListener('click',(e)=>{
-            console.log(id)
+        click.addEventListener('click',(e)=>{
+            console.log(id.id)
+            id.style.color = 'red'
+            
         })
     }
     newupdate(p2)
