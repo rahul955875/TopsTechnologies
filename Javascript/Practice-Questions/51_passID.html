@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p2">o-BEST-PERFORMING-WINDOWS-LAPTOP-facebook</p>
+    <button id="click">click</button>
+    <p id="p1">o-BEST-PERFORMING-WINDOWS-LAPTOP-facebook</p>
+    <div id="pera" class="class1">o-BEST-PERFORMING-WINDOWS-LAPTOP-facebook</d>
+<script>
+    //can pass id directly to get element
+    const btn = document.querySelector('#click')
+    function update(id){
+        console.log(id)
+    }
+    function newupdate(id){
+        btn.addEventListener('click',(e)=>{
+            console.log(id)
+        })
+    }
+    newupdate(p2)
+</script>
+</body>
+</html>
