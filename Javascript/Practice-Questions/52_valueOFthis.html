@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // this points to the functionName
+      const myobj = {
+        functionName: function thisFunction() {
+          const name1 = "rahul";
+          const name = () => {
+            console.log(this);
+          };
+          name();
+        },
+      };
+
+      //   myobj.functionName();
+
+      function thisFunction() {
+        const name1 = "rahul";
+        const name = () => {
+          console.log(this);
+        };
+        name();
+      }
+      //   points to the window
+      //   thisFunction()
+
+      const arrow = () => {
+        function name() {
+          function name2() {
+            console.log(this);
+          }
+          name2();
+        }
+        name();
+      };
+      // points to the window
+      //   arrow();
+
+      class myClass  {
+        thisFunction2() {
+          console.log(this)
+        }
+      };
+    //   myClass.thisFunction2();
+    const newObj = new myClass()
+    newObj.thisFunction2()
+    // refers to the class obj
+    </script>
+  </body>
+</html>
