@@ -1,0 +1,13 @@
+*{
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+  font-size: 25px;
+}
+body{
+  background-color:#ddd;
+}
+.heading{
+  padding: 20px;
+}
