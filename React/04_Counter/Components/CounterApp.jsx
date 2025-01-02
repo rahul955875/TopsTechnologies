@@ -23,7 +23,7 @@ function CounterApp() {
 
   return (
     <div className="d-flex justify-content-between p-5">
-        <Basket count={firstCount} basketName='Basket 1'/>
+        <Basket count={firstCount} basketName='Basket 1' />
         <Button imgUrl={leftarrow}  ClassName='left' handleClick={leftCount} title="left-arrow"/>
         <Button imgUrl={leftarrow} ClassName='right' deg='180deg' handleClick={rightCount} title="right-arrow"/>
         <Basket count={secondCount} basketName='Basket 2'/>
