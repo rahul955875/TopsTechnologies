@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta asyn="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <button id="btn">Click</button>
     <h1 id="heading"></h1>
     <script>
-        // const btn = document.getElementById('btn')
-        btn.addEventListener('click',(e)=>{
-            heading.innerText += e
-        },{once:true})
-        setTimeout(() => {
-            btn.click()
-        }, 1000);
+      // const btn = document.getElementById('btn')
+      // btn.addEventListener('click',(e)=>{
+      //     heading.innerText += e
+      // },{once:true})
+      // setTimeout(() => {
+      //     btn.click()
+      // }, 1000);
+
+      async function asyn(params) {
+          console.log('before asyn')
+          const name= await console.log('this');
+          console.log('aysn end')
+      }
+      function syn() {
+        console.log("syn function");
+        console.log("syn function");
+        console.log("syn function");
+
+      }
+      asyn();
+      syn();
     </script>
-</body>
+  </body>
 </html>
