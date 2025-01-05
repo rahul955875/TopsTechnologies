@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter and setter in class</title>
+</head>
+<body>
+    <script>
+        // set & get in object
+        const obj = {
+            firstName : 'rahul',
+            lastName : 'nizare',
+            get fullName(){
+                return this.firstName + ' ' + this.lastName
+            },
+            set fullName([firstName, lastName]){
+                this.firstName = firstName
+                this.lastName = lastName
+            }
+        }
+        obj.fullName = ['ramesh','kumar']
+        console.log(obj.fullName)
+        console.log(obj)
+        obj.fullName = ['jignesh','solanki']
+        console.log(obj)
+
+// getter and setter in class
+        class CreateUser{
+            constructor(firstName,lastName){
+                this.firstName = firstName
+                this.lastName = lastName
+            }
+            get fullName(){
+                return this.firstName + ' ' + this.lastName
+            }
+            set fullName([firstName,lastName]){
+                this.firstName = firstName
+                this.lastName = lastName
+            }
+        }
+        const user1 = new CreateUser('javascript','v8Engine')
+        // console.log(user1.fullName)
+        user1.fullName = ['node','javascript']
+        console.log(user1.fullName)
+    </script>
+</body>
+</html>
