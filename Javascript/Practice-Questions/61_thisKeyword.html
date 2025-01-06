@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This keyword</title>
+</head>
+<body>
+    <h1 id="head">This keyword behaviour in deffrent cases</h1>
+    <script>
+        // this keyword in global and stric mode
+        // 'use strict'
+        // console.log(this)
+        function getThis(){
+            console.log(this) //undefind in strict mode unless window
+        }
+        getThis()
+        new getThis() // in constructor funtion this refers returned obj
+
+        // this value object
+        const thisObj ={
+            firstName : 'rahul',
+            getName(){
+                const hi =()=>{
+                    console.log(this)
+                }
+                hi() //normal function refers to the window but in the case of arrow funtion its refers to its lexical scope so in this case its refers to the methods(get refrence form getName) obj.
+
+                return this.firstName
+
+            }
+        }
+        console.log(thisObj.getName())
+        
+        head.addEventListener('click',function(){
+            const arr=()=>{
+
+                console.log(this) // normal function refers to the attached element arrow funtion refers to the window or parent funtions this.
+            }
+            arr()
+        })
+        class User{
+            constructor(){
+                this.firstName = 'rahul'
+                console.log(this)
+            }
+        }
+        const user1 = new User()
+        console.log(user1) // in the case of class its same as constructor function class is also made on constructor function.
+    </script>
+</body>
+</html>
