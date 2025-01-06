@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototypal Inheritance, Extends and super keyWord</title>
+</head>
+<body>
+    <script>
+        class User{
+            constructor(firstName,lastname,age) {
+                this.firstName = firstName
+                this.lastname = lastname
+                this.age = age
+            }
+            getFullName(){
+                return this.firstName + ' ' + this.lastname
+            }
+            getBirthYear(){
+                return new Date().getFullYear() - this.age
+            }
+             getIntro(){
+                return `Iam ${this.firstName} ${this.lastname} and ${this.age} year old `
+            }
+        }
+
+        class Student extends User{
+            constructor(firstName,lastname,age,degree){
+                super(firstName,lastname,age)
+                this.degree = degree
+            }
+            study(){
+                console.log('learning.....')
+            }
+             getIntro(){
+                const general = super.getIntro()
+                return `${general} with ${this.degree} degree`
+            }
+        }
+        class Employee extends Student{
+            constructor(firstName,lastname,age,degree,company){
+                super(firstName,lastname,age,degree)
+                this.company = company
+            }
+             getIntro(){
+                const general = super.getIntro()
+                return `${general} work at ${this.company}`
+            }
+            static  work(){
+                return 'working...'
+            }
+        }
+        const Student1 = new Student('rahul','nizare','22','Bca')
+        const employee1 = new Employee('jignesh','solanki',22,'mca','google')
+        console.log(employee1.getIntro())
+        // console.log(employee1.work())
+        // console.log(Employee.work())
+
+    </script>
+</body>
+</html>
