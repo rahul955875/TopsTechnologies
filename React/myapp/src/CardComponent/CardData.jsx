@@ -6,6 +6,7 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 
 function CardData({ img, title }) {
+  // const icons = [faFacebookMessenger,faWhatsapp,faInstagram]
   return (
     <div className="col">
       <div className="shadow border">
@@ -20,10 +21,10 @@ function CardData({ img, title }) {
         </h3>
         <div className="icons d-flex gap-3 display-6 p-2">
         
-        <a className="btn btn-outline-primary fs-3" href=""><FontAwesomeIcon icon={faFacebookMessenger} /></a>
+        <a className="btn btn-outline-primary fs-3" href="" ><FontAwesomeIcon icon={faFacebookMessenger} /></a>
         <a className="btn btn-outline-primary fs-3" href=""><FontAwesomeIcon icon={faInstagram} /></a>
         <a className="btn btn-outline-primary fs-3" href=""><FontAwesomeIcon icon={faWhatsapp} /></a>
-          
+           
         </div>
       </div>
     </div>

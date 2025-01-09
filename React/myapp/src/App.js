@@ -1,6 +1,8 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Props from './PropDes/Props';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+// import Props from './PropDes/Props';
+import Navbar from './Navigation/Navbar';
 import Card from './CardComponent/Card';
 // import Nav from './component/Navbar/Nav';
 // import Heroimg from './component/HeroImg/Heroimg';
@@ -23,7 +25,8 @@ function App() {
     {/* <Footer /> */}
     {/* <ImgImport /> */}
     {/* <PropEx /> */}
-    {/* <Props /> */}
+    {/* <Props   /> */}
+    <Navbar logoname='ImgGallery'  />
     <Card />
     </>
   );
