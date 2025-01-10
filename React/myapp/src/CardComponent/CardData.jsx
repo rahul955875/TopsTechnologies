@@ -6,7 +6,7 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 
 function CardData({ img, title }) {
-  // const icons = [faFacebookMessenger,faWhatsapp,faInstagram]
+  const icons = [faFacebookMessenger,faWhatsapp,faInstagram]
   return (
     <div className="col">
       <div className="shadow border">
@@ -24,7 +24,11 @@ function CardData({ img, title }) {
         <a className="btn btn-outline-primary fs-3" href="" ><FontAwesomeIcon icon={faFacebookMessenger} /></a>
         <a className="btn btn-outline-primary fs-3" href=""><FontAwesomeIcon icon={faInstagram} /></a>
         <a className="btn btn-outline-primary fs-3" href=""><FontAwesomeIcon icon={faWhatsapp} /></a>
-           
+           {icons.map((item)=>{
+            console.log(item.iconName)
+            return <a onClick={()=>alert(`you clicked a ${item.iconName} button`)} className="btn btn-outline-primary fs-3" href=""><FontAwesomeIcon icon={item} /></a>
+            
+           })}
         </div>
       </div>
     </div>
