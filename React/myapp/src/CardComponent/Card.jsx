@@ -2,6 +2,7 @@ import React from 'react'
 import CardData from './CardData'
 
 function Card() {
+  // const  [{}]
   return (
 
     <div className='row row-cols-1 row-cols-lg-3 p-4 g-4 ' >

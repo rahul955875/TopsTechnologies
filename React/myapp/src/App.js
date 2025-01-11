@@ -4,6 +4,9 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 // import Props from './PropDes/Props';
 import Navbar from './Navigation/Navbar';
 import Card from './CardComponent/Card';
+import StateEx from './StateMange/StateMange'
+import IfStatement from './Conditionals/IfStatement';
+import ShowTable from './Table/ShowTable';
 // import Nav from './component/Navbar/Nav';
 // import Heroimg from './component/HeroImg/Heroimg';
 // import Footer from './component/Footer/Footer';
@@ -27,7 +30,10 @@ function App() {
     {/* <PropEx /> */}
     {/* <Props   /> */}
     <Navbar logoname='ImgGallery'  />
-    <Card />
+    {/* <Card /> */}
+  {/* <StateEx/> */}
+  {/* <IfStatement name={'rahul'}/> */}
+  <ShowTable />
     </>
   );
 }
