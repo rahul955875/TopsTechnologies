@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const p1 = new Promise((res,rej)=>{
+        //     setTimeout(() => {
+        //         rej('p1 is resolved')
+        //     }, 1000)
+        // }).catch((e)=>console.log('handdled the error'))
+        // const p2 = new Promise((res,rej)=>{
+        //     setTimeout(() => {
+        //         res('p2 is resolved')
+        //     }, 2000);
+        // })
+        // async function getData(){
+        //    const valP1 = await p1
+        //    console.log(valP1)
+        //    const valp2 = await p2
+        //     console.log(valp2)
+
+        // }
+        // function normalFun(){ 
+        //     // alert('hello')
+        //     console.log('lksjfl')
+        // }
+        // normalFun()
+        // getData()
+            async function getData() {
+                try{
+
+                    const fetchData = await (await fetch("https://api.github.com/users/rahul955875")).json()
+                    // const JsonData = await fetchData.json()
+                    console.log(fetchData.name)
+                }
+                catch(e){
+                    console.log('this is an error '+e)
+                }
+            }
+        getData()
+    </script>
+</body>
+</html>
