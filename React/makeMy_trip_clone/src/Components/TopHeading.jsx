@@ -3,6 +3,7 @@ import {Container,Nav,Navbar,Button} from 'react-bootstrap'
 import NavLogo from './NavLogo'
 import NavMenuList from './NavMenuList'
 import TopheadingBtn from './TopheadingBtn';
+import { Outlet } from 'react-router-dom';
 
 function TopHeading() {
     const menuList = ["List Your Property", "Introducing myBiz", "My Trips"];
@@ -20,6 +21,7 @@ function TopHeading() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    <Outlet />
     </>
   )
 }

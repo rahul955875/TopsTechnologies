@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import { Nav } from 'react-bootstrap'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faPlaneDeparture,faHotel,faHome,faIgloo,faTrain,faBus,faCab,faIndianRupeeSign,faLocationDot} from "@fortawesome/free-solid-svg-icons"
@@ -17,10 +18,10 @@ function NavHead() {
   return (
     <Nav className='container w-75 px-5 mt-5 d-flex justify-content-between flex-wrap text-center shadow  pt-4 border gap-2 '>
     {NavList.map(item => 
-      <div href='' key={item.desc} className='d-flex flex-column flex-grow-1 align-items-center' style={{minWidth:'100px',maxWidth:'110px',wordWrap:'break-word'}}>
+      <Link to='/'  key={item.desc} className='d-flex flex-column flex-grow-1 align-items-center text-decoration-none' style={{minWidth:'100px',maxWidth:'110px',wordWrap:'break-word'}}> 
         <FontAwesomeIcon icon={item.icon} className='fs-3 mb-2' />
         <p className=''>{item.desc}</p>
-      </div>
+      </Link>
     )}
     </Nav>
   )

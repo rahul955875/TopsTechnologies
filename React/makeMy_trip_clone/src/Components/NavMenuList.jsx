@@ -7,6 +7,7 @@ function NavMenuList({menuList}) {
       {menuList.map((item) => (
         <Nav.Link href="#link" key={item} >{item}</Nav.Link>
       ))}
+      
     </>
   );
 }
