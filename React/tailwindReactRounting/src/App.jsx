@@ -8,6 +8,8 @@ import PageNotfound from './Components/PageNotfound';
 import Counter from './Components/useStateHook/Counter';
 import Example2 from './Components/useStateHook/Example2';
 import Employee from './Components/useStateHook/Employee';
+import Student from './Components/useStateHook/Student';
+import UseEffectFetch from './Components/UseEffect/UseEffectFetch';
 function App() {
 
 
@@ -23,7 +25,10 @@ function App() {
         </ul> */}
         {/* <Counter/> */}
         {/* <Example2/> */}
-        <Employee/>
+        {/* <Employee/> */}
+        {/* <Student/> */}
+        <UseEffectFetch/>
+        
         <Routes>
           <Route element="" path='/'></Route>
           <Route element={<HomePage />} path='/Home'></Route>
