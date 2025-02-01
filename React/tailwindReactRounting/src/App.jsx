@@ -11,6 +11,7 @@ import Employee from './Components/useStateHook/Employee';
 import Student from './Components/useStateHook/Student';
 import UseEffectFetch from './Components/UseEffect/UseEffectFetch';
 import Timer from './Components/UseEffect/Timer';
+import UseRefVideo from './Components/UseRef/UseRefVideo';
 function App() {
 
 
@@ -30,6 +31,7 @@ function App() {
         {/* <Student/> */}
         {/* <UseEffectFetch/> */}
         <Timer/>
+        <UseRefVideo />
         
         <Routes>
           <Route element="" path='/'></Route>
