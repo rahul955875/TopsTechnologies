@@ -9,3 +9,14 @@ a{
 td,th{
   padding: 10px;
 }
+
+body{
+  --white : white;
+  --black :black;
+  background-color: var(--white);
+  color: var(--black);
+}
+body.dark{
+  --white:black;
+  --black : white;
+}

@@ -12,6 +12,7 @@ import Student from './Components/useStateHook/Student';
 import UseEffectFetch from './Components/UseEffect/UseEffectFetch';
 import Timer from './Components/UseEffect/Timer';
 import UseRefVideo from './Components/UseRef/UseRefVideo';
+import UseContextEx from './Components/UseContext/UseContextEx';
 function App() {
 
 
@@ -30,8 +31,9 @@ function App() {
         {/* <Employee/> */}
         {/* <Student/> */}
         {/* <UseEffectFetch/> */}
-        <Timer/>
-        <UseRefVideo />
+        {/* <Timer/> */}
+        {/* <UseRefVideo /> */}
+        <UseContextEx/>
         
         <Routes>
           <Route element="" path='/'></Route>
