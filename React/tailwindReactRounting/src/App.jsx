@@ -13,6 +13,7 @@ import UseEffectFetch from './Components/UseEffect/UseEffectFetch';
 import Timer from './Components/UseEffect/Timer';
 import UseRefVideo from './Components/UseRef/UseRefVideo';
 import UseContextEx from './Components/UseContext/UseContextEx';
+import ReducerArith from './Components/useReducer/ReducerArith';
 function App() {
 
 
@@ -33,7 +34,9 @@ function App() {
         {/* <UseEffectFetch/> */}
         {/* <Timer/> */}
         {/* <UseRefVideo /> */}
-        <UseContextEx/>
+        {/* <UseContextEx/> */}
+        <ReducerArith/>
+        
         
         <Routes>
           <Route element="" path='/'></Route>
