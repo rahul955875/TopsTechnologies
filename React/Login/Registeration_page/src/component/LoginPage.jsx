@@ -23,6 +23,7 @@ const LoginPage = () => {
           console.log(isUser)
       if (isUser) {
         alert("Login successfully");
+        localStorage.setItem("loginUser",JSON.stringify(isUser))
         navigate('/Home')
     }
     else{
