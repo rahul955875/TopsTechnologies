@@ -15,6 +15,9 @@ import UseRefVideo from './Components/UseRef/UseRefVideo';
 import UseContextEx from './Components/UseContext/UseContextEx';
 import ReducerArith from './Components/useReducer/ReducerArith';
 import FetchData from './Components/FetchData';
+import RenderList from './Components/Assignment/RenderList';
+import Hooks from './Components/Assignment/Hooks';
+import HandlingEvnetsAndConditionals from './Components/Assignment/HandlingEvnetsAndConditionals';
 function App() {
 
 
@@ -37,9 +40,10 @@ function App() {
         {/* <UseRefVideo /> */}
         {/* <UseContextEx/> */}
         {/* <ReducerArith/> */}
-        <FetchData/>
-        
-        
+        {/* <FetchData/> */}
+        {/* <RenderList/> */}
+        {/* <Hooks/> */}
+        <HandlingEvnetsAndConditionals/>
         <Routes>
           <Route element="" path='/'></Route>
           <Route element={<HomePage />} path='/Home'></Route>
