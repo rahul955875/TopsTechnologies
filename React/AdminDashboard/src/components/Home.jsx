@@ -1,15 +1,14 @@
 import React from 'react'
-import Navigation from './Navigation'
-import { Outlet } from 'react-router'
 
 const Home = () => {
     const getAdminName = localStorage.getItem('LoginAdmin')
 
   return (
     <>
-    <Navigation/>
-    <div>Welcome {getAdminName}</div>
-    <Outlet/>
+    <div className="container-fluid mt-3">
+    <h2>Welcome {getAdminName}</h2>
+    </div>
+    
     </>
   )
 }

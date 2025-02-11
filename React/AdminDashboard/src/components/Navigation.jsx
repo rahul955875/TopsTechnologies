@@ -6,18 +6,18 @@ const Navigation = () => {
     const getuser = localStorage.getItem("LoginAdmin")
     const menulist = [
         { path: "/Home", pathname: "Home" },
-        { path: "/Product", pathname: "Product" }
+        { path: "/Home/Product", pathname: "Product" }
     ]
 
     const logout = () => {
-        localStorage.removeItem("login")
+        localStorage.removeItem("LoginAdmin")
         navigate("/")
     }
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
-                <div className="container-fluid">
-                    <a className="navbar-brand" href="#">Admin Dashboard</a>
+                <div className="container-fluid shadow">
+                    <a className="navbar-brand fw-bold fs-3" href="#">Admin Dashboard</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -26,7 +26,7 @@ const Navigation = () => {
                             {
                                 menulist.map(menu =>
                                     <li className="nav-item" key={menu.path}>
-                                        <Link to={menu.path} className="text-primary">{menu.pathname}</Link>
+                                        <Link to={menu.path} className="text-primary nav-link">{menu.pathname}</Link>
                                     </li>
                                 )
                             }
@@ -34,7 +34,7 @@ const Navigation = () => {
                         </ul>
                         <div className='d-flex gap-2 align-items-center'>
                             <h5 className='m-0'>Welcome , {getuser}</h5>
-                            <button className='btn btn-danger' onClick={logout}>Logout</button>
+                            <button className='btn btn-sm btn-danger' onClick={logout}>Logout</button>
                         </div>
                     </div>
                 </div>
