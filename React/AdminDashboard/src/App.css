@@ -3,7 +3,7 @@
     height: 100px;
     object-fit: contain;
 }
-s{
+.s{
         text-decoration: line-through;
         text-decoration-color: red;
         text-shadow: 0 0 2px red   

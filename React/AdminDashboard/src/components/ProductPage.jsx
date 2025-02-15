@@ -100,7 +100,7 @@ const ProductPage = () => {
           <div className="row g-3">
             <div className="col-4">
               <input
-                type="number"
+                type="text"
                 placeholder="Enter Product Id"
                 className="form-control"
                 name="id"
