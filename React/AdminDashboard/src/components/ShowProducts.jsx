@@ -12,7 +12,7 @@ const ShowProducts = () => {
   const handleDeleteProduct = (id) => {
     const filterData = productData.filter((product) => product.id !== id);
     setProductData(filterData);
-    localStorage.setItem("ProductData", JSON.stringify(filterData));
+    // localStorage.setItem("ProductData", JSON.stringify(filterData));
   };
   const [proUpdatedData, setProUpdatedData] = useState({
     id: "",
