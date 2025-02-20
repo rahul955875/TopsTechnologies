@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-
+import useValidationConfig from "./useValidationConfig";
 
 const ShowProducts = () => {
+  const [validateFormFun, error, setError] = useValidationConfig();
+
   const categoryList = ["Cameras", "Mobiles", "Laptops", "Accesories"];
   const getData = JSON.parse(localStorage.getItem("ProductData")) || [];
   const [productData, setProductData] = useState(getData);
   console.log("rendering");
-  localStorage.setItem('ProductData',JSON.stringify(productData))
+  localStorage.setItem("ProductData", JSON.stringify(productData));
   const handleDeleteProduct = (id) => {
     const filterData = productData.filter((product) => product.id !== id);
     setProductData(filterData);
@@ -14,29 +16,55 @@ const ShowProducts = () => {
   };
   const [proUpdatedData, setProUpdatedData] = useState({
     id: "",
-      title: "",
-      category: "",
-      description: "",
-      oldPrice: "",
-      rate: "",
-      newPrice: "",
-      image: "",
-  })
-   const [fetchRealProData, setFetchRealProData] = useState({}) ;
-  const handleEdit = (fetchProductData) =>{
-    setProUpdatedData(fetchProductData)
-    setFetchRealProData(fetchProductData)
-    console.log(fetchRealProData)
-  }
-  const handleChange = (e)=>{
-  const existingProData = {...proUpdatedData, [e.target.name] : e.target.value}  
-  setProUpdatedData(existingProData)
-  }
-  const handleSubmit = (e)=>{
-    e.preventDefault()
-    setProductData(prevData => prevData.map(product => product.id === fetchRealProData.id ? proUpdatedData : product))
-    console.log(productData)
-  }
+    title: "",
+    category: "",
+    description: "",
+    oldPrice: "",
+    rate: "",
+    newPrice: "",
+    image: "",
+  });
+  const [fetchRealProData, setFetchRealProData] = useState({});
+  const handleEdit = (fetchProductData) => {
+    setProUpdatedData(fetchProductData);
+    setFetchRealProData(fetchProductData);
+    // console.log(fetchRealProData);
+  };
+  const handleChange = (e) => {
+    const existingProData = {
+      ...proUpdatedData,
+      [e.target.name]: e.target.value,
+    };
+    if (e.target.name === "oldPrice" || e.target.name === "rate") {
+      if (
+        existingProData.oldPrice > 0 &&
+        existingProData.rate >= 0 &&
+        existingProData.rate <= 100
+      ) {
+        existingProData.newPrice =
+          Math.round(parseFloat(existingProData.oldPrice) *
+          (1 - (parseFloat(existingProData.rate) || 0) / 100));
+      }
+      else{
+        existingProData.newPrice = 'Not valid'
+      }
+    }
+    setProUpdatedData(existingProData);
+    setError({});
+    
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const isValid = validateFormFun(proUpdatedData);
+    if (Object.keys(isValid).length) return;
+    setProductData((prevData) =>
+      prevData.map((product) =>
+        product.id === fetchRealProData.id ? proUpdatedData : product
+      )
+    );
+    alert('Product details updated successfuly')
+  };
   return (
     <>
       <div className="container p-5">
@@ -48,6 +76,7 @@ const ShowProducts = () => {
               <th>Title</th>
               <th>Description</th>
               <th>Price</th>
+              <th>Rate</th>
               <th>Image</th>
               <th>Action</th>
             </tr>
@@ -58,6 +87,7 @@ const ShowProducts = () => {
                 <td>{product.id}</td>
                 <td>{product.category}</td>
                 <td>{product.title}</td>
+                <td>{product.description}</td>
                 <td>
                   <s>{product.oldPrice}</s>
                   <div>{product.newPrice}</div>
@@ -75,7 +105,7 @@ const ShowProducts = () => {
                     className="btn btn-primary"
                     data-bs-toggle="modal"
                     data-bs-target="#updateProduct"
-                    onClick={()=>handleEdit(product)}
+                    onClick={() => handleEdit(product)}
                   >
                     Edit
                   </button>
@@ -125,9 +155,8 @@ const ShowProducts = () => {
                       className="form-control"
                       name="id"
                       value={proUpdatedData.id}
-                      onChange={handleChange}
+                      readOnly
                     />
-                    {/* <p className="text-danger">{error.id}</p> */}
                   </div>
                   <div className="col-4">
                     <select
@@ -145,7 +174,7 @@ const ShowProducts = () => {
                         </option>
                       ))}
                     </select>
-                    {/* <p className="text-danger">{error.category}</p> */}
+                    <p className="text-danger">{error.category}</p>
                   </div>
                   <div className="col-4">
                     <input
@@ -156,7 +185,7 @@ const ShowProducts = () => {
                       value={proUpdatedData.title}
                       onChange={handleChange}
                     />
-                    {/* <p className="text-danger">{error.title}</p> */}
+                    <p className="text-danger">{error.title}</p>
                   </div>
                   <div className="col-12">
                     <textarea
@@ -166,7 +195,7 @@ const ShowProducts = () => {
                       value={proUpdatedData.description}
                       onChange={handleChange}
                     ></textarea>
-                    {/* <p className="text-danger">{error.description}</p> */}
+                    <p className="text-danger">{error.description}</p>
                   </div>
                   <div className="col-4">
                     <input
@@ -177,7 +206,7 @@ const ShowProducts = () => {
                       value={proUpdatedData.oldPrice}
                       onChange={handleChange}
                     />
-                    {/* <p className="text-danger">{error.oldPrice}</p> */}
+                    <p className="text-danger">{error.oldPrice}</p>
                   </div>
                   <div className="col-4">
                     <input
@@ -188,7 +217,7 @@ const ShowProducts = () => {
                       value={proUpdatedData.rate}
                       onChange={handleChange}
                     />
-                    {/* <p className="text-danger">{error.rate}</p> */}
+                    <p className="text-danger">{error.rate}</p>
                   </div>
                   <div className="col-12">
                     <input
@@ -209,22 +238,21 @@ const ShowProducts = () => {
                       value={proUpdatedData.image}
                       onChange={handleChange}
                     />
-                    {/* <p>{error.image}</p> */}
+                    <p>{error.image}</p>
                   </div>
-                  
                 </div>
-            <div className="modal-footer">
-            <button
-                type="button"
-                className="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="submit" className="btn btn-primary">
-                      Update
-                    </button>
-            </div>
+                <div className="modal-footer">
+                  <button
+                    type="button"
+                    className="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="submit" className="btn btn-primary">
+                    Update
+                  </button>
+                </div>
               </form>
             </div>
           </div>
