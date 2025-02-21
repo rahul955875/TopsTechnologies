@@ -1,0 +1,36 @@
+{
+  "employee": [
+    {
+      "id": "1",
+      "ename": "pawan",
+      "designation": "Mangager",
+      "doj": "25-4-2024",
+      "city": "surat",
+      "profile": "https://tse1.mm.bing.net/th?id=OIP.srNFFzORAaERcWvhwgPzVAHaHa&pid=Api&P=0&h=180"
+    },
+    {
+      "id": "2",
+      "ename": "Jignesh",
+      "designation": "Product Mangager",
+      "doj": "25-4-2021",
+      "city": "Baroda",
+      "profile": "https://tse3.mm.bing.net/th?id=OIP.zc3XRPZxUt4Xt7zDZYLa_wHaHa&pid=Api&P=0&h=180"
+    },
+    {
+      "id": "3",
+      "ename": "Rahul Nizare",
+      "designation": "Front-end developer",
+      "doj": "2025-04-25",
+      "city": "Surat",
+      "profile": ""
+    },
+    {
+      "id": "",
+      "ename": "",
+      "designation": "",
+      "doj": "",
+      "city": "",
+      "profile": ""
+    }
+  ]
+}
