@@ -13,11 +13,15 @@ const AddDataToApi = ({ fetchData }) => {
     setInput((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
   const handleSubmit = (e) => {
-    // e.perventDefault()
+    e.preventDefault()
     fetch("http://localhost:3000/employee", {
       method: "POST",
       body: JSON.stringify(input),
-    });
+    }).then((res)=>{
+      if(res.ok){
+        fetchData()        
+      }
+    })
 
   };
   return (
