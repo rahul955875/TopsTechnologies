@@ -1,32 +1,57 @@
 import React, { useEffect, useState } from "react";
 
-const AddDataToApi = ({ fetchData }) => {
-  const [input, setInput] = useState({
-    id: "",
-    ename: "",
-    designation: "",
-    doj: "",
-    city: "",
-    profile: "",
-  });
+const AddDataToApi = ({ fetchData, formfield, filedEditing }) => {
+  const [input, setInput] = formfield;
+  const [isEditing, setIsEditing] = filedEditing;
   const hanldeChange = (e) => {
     setInput((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
+    if (isEditing) {
+      fetch(`http://localhost:3000/employee/${isEditing}`, {
+        method: "PUT",
+        body: JSON.stringify(input),
+      })
+        .then((res) => {
+          if (res.ok) {
+            fetchData();
+            console.log(res);
+            alert("Record updated successfully");
+          }
+        })
+        .catch((e) => console.log("Handled error", e));
+      setIsEditing("");
+      setInput({
+        id: "",
+        ename: "",
+        designation: "",
+        doj: "",
+        city: "",
+        profile: "",
+      });
+      return;
+    }
     fetch("http://localhost:3000/employee", {
       method: "POST",
       body: JSON.stringify(input),
-    }).then((res)=>{
-      if(res.ok){
-        fetchData()        
+    }).then((res) => {
+      if (res.ok) {
+        fetchData();
+        setInput({
+          id: "",
+          ename: "",
+          designation: "",
+          doj: "",
+          city: "",
+          profile: "",
+        });
       }
-    })
-
+    });
   };
   return (
     <div className="container text-center mt-4">
-      <h2 className="mb-4">Add User Data</h2>
+      <h2 className="mb-4">{isEditing ? 'Update User' : 'Add User Data'}</h2>
       <form action="" className="row g-4" onSubmit={handleSubmit}>
         <div className="col-4">
           <input
@@ -36,6 +61,7 @@ const AddDataToApi = ({ fetchData }) => {
             value={input.id}
             onChange={hanldeChange}
             className="form-control"
+            disabled = {isEditing ? true : false}
           />
         </div>
         <div className="col-4">
@@ -90,7 +116,7 @@ const AddDataToApi = ({ fetchData }) => {
         </div>
         <div className="col-2">
           <button type="submit" className="form-control btn btn-primary">
-            Submit
+            {isEditing ? 'Update':'Submit'}
           </button>
         </div>
       </form>
