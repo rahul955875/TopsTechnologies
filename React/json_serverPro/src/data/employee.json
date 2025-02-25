@@ -23,6 +23,22 @@
       "doj": "2025-02-09",
       "city": "Shirpur city",
       "profile": "https://tse1.mm.bing.net/th?id=OIP.srNFFzORAaERcWvhwgPzVAHaHa&pid=Api&P=0&h=180"
+    },
+    {
+      "id": "5",
+      "ename": "Arving",
+      "designation": "politician",
+      "doj": "2025-02-02",
+      "city": "delhi",
+      "profile": "https://tse1.mm.bing.net/th?id=OIP.srNFFzORAaERcWvhwgPzVAHaHa&pid=Api&P=0&h=180"
+    },
+    {
+      "id": "2",
+      "ename": "Jitendra",
+      "designation": "Backend developer",
+      "doj": "2025-01-02",
+      "city": "Bhuvaneshwar",
+      "profile": "https://tse3.mm.bing.net/th?id=OIP.zc3XRPZxUt4Xt7zDZYLa_wHaHa&pid=Api&P=0&h=180"
     }
   ]
 }
