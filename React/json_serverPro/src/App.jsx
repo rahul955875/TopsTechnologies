@@ -13,8 +13,7 @@ function App() {
     fetch("http://localhost:3000/employee")
       .then((res) => res.json())
       .then((data) => {
-        setData(data.sort((a,b)=>a.id - b.id));
-
+        setData(data);
       });
   };
   useEffect(() => {
@@ -41,6 +40,7 @@ function App() {
     setIsEditing(emp.id);
     setInput(emp);
   };
+  const [sortTable, setSortTable] = useState(() => () => {});
   return (
     <>
       <AddDataToApi
@@ -48,6 +48,58 @@ function App() {
         formfield={[input, setInput]}
         filedEditing={[isEditing, setIsEditing]}
       />
+      <div className="container">
+        <h3 className="">Search Data</h3>
+        <div className="search">
+          <div className="col-12">
+            <div>
+              <input
+                type="radio"
+                name="sel"
+                className="form-check-input"
+                id="sel"
+                value="designation"
+                onChange={(e) => {
+                  setSortTable(
+                    () => (a, b) => a.designation > b.designation ? 1 : -1
+                  );
+                }}
+              />
+              <label htmlFor="sel">Designation</label>
+            </div>
+          </div>
+          <div className="col-12">
+            <div>
+              <input
+                type="radio"
+                name="sel"
+                className="form-check-input"
+                id="sel"
+                value="salary"
+                onChange={(e) =>
+                  setSortTable(() => (a, b) => a.city > b.city ? -1 : 1)
+                }
+              />
+              <label htmlFor="sel">city</label>
+            </div>
+          </div>
+          <div className="col-12">
+            <div>
+              <input
+                type="radio"
+                name="sel"
+                className="form-check-input"
+                id="sel"
+                value={"doj"}
+                onChange={(e) =>
+                  setSortTable(() => (a, b) => a.salary - b.salary)
+                }
+              />
+              <label htmlFor="sel">Salary</label>
+            </div>
+          </div>
+        </div>
+      </div>
       <table border={1} className="table p-5 shadow w-75 mx-auto mt-5">
         <thead>
           <tr>
@@ -56,17 +108,19 @@ function App() {
             <th>Designation</th>
             <th>Date of Join</th>
             <th>City</th>
+            <th>salary</th>
             <th>Profile</th>
           </tr>
         </thead>
         <tbody>
-          {data.map((emp) => (
+          {data.sort(sortTable).map((emp) => (
             <tr key={emp.id}>
               <td>{emp.id}</td>
               <td>{emp.ename}</td>
               <td>{emp.designation}</td>
               <td>{emp.doj}</td>
               <td>{emp.city}</td>
+              <td>{emp.salary}</td>
               <td>{emp.profile && <img src={emp.profile} alt="" />}</td>
               <td>
                 <button
