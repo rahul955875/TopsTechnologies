@@ -7,7 +7,7 @@
       "doj": "2025-02-28",
       "city": "Navsari",
       "profile": "https://tse1.mm.bing.net/th?id=OIP.srNFFzORAaERcWvhwgPzVAHaHa&pid=Api&P=0&h=180",
-      "salary" : 50000
+      "salary": 50000
     },
     {
       "id": "4",
@@ -16,7 +16,7 @@
       "doj": "2025-02-28",
       "city": "Limbayat, Surat",
       "profile": "https://tse3.mm.bing.net/th?id=OIP.zc3XRPZxUt4Xt7zDZYLa_wHaHa&pid=Api&P=0&h=180",
-      "salary" : 40000
+      "salary": 40000
     },
     {
       "id": "1",
@@ -25,16 +25,16 @@
       "doj": "2025-02-09",
       "city": "Shirpur city",
       "profile": "https://tse1.mm.bing.net/th?id=OIP.srNFFzORAaERcWvhwgPzVAHaHa&pid=Api&P=0&h=180",
-      "salary" : 30000
+      "salary": 30000
     },
     {
       "id": "5",
-      "ename": "Arving",
+      "ename": "Arvind",
       "designation": "Politician",
       "doj": "2025-02-02",
-      "city": "delhi",
+      "city": "Delhi",
       "profile": "https://tse1.mm.bing.net/th?id=OIP.srNFFzORAaERcWvhwgPzVAHaHa&pid=Api&P=0&h=180",
-      "salary" : 70000
+      "salary": 70000
     },
     {
       "id": "2",
@@ -43,7 +43,7 @@
       "doj": "2025-01-02",
       "city": "Bhuvaneshwar",
       "profile": "https://tse3.mm.bing.net/th?id=OIP.zc3XRPZxUt4Xt7zDZYLa_wHaHa&pid=Api&P=0&h=180",
-      "salary" : 25000
+      "salary": 25000
     }
   ]
 }
