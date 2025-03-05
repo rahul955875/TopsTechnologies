@@ -1,15 +1,14 @@
-
-import './App.css'
+import "./App.css";
 // import Todo from './Todo'
-
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+import AddTodos from "./AddTodos";
 function App() {
-  
-
   return (
     <>
-    <h1>hello firebase</h1>
+      <AddTodos/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
