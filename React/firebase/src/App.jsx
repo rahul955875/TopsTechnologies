@@ -3,10 +3,12 @@ import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import AddTodos from "./AddTodos";
+import ShowTodos from "./ShowTodos";
 function App() {
   return (
     <>
       <AddTodos/>
+      <ShowTodos/>
     </>
   );
 }
