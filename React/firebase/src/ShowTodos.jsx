@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 
-const ShowTodos = () => {
+const ShowTodos = ({todo}) => {
+  const [newInput, setInput] = useState(todo.title)
   const [IsEditing, setIsEditing] = useState(false);
+  const [isCompleted, setIsCompleted] = useState(false)
+  
   return (
     <>
       <div className="container mt-4">
@@ -12,11 +15,11 @@ const ShowTodos = () => {
             {IsEditing ? (
               <input type="text" className="form-control" />
             ) : (
-              <span>todos task</span>
+              <span style={{textDecoration : isCompleted ?  'line-through' : 'none'}}>{newInput}</span>
             )}
           </div>
           <div className="col-4 d-flex gap-2">
-            <button className="btn btn-success">
+            <button onClick={()=>setIsCompleted(true)} className="btn btn-success">
               <FontAwesomeIcon icon={faCheck} />
             </button>
             <button className="btn btn-primary">
