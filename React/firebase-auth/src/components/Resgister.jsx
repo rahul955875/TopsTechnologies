@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { auth, db } from "./firebase/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
+import { Link, useNavigate } from "react-router-dom";
 const Register = () => {
+  const navigate = useNavigate()
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -24,6 +26,7 @@ const Register = () => {
       .then(() => {
         alert("Regiseter successfully.");
         setUser({ name: "", email: "",password : '' });
+        navigate('/')
       })
       .catch((e) => alert("registration failed.", e));
   };
@@ -71,6 +74,9 @@ const Register = () => {
             >
               Submit
             </button>
+          </div>
+          <div>
+            <p>Alerdy Registered <Link to='/'>Login</Link></p>
           </div>
         </div>
       </form>
