@@ -4,7 +4,7 @@ const initialState = {
     todos : [{id: 1, text : 'first Task.'}]
 }
 
-exporte const todoSlice = createSlice({
+ const todoSlice = createSlice({
     name : 'todoList',
     initialState,
     reducers : {
@@ -17,4 +17,5 @@ exporte const todoSlice = createSlice({
         }
     }
 })
+ export const {addTodo} = todoSlice.actions
 export default todoSlice.reducer
