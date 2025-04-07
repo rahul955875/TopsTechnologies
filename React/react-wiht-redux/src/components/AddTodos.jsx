@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import ShowTodos from "./showTodos";
-
+import {useDispatch} from 'react-redux'
+import { addTodo } from "../Features/todoSlice";
 const AddTodos = () => {
-    const [input, setInput] = useState('')
+    const [input, setInput] = useState('')  
+    const dispatch= useDispatch()
     const handleSubmit = ()=>{
-        
+      dispatch(addTodo(input))
+      alert('todo added !!!')       
     }
   return (
     <>
-      <div className="container row px-5">
+      <div className="container row px-5 mt-5">
         <div className="col-8">
           <input
             type="text"
