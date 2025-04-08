@@ -5,33 +5,30 @@ import Counter from "./components/Counter";
 import store from "./store";
 import AddTodos from "./components/AddTodos";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { RecoilRoot } from "recoil";
+import RecAddTodos from "./components/RecAddTodos";
+import Home from "./components/Home";
 
 function App() {
   return (
-    // <Provider store={store}>
-    // <Counter/>
-    // <AddTodos/>
-    // </Provider>
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Provider store={store}>
-              <Counter />
-            </Provider>
-          }
-        ></Route>
-        <Route
-          path="/task2"
-          element={
-            <Provider store={store}>
-              <AddTodos />
-            </Provider>
-          }
-        ></Route>
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}>
+            <Route path="/" element={<Counter />}></Route>
+            <Route path="/task2" element={<AddTodos />}></Route>
+            <Route
+              path="/task3"
+              element={
+                <RecoilRoot>
+                  <RecAddTodos />
+                </RecoilRoot>
+              }
+            ></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 }
 
