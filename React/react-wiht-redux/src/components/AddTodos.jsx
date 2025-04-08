@@ -6,12 +6,16 @@ const AddTodos = () => {
     const [input, setInput] = useState('')  
     const dispatch= useDispatch()
     const handleSubmit = ()=>{
-      dispatch(addTodo(input))
-      alert('todo added !!!')       
+      if(input.trim()){
+
+        dispatch(addTodo(input))
+        alert('todo added !!!')       
+      }
     }
   return (
     <>
       <div className="container row px-5 mt-5">
+        <h1 className="mb-5">Todos List</h1>
         <div className="col-8">
           <input
             type="text"
