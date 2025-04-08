@@ -9,7 +9,8 @@ const AddTodos = () => {
       if(input.trim()){
 
         dispatch(addTodo(input))
-        alert('todo added !!!')       
+        alert('todo added !!!')      
+        setInput('') 
       }
     }
   return (
